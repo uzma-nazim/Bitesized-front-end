@@ -1,0 +1,169 @@
+$textColor: #141414;
+$textColor2: #0b1f22;
+$blue: #5da9e9;
+$pink: #ff7477;
+$grey: #a0a0a0;
+@import './colors';
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;900&display=swap");
+
+@font-face {
+  font-family: rangeSane;
+  src: url(../assets/font/rangesans-medium.ttf);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-bottom: 0px !important;
+}
+
+.heading1 {
+  font-size: 32px;
+  color: $textColor;
+  font-family: rangeSane;
+  letter-spacing: 1px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+.heading2 {
+  font-size: 18px;
+  color: $textColor;
+  font-family: rangeSane;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $textColor2;
+  line-height: 25px;
+}
+
+.links {
+  font-size: 14px;
+  font-family: rangeSane;
+
+  color: $pink;
+}
+
+.p1 {
+  font-family: rangeSane;
+
+  color: $grey;
+  font-size: 14px;
+}
+
+.smallText {
+  font-size: 12px;
+  font-family: rangeSane;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: $pink;
+}
+
+.p2 {
+  font-family: "Poppins", sans-serif;
+  color: $blue;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.btn1 {
+  font-size: 14px;
+  padding: 10px 28px;
+  font-family: "Poppins", sans-serif;
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  border: 1px solid $pink;
+  border-radius: 37px;
+  color: $pink;
+
+  background-color: transparent;
+}
+
+.bluebutton {
+  min-width: 104px;
+  max-width: fit-content;
+  background-color: $blue;
+  border-radius: 37px;
+  border: none;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.homepageheading {
+  font-size: $headinsize;
+  font-weight: 700;
+  line-height: 70px;
+}
+
+.homepageheading2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 74px;
+  color: #5DA9E9;
+  text-align: center;
+}
+
+.homepagepara {
+  font-family: rangeSane;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #4E4D53;
+}
+
+.box-text {
+  font-size: 44px;
+  line-height: 48px;
+  font-family: rangeSane;
+}
+
+@media only screen and (max-width: 700px) {
+
+  /*Big smartphones [426px -> 600px]*/
+  .heading1 {
+    font-size: 21px;
+    line-height: 30px;
+  }
+
+  .btn1 {
+    font-size: 12px;
+    padding: 6px 28px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  /*Big smartphones [426px -> 600px]*/
+  .heading1 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .btn1 {
+    font-size: 12px;
+    padding: 4px 23px;
+  }
+}
+
+.swiper-pagination {
+  display: none !important;
+}

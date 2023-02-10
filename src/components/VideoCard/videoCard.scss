@@ -1,0 +1,83 @@
+$yellow: #ffff00;
+.videoCard {
+  width: 302px;
+}
+.playIcon {
+  background-color: black;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outercolor {
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+
+  svg {
+    color: $yellow;
+    font-size: 30px;
+    margin-left: 1px;
+    border-radius: 10px;
+  }
+}
+.video-Box {
+  position: relative;
+  video{
+    border-radius: 4px;
+  }
+  video[poster]{
+    height:100%;
+    width:100%;
+    }
+  .playbtnwrapper {
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.card-icon-box{
+    display: flex;
+    
+    
+    gap: 10px;
+    img{
+        width: 17px;
+        
+    }
+    p{
+        font-size: 12px;
+    }
+}
+.iconContainer{
+    display: flex;
+    gap: 45px;
+    margin: 7px 0px 7px 0px;
+}
+.progressWrapper{
+    width: 180px;
+    .progressBarContainer{
+        height: 18px;
+        .innerBox{
+            width: 50%;
+        }
+    }
+}
+.Card-porgress-box{
+    display: flex;
+    gap: 14px   ;
+    margin-top: 12px;
+}

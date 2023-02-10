@@ -1,0 +1,63 @@
+.link-container {
+    margin: 16px 0px 16px 0px;
+    a{
+        margin-right: 8px;
+    }
+}
+.profileContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 23px;
+    img{
+        width: 29px;
+
+    }
+}
+.tags-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0px 30px 0px;
+
+    align-items: center;
+}
+.courseDetailsWrapper{
+    gap: 21px;
+
+    display: flex;
+    align-items: center;
+    P{
+        white-space: nowrap;
+    }
+}
+.progreesWrapper{
+    width: 390px;
+
+}
+.cardRow{
+    display: flex;
+    gap: 29px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 39px 0px 30px 0px;
+}
+
+@media only screen and (max-width: 700px){
+	
+    .progreesWrapper{
+        width: 300px;
+    
+    }
+}
+
+@media only screen and (max-width: 500px){
+	
+    .courseDetailsWrapper{
+        gap: 10px;
+    }    
+}
+.swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+}

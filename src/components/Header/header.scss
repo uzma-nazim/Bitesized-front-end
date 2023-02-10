@@ -1,0 +1,86 @@
+$textColor: #141414;
+$blue: #5da9e9;
+@font-face {
+  font-family: rangeSane;
+  src: url(../../assets/font/rangesans-medium.ttf);
+}
+
+.headerContainer {
+  // margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 0px 10px 0px;
+  align-items: center;
+  border: apx solid black;
+  .logo {
+    font-size: 24px;
+    color: $textColor;
+    font-weight: 600;
+    font-family: rangeSane;
+    letter-spacing: 1px;
+  }
+}
+.header-link {
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+    margin-left: 36px;
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 500;
+      color: $textColor;
+      font-family: rangeSane;
+    }
+    .activeLink {
+      color: $blue !important;
+      font-weight: 600;
+    }
+    img {
+      width: 40px;
+      border-radius: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px){
+    .logo {
+        font-size: 20px !important;
+    }
+    .header-link {
+        a{
+
+            font-size: 15px !important;
+        }
+
+        li {
+            list-style: none;
+            margin-left: 16px;
+        }
+        img {
+            width: 30px !important;
+            border-radius: 100%;
+          }
+    }
+}
+@media only screen and (max-width: 450px){
+    .logo {
+        font-size: 17px !important;
+    }
+    .header-link {
+        a{
+
+            font-size: 13px !important;
+        }
+
+        li {
+            list-style: none;
+            margin-left: 16px;
+        }
+
+    }
+}

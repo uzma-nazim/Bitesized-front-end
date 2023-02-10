@@ -1,0 +1,28 @@
+@import '../../style/colors';
+@import '../../style/globalStyle.scss';
+
+
+.block-section {
+
+    margin-top: 148px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    width: 277px;
+    height: 259px;
+    box-sizing: border-box;
+    border: 1px solid #141414;
+    border-radius: 14px;
+    background: #FFFFFF;
+    padding: 24px;
+}
+
+.star {
+    position: relative;
+    width: 108px;
+    height: 108px;
+    left: 160px;
+    top: 35px;
+}
