@@ -1,0 +1,168 @@
+@import '../../style/colors';
+@import '../../style/globalStyle.scss';
+
+$yellow: #ffff00;
+
+
+.card-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1180px;
+  // border: 1px solid black;
+
+  margin-top: 32px;
+}
+
+.videoCard {
+  width: 302px;
+  margin: 20px auto;
+}
+
+.playIcon {
+  background-color: black;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outercolor {
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+
+  svg {
+    color: $yellow;
+    font-size: 30px;
+    margin-left: 1px;
+    border-radius: 10px;
+  }
+}
+
+.video-Box {
+  position: relative;
+
+  video {
+    border-radius: 4px;
+  }
+
+  video[poster] {
+    height: 100%;
+    width: 100%;
+  }
+
+  .playbtnwrapper {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.card-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  gap: 10px;
+
+  img {
+    width: 18px;
+
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  gap: 45px;
+  margin: 7px 0px 7px 0px;
+}
+
+.progressWrapper {
+  width: 180px;
+
+  .progressBarContainer {
+    height: 18px;
+
+    .innerBox {
+      width: 50%;
+    }
+  }
+}
+
+.Card-porgress-box {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.name {
+  font-size: 12px;
+  line-height: 14px;
+  color: #818386;
+
+  font-weight: 600;
+}
+
+.designation {
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFD400;
+
+  font-weight: 600;
+}
+
+.age {
+  font-size: 12px;
+  line-height: 14px;
+  color: #5DA9E9;
+
+  font-weight: 600;
+}
+
+.profile {
+  img {
+
+    margin: 0 2px;
+  }
+
+  span {
+    margin: 0 2px;
+  }
+}
+
+.profiletag {
+  width: 229px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.tags {
+  background: rgba(231, 79, 52, 0.08);
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FF7477;
+  font-weight: 500;
+  padding: 0 5px;
+}

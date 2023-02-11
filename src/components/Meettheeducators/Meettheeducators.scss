@@ -1,0 +1,48 @@
+@import '../../style/colors';
+@import '../../style/globalStyle.scss';
+
+.meettheeducators {
+
+
+    p {
+
+        font-family: rangeSane;
+        font-weight: 100;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: #848692;
+    }
+}
+.staff{
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+.profile {
+   
+
+    h4 {
+        margin-top: 20px;
+        font-size: 26px;
+        line-height: 28px;
+        letter-spacing: -0.005em;
+        color: #141414;
+    }
+
+    span {
+        font-size: 14px;
+        line-height: 22px;
+        color: #848692;
+    }
+
+}
+
+.designation {
+    font-size: 14px;
+    line-height: 22px;
+    color: #848692;
+}

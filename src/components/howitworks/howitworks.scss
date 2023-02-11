@@ -1,0 +1,83 @@
+@import '../../style/colors';
+@import '../../style/globalStyle.scss';
+
+
+.box-section{
+    margin-top: 50px;
+}
+
+.box1 {
+    background-image: url('../../assets/first.svg');
+    width: 318px;
+    height: 250px;
+    padding: 46px 34px 47px 22px;
+
+    span {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #5DA9E9;
+        font-family: rangeSane;
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    p {
+        font-family: rangeSane;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4E4D53;
+    }
+}
+
+.box2 {
+    background-image: url('../../assets/secong.svg');
+    width: 318px;
+    height: 250px;
+    padding: 46px 34px 47px 22px;
+
+    span {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #5DA9E9;
+        font-family: rangeSane;
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 40px;
+    }
+}
+
+.box3 {
+    background-image: url('../../assets/thirs.svg');
+    width: 318px;
+    height: 250px;
+    padding: 46px 34px 47px 22px;
+
+    span {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #5DA9E9;
+        font-family: rangeSane;
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 40px;
+    }
+}
+
+.box-section {
+    display: flex;
+    justify-content: space-around;
+}

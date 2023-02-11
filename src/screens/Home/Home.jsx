@@ -6,6 +6,9 @@ import "./Home.scss"
 import HomePageCover from '../../components/HomePage Cover/HomePageCover'
 import HomePageBlocksection from '../../components/HomepageBlocksection/HomepageBlocksection'
 import Homepagetrendingcourse from '../../components/Homepagetrendingcourse/Homepagetrendingcourse'
+import Homepagecardsection from '../../components/Homepagecardsection/Homepagecardsection'
+import Howitworks from '../../components/howitworks/howitworks'
+import Meettheeducators from '../../components/Meettheeducators/Meettheeducators'
 
 
 
@@ -17,6 +20,9 @@ const Home = () => {
     <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>
+    <Homepagecardsection/>
+    <Howitworks/>
+    <Meettheeducators/>
 
     </>
   )
