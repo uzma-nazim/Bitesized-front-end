@@ -9,7 +9,7 @@ import filtericon from '../../assets/Filter.svg'
 const HomePageCover = () => {
     return (
         <div className="container homepage">
-            <div className="heading">
+            <div className="heading" style={{width:"60%"}}>
                 <h1 className='homepageheading'>
                     Project-based bitesized courses for kids
                 </h1>
