@@ -1,0 +1,144 @@
+@import "../../style/colors";   
+
+
+.progressbar1{
+    width: 200px;
+    
+    .innerBox{
+        background-color: $Brown;
+        width: 100%;
+    border-radius: 0px;
+    }
+    .progressBarContainer{
+        height: 12px;
+    border-radius: 0px;
+    background-color: #E8E8E8;
+
+    }
+}
+.progressbar2{
+    width: 200px;
+    
+    .innerBox{
+        background-color: $Brown;
+        width: 80%;
+    border-radius: 0px;
+    }
+    .progressBarContainer{
+        height: 12px;
+    border-radius: 0px;
+    background-color: #E8E8E8;
+
+    }
+}
+.progressbar3{
+    width: 200px;
+    
+    .innerBox{
+        background-color: $Brown;
+        width: 60%;
+    border-radius: 0px;
+    }
+    .progressBarContainer{
+        height: 12px;
+    border-radius: 0px;
+    background-color: #E8E8E8;
+
+    }
+}
+.progressbar4{
+    width: 200px;
+    
+    .innerBox{
+        background-color: $Brown;
+        width: 40%;
+    border-radius: 0px;
+    }
+    .progressBarContainer{
+        height: 12px;
+    border-radius: 0px;
+    background-color: #E8E8E8;
+
+    }
+}
+.progressbar5{
+    width: 200px;
+
+    .innerBox{
+        background-color: $Brown;
+        width: 20%;
+    border-radius: 0px;
+    }
+    .progressBarContainer{
+        height: 12px;
+    border-radius: 0px;
+    background-color: #E8E8E8;
+
+    }
+}
+.forstarprogress{
+    display: flex;
+}
+
+.customerReviews{
+    color: $pink;
+    font-size: 30px;
+    line-height: 100%;
+    padding-top: 40px;
+  font-family: rangeSanebold;
+}
+
+.customerRevTop{
+    display: flex;
+
+}
+
+.ratenums{
+    font-size:28px ;
+    color: #000000;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.rev{
+    font-size:20px ;
+    color: #8D8D8D;
+    line-height:28px ;
+    font-weight: 500;
+    padding-top: 20px;
+  font-family: rangeSanebold;
+}
+
+.starspacing{
+    padding-top: 20px;
+}
+
+.starspacing img{
+    width: 35px;
+    padding-right: 5px;
+}
+
+.totalrev{
+    margin-top: 40px;
+   gap: 15px;
+}
+
+.forflexprogress{
+    margin: 30px 120px;
+}
+
+.forflexprogress p{
+    margin-right: 20px;
+    color: #8D8D8D;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 500;
+    align-items: center;
+  font-family: rangeSane;
+}
+
+.forflexprogressstar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}

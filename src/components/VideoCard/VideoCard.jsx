@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import thumbnail from "../../assets/videoThumnail.png";
 import "./videoCard.scss";
-
+import lock from "../../assets/lock.svg";
 
 import { BsPlayFill } from "react-icons/bs";
 import clock from "../../assets/clock.svg";
 import book from "../../assets/book.svg";
 import ProgressBar from "../ProgressBar/ProgressBar";
-const VideoCard = () => {
+const VideoCard = ({hideprogressbar , lockvideo}) => {
   const [play, setplay] = useState(false);
 
   const videoPlayer = useRef();
@@ -18,11 +18,18 @@ const VideoCard = () => {
   return (
     <div className="videoCard">
       <div className="video-Box">
-        <video  ref={videoPlayer} poster={thumbnail} width="100%" height="208">
+        <video className="thumbnail" ref={videoPlayer} poster={thumbnail} width="100%" height="208">
           <source type="video/mp4" src={""} />
         </video>
-        <div className="playbtnwrapper" style={{ opacity: play ? 0 : 1 }}>
-          <div onClick={handlePlay} className="outercolor">
+        {lockvideo ? <div className="playbtnwrapper blacklayer">
+          <div>
+            <img src={lock} alt="" />
+          </div>
+          <p className="smallText cardtext" style={{ color: "#fff", fontWeight: 500 }}>
+          Purchase bitesized course to watch more
+          </p>
+        </div> :<div className="playbtnwrapper">
+          <div className="outercolor">
             <div className="playIcon">
               <BsPlayFill />
             </div>
@@ -30,7 +37,8 @@ const VideoCard = () => {
           <p className="smallText" style={{ color: "#fff", fontWeight: 500 }}>
             Recently Played
           </p>
-        </div>
+        </div> }
+        
       </div>
 
       <div className="iconContainer">
@@ -51,12 +59,13 @@ const VideoCard = () => {
       </div>
 
       <h2 className="heading2">Introduction to User Interface Design</h2>
-      <div className="Card-porgress-box">
+      {hideprogressbar ? null :<div className="Card-porgress-box">
         <div className="progressWrapper">
           <ProgressBar />
         </div>
         <p className="p2">54% Completed</p>
-      </div>
+      </div> }
+      
     </div>
   );
 };
