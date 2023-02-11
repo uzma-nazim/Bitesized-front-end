@@ -8,10 +8,9 @@ const Howitworks = () => {
     return (
         <div className="container howitworks">
 
-            <div className="heading">
+            <div className="headinghowitworks">
                 <h1 className="homepageheading2">How It Works</h1>
-                <p className="homepagepara">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit minima aut nobis, odio impedit consequatur ab ea </p>
+                <p className="homepagepara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis diam massa accumsan ac facilisis odio laoreet. </p>
             </div>
             <div className="box-section">
                 <div className="box1">

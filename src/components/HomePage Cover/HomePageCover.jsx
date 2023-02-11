@@ -13,13 +13,15 @@ const HomePageCover = () => {
                 <h1 className='homepageheading'>
                     Project-based bitesized courses for kids
                 </h1>
-                <p>By the most innovative educators</p>
+                
             </div>
             <div className="elements">
+                
                 <div>
                     <img src={cartoonImage} alt="" />
                 </div>
                 <div className='center-section'>
+                    <p className='centerpara'>By the most innovative educators</p>
                     <div className='searcbar'>
                         <img src={searcicon} alt="" />
                         <input className='input' type="text" placeholder='Search Course...' />

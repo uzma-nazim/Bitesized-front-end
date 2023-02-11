@@ -8,8 +8,7 @@ const Homepagetrendingcourse = ()=>{
         <div className="container course-section">
             <div className="heading-sec">
             <h1 className="homepageheading2">New and Trending Courses</h1>
-            <p className="homepagepara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae illo, fuga 
-                adipisci magni aut sed minus necessitatibus incidunt </p>
+            <p className="homepagepara trendingcoursepara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis diam massa accumsan ac facilisis odio laoreet.</p>
             </div>
 
             <div className="course-video">

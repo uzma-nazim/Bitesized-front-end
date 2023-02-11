@@ -12,9 +12,7 @@ const Meettheeducators = ()=>{
                 <h1 className="homepageheading2">
                 Meet The Educators
                 </h1>
-                <p className="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nihil vitae eum ab saepe sapiente error eius ducimus impedit! Nobis,
-                     nisi. Quos ex optio at, eaque minima omnis commodi repudiandae veritatis.</p>
+                <p className="details">Our learning experts are parents, teachers, designers, and makers with backgrounds in early child development.</p>
             </div>
             <div className="staff">
                 <div className="profile">

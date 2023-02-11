@@ -3,9 +3,18 @@
 
 
 .box-section{
-    margin-top: 50px;
+    margin-top: 52px;
 }
-
+.howitworks{
+    margin-top: 177px;
+}
+.headinghowitworks{
+    margin: auto;
+    width: 450px;
+    p{
+        margin-top: 10px;
+    }
+}
 .box1 {
     background-image: url('../../assets/first.svg');
     width: 318px;
@@ -15,23 +24,25 @@
     span {
         font-size: 16px;
         line-height: 30px;
-        font-weight: 600;
+        font-weight: 500;
         color: #5DA9E9;
         font-family: rangeSane;
     }
 
     h2 {
+        font-family: rangeSanebold;
         font-weight: 800;
         font-size: 25px;
         line-height: 40px;
     }
 
     p {
-        font-family: rangeSane;
+        font-family: rangeSaneregular;
         font-weight: lighter;
         font-size: 16px;
         line-height: 26px;
         color: #4E4D53;
+        margin-top: 10px;
     }
 }
 
@@ -44,15 +55,24 @@
     span {
         font-size: 16px;
         line-height: 30px;
-        font-weight: 600;
+        font-weight: 500;
         color: #5DA9E9;
         font-family: rangeSane;
     }
 
     h2 {
+        font-family: rangeSanebold;
         font-weight: 800;
         font-size: 25px;
         line-height: 40px;
+    }
+    p{
+        font-family: rangeSaneregular;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4E4D53;
+        margin-top: 10px;
     }
 }
 
@@ -65,15 +85,24 @@
     span {
         font-size: 16px;
         line-height: 30px;
-        font-weight: 600;
+        font-weight: 500;
         color: #5DA9E9;
         font-family: rangeSane;
     }
 
     h2 {
+        font-family: rangeSanebold;
         font-weight: 800;
         font-size: 25px;
         line-height: 40px;
+    }
+    p{
+        font-family: rangeSaneregular;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4E4D53;
+        margin-top: 10px;
     }
 }
 
