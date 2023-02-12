@@ -9,7 +9,7 @@ import filtericon from '../../assets/Filter.svg'
 const HomePageCover = () => {
     return (
         <div className="container homepage">
-            <div className="heading" style={{width:"60%"}}>
+            <div className="pagecoverheading">
                 <h1 className='homepageheading'>
                     Project-based bitesized courses for kids
                 </h1>
@@ -17,8 +17,8 @@ const HomePageCover = () => {
             </div>
             <div className="elements">
                 
-                <div>
-                    <img src={cartoonImage} alt="" />
+                <div style={{marginTop:"-21px"}}>
+                    <img className='cover-images' src={cartoonImage} alt="" />
                 </div>
                 <div className='center-section'>
                     <p className='centerpara'>By the most innovative educators</p>
@@ -48,7 +48,7 @@ const HomePageCover = () => {
                     </div>
                 </div>
                 <div>
-                    <img src={cartoonImage2} alt="" />
+                    <img className='cover-images' src={cartoonImage2} alt="" />
                 </div>
             </div>
         </div>

@@ -10,9 +10,11 @@
 }
 .headinghowitworks{
     margin: auto;
-    width: 450px;
+    width: 100%;
     p{
         margin-top: 10px;
+        max-width: 612px;
+        margin: auto;
     }
 }
 .box1 {
@@ -109,4 +111,39 @@
 .box-section {
     display: flex;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+    .howitworks{
+        margin-top: 20px;
+    }
+    .box-section{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        img{
+            display: none;
+        }
+
+    }
+    .box1, .box2, .box3 {
+        margin: 10PX;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .box-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        img{
+            display: none;
+        }
+
+    }
+    .box1, .box2, .box3 {
+        margin: 10px 0 10px 0;
+    }
 }
