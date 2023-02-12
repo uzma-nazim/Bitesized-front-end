@@ -14,11 +14,11 @@ const Reviews = ({picture , name , date}) => {
       <div className="userheading">
         <p>{name}</p>
         <div>
-          <img src={onlystar} alt="" />
-          <img src={onlystar} alt="" />
-          <img src={onlystar} alt="" />
-          <img src={onlystar} alt="" />
-          <img src={onlystar} alt="" />
+          <img className="formarginrightstar" src={onlystar} alt="" />
+          <img className="formarginrightstar" src={onlystar} alt="" />
+          <img className="formarginrightstar" src={onlystar} alt="" />
+          <img className="formarginrightstar" src={onlystar} alt="" />
+          <img className="formarginrightstar" src={onlystar} alt="" />
         </div>
       </div>
     </div>
