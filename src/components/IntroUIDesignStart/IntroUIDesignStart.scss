@@ -2,25 +2,26 @@
 
 .introUIflex{
     display: flex;
-    gap: 10px;
 
 }
 
 .introtoUIthumbnail{
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin-top: 28px;
+    margin-bottom: 40px;
 }
 
 .introtoUIthumbnail[poster]{
     width: 96%;
 }
 
-
+.linkspadding{
+    margin-bottom: 10px !important;
+}
 
 .uidesignpara{
     font-size: 16px;
     line-height: 25px;
-    color: darkgrey;
+    color: $darkgrey;
     max-width: 760px;
     font-family: rangeSaneregular;
 }
@@ -29,8 +30,16 @@
     font-size: 16px;
     line-height: 22px;
     font-family: rangeSanebold;
-    padding-right: 179px;
     margin-top: 25px;
+    margin-left: 15px;
+}
+
+.forgreyline{
+    background-color: #E9EDF1;
+    width: 328px;
+    height: 1px;
+    margin-top: 12px;
+    margin-bottom: 10px;
 }
 
 .howtodoeverythingflex2{
@@ -47,13 +56,13 @@
 .howtodoeverythingflex2 img{
     width: 50px;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 25px;
 }
 
 .howtodoeverythingflex img{
     width: 50px;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 25px;
 }
 
 .lessonintro{
@@ -61,7 +70,8 @@
     line-height: 24px;
   font-family: rangeSanebold;
   color: #808281;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
+  margin-left: 15px;
 }
 
 .lessonintro2{
@@ -69,8 +79,9 @@
     line-height: 24px;
   font-family: rangeSanebold;
   color: #808281;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   padding-top: 20px;
+  margin-left: 15px;
 }
 
 .bolding{
