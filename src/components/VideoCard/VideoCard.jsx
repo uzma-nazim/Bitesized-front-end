@@ -25,7 +25,7 @@ const VideoCard = ({hideprogressbar , lockvideo}) => {
           <div>
             <img src={lock} alt="" />
           </div>
-          <p className="smallText cardtext" style={{ color: "#fff", fontWeight: 500 }}>
+          <p className="smallText2 cardtext">
           Purchase bitesized course to watch more
           </p>
         </div> :<div className="playbtnwrapper">
@@ -34,7 +34,7 @@ const VideoCard = ({hideprogressbar , lockvideo}) => {
               <BsPlayFill />
             </div>
           </div>
-          <p className="smallText" style={{ color: "#fff", fontWeight: 500 }}>
+          <p className="smallText2" >
             Recently Played
           </p>
         </div> }

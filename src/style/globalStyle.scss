@@ -5,7 +5,7 @@ $textColor2: #0b1f22;
 $blue: #5da9e9;
 $pink: #ff7477;
 $grey: #a0a0a0;
-@import './colors';
+@import "./colors";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;900&display=swap");
 
@@ -21,7 +21,6 @@ $grey: #a0a0a0;
   font-family: rangeSaneregular;
   src: url(../assets/font/rangesans-regular.ttf);
 }
-
 
 * {
   margin: 0px;
@@ -48,6 +47,15 @@ ul {
   line-height: 44px;
   font-weight: 700;
 }
+.heading3 {
+  font-size: 32px;
+  color: $textColor;
+  font-family: rangeSanebold;
+
+  letter-spacing: 1px;
+  line-height: 38px;
+  font-weight: 700;
+}
 
 .heading2 {
   font-size: 18px;
@@ -59,13 +67,20 @@ ul {
   line-height: 25px;
   margin-bottom: 20px;
 }
-.heading4{
+.heading5 {
+  font-size: 20px;
+line-height: 23px;
+  
+  font-family: rangeSane
+  ;
+  color: $blue;
+}
+.heading4 {
   font-size: 26px;
-    line-height: 28px;
-    letter-spacing: -0.005em;
-    color: #141414;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: #141414;
   font-family: rangeSanebold;
-
 }
 .links {
   font-size: 14px;
@@ -73,20 +88,55 @@ ul {
 
   color: $pink;
 }
-
+.boldfamily {
+  font-family: rangeSanebold !important;
+}
+.blue {
+  color: $blue !important;
+}
+.pink {
+  color: $pink !important;
+}
 .p1 {
   font-family: rangeSane;
 
   color: $grey;
   font-size: 14px;
 }
-
+.p3 {
+  font-size: 15px;
+  line-height: 18px;
+  font-family: rangeSane;
+  color: $blue;
+}
+.p4 {
+  font-size: 13px;
+  line-height: 15px;
+  font-family: rangeSane;
+  color: $textColor;
+}
+.p5{
+  font-family: rangeSane;
+color: $darkgrey;
+  font-size: 16px;
+line-height: 19px;
+}
 .smallText {
   font-size: 12px;
   font-family: rangeSane;
   font-weight: 600;
   letter-spacing: 1px;
   color: $pink;
+  line-height: 18px;
+}
+.smallText2 {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  letter-spacing: 1px;
+  color: #fff;
+  line-height: 18px;
 }
 
 .p2 {
@@ -110,7 +160,27 @@ ul {
 
   background-color: transparent;
 }
+.bg-pink{
+  background-color: $pink !important; 
 
+}
+.largebluebtn {
+  width: 223px;
+  height: 43px;
+  border-radius: 37px;
+  background-color: $blue;
+  font-family: rangeSane !important;
+
+  // font-family: rangeSaneregular;
+  letter-spacing: 1px;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  border: none;
+}
 .bluebutton {
   min-width: 104px;
   max-width: fit-content;
@@ -122,8 +192,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
 .homepageheading {
@@ -137,7 +205,7 @@ ul {
   font-size: 48px;
   font-weight: 700;
   line-height: 74px;
-  color: #5DA9E9;
+  color: #5da9e9;
   text-align: center;
 }
 
@@ -145,18 +213,21 @@ ul {
   font-family: rangeSaneregular;
   font-weight: lighter;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 30px;
   text-align: center;
-  color: #4E4D53;
+  color: #4e4d53;
 }
+.grey2{
+  color: $grey2 !important;
 
+}
 .box-text {
   font-size: 44px;
   line-height: 48px;
   font-family: rangeSane;
 }
 
-.roundedbluebtn{
+.roundedbluebtn {
   background-color: $blue;
   color: $CreamWhite;
   border-radius: 12px;
@@ -168,13 +239,14 @@ ul {
 }
 
 @media only screen and (max-width: 700px) {
-
   /*Big smartphones [426px -> 600px]*/
   .heading1 {
     font-size: 21px;
     line-height: 30px;
   }
-
+  .heading3 {
+    font-size: 22px;
+  }
   .btn1 {
     font-size: 12px;
     padding: 6px 28px;
@@ -182,7 +254,12 @@ ul {
 }
 
 @media only screen and (max-width: 500px) {
+  .bluebutton{
+    
+    min-width: 96px;
+    height: 40px;
 
+  }
   /*Big smartphones [426px -> 600px]*/
   .heading1 {
     font-size: 15px;
@@ -199,5 +276,4 @@ ul {
   display: none !important;
 }
 
-//test 
-
+//test

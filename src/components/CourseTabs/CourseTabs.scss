@@ -1,0 +1,94 @@
+@import "../../style/colors";
+@import "../../style/font";
+
+.tabscontainer {
+  padding: 0px 68px;
+  .nav-tabs{
+    border-bottom: 0px;
+  }
+  .nav-tabs {
+    box-shadow: -4px 10px 32px rgba(44, 63, 88, 0.08);
+    border-radius: 8px;
+    position: relative !important;
+    top: -10px;
+
+    background-color: #fff;
+  }
+  li {
+    padding: 7px 17px;
+  }
+  .nav-item {
+    .nav-link:hover {
+      border-color: #fff;
+    }
+    button {
+      font-size: 16px;
+      font-family: rangeSanebold !important;
+      color: $darkgrey !important;
+    }
+    .active {
+      // padding: 5px 17px;
+      padding: 7px 17px;
+      border: none !important;
+      position: relative !important;
+      font-family: rangeSanebold !important;
+
+      font-size: 16px;
+      //   line-height: 19px;
+      color: $blue !important;
+    }
+
+    .active::after {
+      content: "";
+      width: 80%;
+      position: absolute;
+      bottom: -11px;
+      left: 10px;
+      height: 3px;
+
+      background-color: $blue;
+    }
+  }
+}
+
+.aboutMeContainer {
+  padding: 39px 116px 39px 93px;
+
+  h3 {
+    margin-top: 17px;
+  }
+  .hosizontal-line {
+    height: 1px;
+    background-color: $lighgray;
+    margin-top: 9px;
+  }
+  .aboutintro {
+    margin: 35px 0px;
+    p {
+      text-align: start !important;
+      margin-top: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .aboutMeContainer {
+    padding: 17px 25px 15px 30px;
+  }
+}
+@media only screen and (max-width: 786px) {
+  .tabscontainer li:nth-child(1) {
+    padding-left: 10px;
+  }
+  .tabscontainer li {
+    padding: 6px 0px;
+  }
+}
+@media only screen and (max-width: 551px) {
+  button {
+    font-size: 12px !important;
+    padding: 10px 4px !important;
+  }
+}
+
+

@@ -1,0 +1,114 @@
+@import "../../style/colors";
+
+.userprofileBox {
+  padding: 73px 0px;
+  background-color: $lightBlue;
+}
+.userprofilewrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userProfile {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+  .verifyedBox {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin: 10px 0px 3px 0px;
+  }
+  .usercourse {
+    width: 182px;
+  }
+  .averageRating {
+    div {
+      white-space: nowrap;
+    }
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+
+    margin-bottom: 7px;
+    img {
+      width: 18px;
+    }
+  }
+  .courseDetails {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .followers {
+    margin-top: 10px;
+  }
+  .userprofileCourse {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 12px;
+  }
+}
+
+.cousrebtnCoutntry button {
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+  .cousrebtnCoutntry {
+    margin-top: 30px;
+  }
+  .userprofilewrapper {
+    flex-wrap: wrap;
+  }
+  .cousrebtnCoutntry button {
+    margin-bottom: 15px;
+    width: 183px;
+    font-size: 12px;
+    height: 37px;
+  }
+}
+@media only screen and (max-width: 522px) {
+  .cousrebtnCoutntry {
+    margin-top: 15px;
+  }
+  .userprofilewrapper {
+    .userProfile {
+      .userprofileCourse {
+        gap: 10px;
+        .courseDetails {
+          gap: 3px;
+        }
+      }
+      gap: 10px;
+      .verifyedBox {
+        margin: 0px 0px 3px 0px;
+      }
+    }
+    .userProfile h3 {
+      font-size: 23px;
+    }
+    .usercourse {
+      width: 163px;
+    }
+  }
+  .cousrebtnCoutntry button {
+    width: 164px;
+  }
+  .userprofileBox{
+
+    padding: 46px 0px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .userprofilewrapper {
+    .usercourse {
+      width: 134px;
+      display: none;
+    }
+    .userProfile h3 {
+        font-size: 19px;
+      }
+  }
+}
