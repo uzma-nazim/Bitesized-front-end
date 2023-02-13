@@ -5,6 +5,7 @@ import ChooseCourseUser from "./screens/ChooseCourseUser/ChooseCourseUser";
 import UserProfile from "./screens/CourseUser/CourseUser";
 import CourseUser from "./screens/CourseUser/CourseUser";
 import Signup from "./screens/Signup/Signup";
+import IntroToUIDesign from "./screens/IntroToUIDesign/IntroToUIDesign";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/user-courese" element={<UserCourses />} />
           <Route exact path="/choose-course-user" element={<ChooseCourseUser />} />
           <Route exact path="/user-profile" element={<CourseUser />} />
+          <Route exact path="/intro-to-ui-design" element={<IntroToUIDesign/>} />
           
         </Routes>
       </BrowserRouter>

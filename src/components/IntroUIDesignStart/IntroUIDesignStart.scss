@@ -1,0 +1,89 @@
+@import "../../style/colors";
+
+.introUIflex{
+    display: flex;
+    gap: 10px;
+
+}
+
+.introtoUIthumbnail{
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.introtoUIthumbnail[poster]{
+    width: 96%;
+}
+
+
+
+.uidesignpara{
+    font-size: 16px;
+    line-height: 25px;
+    color: darkgrey;
+    max-width: 760px;
+    font-family: rangeSaneregular;
+}
+
+.lessontime{
+    font-size: 16px;
+    line-height: 22px;
+    font-family: rangeSanebold;
+    padding-right: 179px;
+    margin-top: 25px;
+}
+
+.howtodoeverythingflex2{
+    display: flex;
+    gap: 10px;
+}
+
+.howtodoeverythingflex{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.howtodoeverythingflex2 img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.howtodoeverythingflex img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.lessonintro{
+    font-size: 18px;
+    line-height: 24px;
+  font-family: rangeSanebold;
+  color: #808281;
+  padding-bottom: 25px;
+}
+
+.lessonintro2{
+    font-size: 18px;
+    line-height: 24px;
+  font-family: rangeSanebold;
+  color: #808281;
+  padding-bottom: 25px;
+  padding-top: 20px;
+}
+
+.bolding{
+    font-size: 16px;
+    line-height: 27px;
+  font-family: rangeSane;
+  color: #05162E;
+}
+
+.forgrey{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #808281;
+}
