@@ -9,6 +9,7 @@ import Homepagetrendingcourse from '../../components/Homepagetrendingcourse/Home
 import Homepagecardsection from '../../components/Homepagecardsection/Homepagecardsection'
 import Howitworks from '../../components/howitworks/howitworks'
 import Meettheeducators from '../../components/Meettheeducators/Meettheeducators'
+import Signupuser from '../../components/Signup-User/Signupuser'
 
 
 
@@ -16,13 +17,14 @@ const Home = () => {
   return (
     
     <>
-    <Header/>
+    {/* <Header />
     <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>
     <Homepagecardsection/>
     <Howitworks/>
-    <Meettheeducators/>
+    <Meettheeducators/> */}
+    <Signupuser/>
 
     </>
   )

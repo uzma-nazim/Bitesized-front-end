@@ -2,8 +2,9 @@
 @import '../../style/globalStyle.scss';
 
 .meettheeducators {
-
+    width: 100%;
     margin-top: 170px;
+
     p {
         // max-width: 500px;
 
@@ -15,16 +16,19 @@
         color: #848692;
     }
 }
-.staff{
+
+.staff {
     margin-top: 52px;
     margin-bottom: 90px;
 
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
 }
+
 .profile {
-   
+
 
     h4 {
         margin-top: 20px;
@@ -47,4 +51,61 @@
     font-size: 14px;
     line-height: 22px;
     color: #848692;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .headingcontainer {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .meettheeducators {
+
+        margin-top: 55px;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .staff {
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .staff {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .profile {
+
+
+        h4 {
+            margin: 20px;
+            font-size: 20px;
+            line-height: 20px;
+
+
+
+        }
+
+        span {
+            font-size: 14px;
+            line-height: 22px;
+            color: #848692;
+            margin: 20px;
+        }
+
+    }
+
 }

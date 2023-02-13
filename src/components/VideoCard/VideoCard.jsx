@@ -7,7 +7,7 @@ import { BsPlayFill } from "react-icons/bs";
 import clock from "../../assets/clock.svg";
 import book from "../../assets/book.svg";
 import ProgressBar from "../ProgressBar/ProgressBar";
-const VideoCard = ({hideprogressbar , lockvideo}) => {
+const VideoCard = ({hideprogressbar , lockvideo , cardWidth}) => {
   const [play, setplay] = useState(false);
 
   const videoPlayer = useRef();
@@ -16,13 +16,13 @@ const VideoCard = ({hideprogressbar , lockvideo}) => {
     setplay(true);
   };
   return (
-    <div className="videoCard">
+    <div className={`videoCard ${cardWidth}`}>
       <div className="video-Box">
         <video className="thumbnail" ref={videoPlayer} poster={thumbnail} width="100%" height="208">
           <source type="video/mp4" src={""} />
         </video>
         {lockvideo ? <div className="playbtnwrapper blacklayer">
-          <div>
+          <div className="lockicon">
             <img src={lock} alt="" />
           </div>
           <p className="smallText2 cardtext">

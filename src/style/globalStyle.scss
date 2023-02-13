@@ -13,10 +13,12 @@ $grey: #a0a0a0;
   font-family: rangeSane;
   src: url(../assets/font/rangesans-medium.ttf);
 }
+
 @font-face {
   font-family: rangeSanebold;
   src: url(../assets/font/rangesans-bold.ttf);
 }
+
 @font-face {
   font-family: rangeSaneregular;
   src: url(../assets/font/rangesans-regular.ttf);
@@ -82,6 +84,7 @@ line-height: 23px;
   color: #141414;
   font-family: rangeSanebold;
 }
+
 .links {
   font-size: 14px;
   font-family: rangeSane;
@@ -238,6 +241,33 @@ line-height: 19px;
   margin-bottom: 20px;
 }
 
+.selectheading {
+  font-family: rangeSanebold;
+  font-size: 32px;
+
+}
+
+.selectpara {
+  font-family: rangeSaneregular;
+  font-size: 16px;
+  color: #818386;
+
+}
+
+
+@media only screen and (max-width: 1306px) {
+
+  .pagecoverheading {
+    max-width: 600px;
+  }
+
+  .homepageheading {
+    font-size: 48px;
+    line-height: 55px;
+  }
+
+}
+
 @media only screen and (max-width: 700px) {
   /*Big smartphones [426px -> 600px]*/
   .heading1 {
@@ -251,6 +281,20 @@ line-height: 19px;
     font-size: 12px;
     padding: 6px 28px;
   }
+
+  .pagecoverheading {
+    max-width: 600px;
+  }
+
+  .homepageheading {
+    font-size: 39px;
+    line-height: 43px;
+  }
+
+  .homepageheading2 {
+    font-size: 33px;
+  }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -270,6 +314,27 @@ line-height: 19px;
     font-size: 12px;
     padding: 4px 23px;
   }
+
+  .pagecoverheading {
+    max-width: 400px;
+  }
+
+  .homepageheading {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  .homepageheading2 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+
+  .homepagepara {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+
 }
 
 .swiper-pagination {

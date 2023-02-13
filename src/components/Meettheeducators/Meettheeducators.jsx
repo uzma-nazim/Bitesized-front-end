@@ -8,7 +8,7 @@ import prof4 from '../../assets/prof4.svg'
 const Meettheeducators = ()=>{
     return(
         <div className="container meettheeducators">
-            <div className="heading">
+            <div className="heading headingcontainer">
                 <h1 className="homepageheading2">
                 Meet The Educators
                 </h1>

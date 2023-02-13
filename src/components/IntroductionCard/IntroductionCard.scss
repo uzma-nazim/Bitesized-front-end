@@ -1,7 +1,610 @@
 
 .introductionvideocard{
     display: flex;
+    justify-content: start;
     flex-wrap: wrap;
     width: 650px;
     margin-top: 40px;
+    gap: 24px;
 }
+
+.purchasebeforeintro{
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .dollarssection{
+      width: 100%;
+    }
+    .purchasevideocard[poster]{
+      width: 100% !important;
+      height: 269px;
+    }
+    .dollars{
+      font-size: 35px;
+    }
+    .purchasecourse{
+      width: 320px;
+    }
+  }
+
+@media only screen and (max-width: 991px) {
+    .purchasebeforeintro{
+        display: block;
+    }
+    .purchasecardnone{
+        display: none;
+      }
+    .dollarssection{
+        position: static;
+        margin-top: 30px;
+        width: 525px;
+        height: 650px;
+    }
+    .purchasevideocard[poster]{
+        width: 100%;
+        object-fit: cover !important;
+    }
+    .oldkids{
+        font-size: 18px;
+    }
+    .dollars{
+        font-size: 41px;
+    }
+    .purchasecourse{
+        width: 480px;
+        font-size: 18px;
+    }
+    .paraLevelup{
+        line-height: 25px;
+        font-weight: 400;
+        font-family: rangeSaneregular;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .forflexprogress{
+        margin: 0px;
+    }
+    .totalrev{
+        margin: 0px;
+    }
+    .introductionvideocard{
+        width: 530px;
+    }
+    .customerRevTop{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .review{
+        font-size: 16px;
+    }
+}
+
+  
+  @media only screen and (max-width: 565px) {
+    .headingDesignBootcamp{
+        font-size: 35px;
+    }
+    .introductionvideocard{
+        width: 526px;
+    }
+    .paraLevelup{
+        font-size: 15px;
+    }
+    .ages{
+        font-size: 18px;
+    }
+    .starrat{
+        width: 15px;
+    }
+    .rating{
+        font-size: 12px;
+    }
+    .peoplenums{
+        font-size: 12px;
+    }
+    .tagsmain button{
+        font-size: 10px;
+    }
+    .purchasebeforeintro{
+        display: flex;
+        justify-content: center;
+    }
+
+    .dollarssection{
+        width: 460px;
+    }
+    .oldkids{
+        font-size: 15px;
+    }
+    .dollars{
+        font-size: 33px;
+    }
+    .purchasecourse{
+        font-size: 16px;
+        width: 420px;
+    }
+    .lessons li{
+        font-size: 16px;
+    }
+    .customerReviews{
+        font-size: 27px;
+    }
+    .ratenums{
+        font-size: 22px;
+    }
+    .rev{
+        font-size: 18px;
+    }
+    .starspacing img{
+        width: 28px;
+    }
+    .forflexprogress p{
+        font-size: 14px;
+    }
+    .profiles{
+        width: 45px;
+    }
+    .userheading p{
+        font-size: 16px;
+    }
+    .userheading img{
+        width: 18px;
+    }
+    .fordaysflex h1{
+        font-size: 14px;
+    }
+    .review{
+        font-size: 15px;
+    }
+  }
+
+
+  @media only screen and (max-width: 556px) {
+    .introductionvideocard{
+        justify-content: center;
+        width: 100%;
+    }
+    .cardWidth{
+        width: 300px !important;
+    }
+    .review{
+        font-size: 14px;
+    }
+    .customerRevTop{
+        
+        flex-direction: column;
+    }
+    .rev{
+        padding-top: 12px;
+    }
+    .starspacing{
+        padding-top: 12px;
+    }
+    .forflexprogress{
+        margin-top: 20px;
+    }
+    .progressbar1{
+        width: 50%;
+    }
+    .progressbar2{
+        width: 50%;
+    }
+    .progressbar3{
+        width: 50%;
+    }
+    .progressbar4{
+        width: 50%;
+    }
+    .progressbar5{
+        width: 50%;
+    }
+  }
+
+
+  @media only screen and (max-width: 499px) {
+    .headingDesignBootcamp{
+        font-size: 32px;
+    }
+    .introductionvideocard{
+        justify-content: center;
+        width: 100%;
+    }
+    .cardWidth{
+        width: 300px !important;
+    }
+    .rev{
+        padding-top: 12px;
+    }
+    .starspacing{
+        padding-top: 12px;
+    }
+    .paraLevelup{
+        font-size: 15px;
+    }
+    .ages{
+        font-size: 14px;
+    }
+    .starrat{
+        width: 15px;
+    }
+    .rating{
+        font-size: 11px;
+    }
+    .peoplenums{
+        font-size: 12px;
+    }
+    .profileChoose{
+        width: 27px;
+    }
+
+    .dollarssection{
+        width: 400px;
+    }
+    .oldkids{
+        font-size: 14px;
+    }
+    .dollars{
+        font-size: 30px;
+    }
+    .purchasecourse{
+        font-size: 14px;
+        width: 360px;
+    }
+    .lessons li{
+        font-size: 14px;
+    }
+    .customerReviews{
+        font-size: 25px;
+    }
+
+    .ratenums{
+        font-size: 20px;
+    }
+    .rev{
+        font-size: 16px;
+    }
+    .starspacing img{
+        width: 25px;
+    }
+    .forflexprogress p{
+        font-size: 13px;
+    }
+    
+    .profiles{
+        width: 45px;
+    }
+    .userheading p{
+        font-size: 15px;
+    }
+    .userheading img{
+        width: 16px;
+    }
+    .fordaysflex h1{
+        font-size: 13px;
+    }
+    .review{
+        font-size: 14px;
+    }
+    .roundedbluebtn{
+        font-size: 11px;
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+    .headingDesignBootcamp{
+        font-size: 29px;
+        line-height: 35px;
+    }
+    .introductionvideocard{
+        justify-content: center;
+        width: 100%;
+    }
+    .cardWidth{
+        width: 300px !important;
+    }
+    .rev{
+        padding-top: 12px;
+    }
+    .starspacing{
+        padding-top: 12px;
+    }
+    .paraLevelup{
+        font-size: 14px;
+    }
+    .ages{
+        font-size: 13px;
+    }
+    .starrat{
+        width: 14px;
+    }
+    .rating{
+        font-size: 10px;
+    }
+    .peoplenums{
+        font-size: 11px;
+    }
+    .profileChoose{
+        width: 25px;
+    }
+
+    .dollarssection{
+        width: 380px;
+    }
+    .oldkids{
+        font-size: 14px;
+    }
+    .dollars{
+        font-size: 27px;
+    }
+    .purchasecourse{
+        font-size: 14px;
+        width: 335px;
+    }
+    .lessons li{
+        font-size: 14px;
+    }
+    .customerReviews{
+        font-size: 24px;
+    }
+
+    .ratenums{
+        font-size: 18px;
+    }
+    .rev{
+        font-size: 16px;
+    }
+    .starspacing img{
+        width: 22px;
+    }
+    .forflexprogress p{
+        font-size: 13px;
+    }
+    
+    .review{
+        font-size: 12px;
+        line-height: 21px;
+    }
+  }
+
+  @media only screen and (max-width: 423px) {
+    .headingDesignBootcamp{
+        font-size: 27px;
+    }
+    .introductionvideocard{
+        justify-content: center;
+        width: 100%;
+    }
+    .cardWidth{
+        width: 300px !important;
+    }
+    .rev{
+        padding-top: 12px;
+    }
+    .starspacing{
+        padding-top: 12px;
+    }
+    .paraLevelup{
+        font-size: 14px;
+    }
+    .ages{
+        font-size: 13px;
+    }
+    .starrat{
+        width: 14px;
+    }
+    .rating{
+        font-size: 10px;
+    }
+    .peoplenums{
+        font-size: 11px;
+    }
+    .profileChoose{
+        width: 25px;
+    }
+
+    .dollarssection{
+        width: 340px;
+    }
+    .oldkids{
+        font-size: 13px;
+    }
+    .dollars{
+        font-size: 25px;
+    }
+    .purchasecourse{
+        font-size: 13px;
+        width: 300px;
+    }
+    .lessons li{
+        font-size: 14px;
+    }
+    .customerReviews{
+        font-size: 23px;
+    }
+
+    .ratenums{
+        font-size: 18px;
+    }
+    .rev{
+        font-size: 15px;
+    }
+    .starspacing img{
+        width: 22px;
+    }
+    .forflexprogress p{
+        font-size: 12px;
+    }
+    
+    .review{
+        font-size: 14px;
+    }
+    .roundedbluebtn{
+        font-size: 11px;
+    }
+  }
+
+  @media only screen and (max-width: 395px) {
+    .headingDesignBootcamp{
+        font-size: 25px;
+    }
+    .introductionvideocard{
+        justify-content: center;
+        width: 100%;
+    }
+    .cardWidth{
+        width: 300px !important;
+    }
+    .rev{
+        padding-top: 12px;
+    }
+    .starspacing{
+        padding-top: 12px;
+    }
+    .paraLevelup{
+        font-size: 13px;
+    }
+    .ages{
+        font-size: 12px;
+    }
+    .starrat{
+        width: 13px;
+    }
+    .rating{
+        font-size: 9px;
+    }
+    .peoplenums{
+        font-size: 10px;
+    }
+    .profileChoose{
+        width: 22px;
+    }
+
+    .dollarssection{
+        width: 320px;
+    }
+    .oldkids{
+        font-size: 12px;
+    }
+    .dollars{
+        font-size: 23px;
+    }
+    .purchasecourse{
+        font-size: 13px;
+        width: 280px;
+        height: 45px;
+    }
+    .lessons li{
+        font-size: 13px;
+    }
+    .customerReviews{
+        font-size: 22px;
+    }
+
+    .ratenums{
+        font-size: 17px;
+    }
+    .rev{
+        font-size: 14px;
+    }
+    .starspacing img{
+        width: 20px;
+    }
+    .forflexprogress p{
+        font-size: 11px;
+    }
+    
+    .review{
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .headingDesignBootcamp{
+        font-size: 21px;
+        line-height: 25px;
+    }
+    .introductionvideocard{
+        justify-content: center;
+        width: 100%;
+    }
+    .cardWidth{
+        width: 300px !important;
+    }
+    .rev{
+        padding-top: 12px;
+    }
+    .starspacing{
+        padding-top: 12px;
+    }
+    .paraLevelup{
+        font-size: 12px;
+    }
+    .ages{
+        font-size: 12px;
+    }
+    .starrat{
+        width: 13px;
+    }
+    .rating{
+        font-size: 9px;
+    }
+    .peoplenums{
+        font-size: 10px;
+    }
+    .profileChoose{
+        width: 22px;
+    }
+    .viewInstructor{
+        font-size: 12px;
+    }
+
+    .dollarssection{
+        width: 270px;
+    }
+    .oldkids{
+        font-size: 11px;
+    }
+    .dollars{
+        font-size: 21px;
+    }
+    .shareicon button{
+        margin-top: 10px;
+    }
+    .shareicon img{
+        width: 32px;
+    }
+    .purchasecourse{
+        font-size: 12px;
+        width: 240px;
+    }
+    .lessons li{
+        font-size: 12px;
+    }
+    .customerReviews{
+        font-size: 20px;
+    }
+
+    .ratenums{
+        font-size: 18px;
+    }
+    .rev{
+        font-size: 14px;
+    }
+    .starspacing img{
+        width: 20px;
+    }
+    .forflexprogress p{
+        font-size: 12px;
+    }
+    
+    .review{
+        font-size: 12px;
+    }
+    .roundedbluebtn{
+        font-size: 9px;
+        padding: 10px 30px;
+    }
+  }

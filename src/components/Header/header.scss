@@ -74,7 +74,7 @@ $blue: #5da9e9;
     .header-link {
         a{
 
-            font-size: 13px !important;
+            font-size: 10px !important;
         }
 
         li {
@@ -84,4 +84,25 @@ $blue: #5da9e9;
         }
 
     }
+}
+@media only screen and (max-width: 425px){
+    .textadjust{
+      min-width: 73px;
+      padding: 3px;
+      font-size: 12px;
+    }
+    li a{
+      font-size: 1px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+  
+  .header-link {
+      a{
+
+          font-size: 8px !important;
+      }
+
+  }
 }

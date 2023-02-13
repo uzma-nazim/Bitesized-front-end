@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     gap: 24px;
+
 }
 
 .box {
@@ -18,12 +19,73 @@
     border-radius: 14px;
     background: #FFFFFF;
     padding: 24px;
+    position: relative;
 }
 
 .star {
-    position: relative;
+    position: absolute;
     width: 108px;
     height: 108px;
-    left: 160px;
-    top: 35px;
+    right: 0px;
+    bottom: -54px;
+
+}
+
+.box-text {
+    font-size: 44px;
+    line-height: 48px;
+    font-family: rangeSane;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .block-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .box-text {
+        font-size: 34px;
+    }
+
+    .star {
+        right: 0px;
+        bottom: -45px;
+        z-index: 1;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .box {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .block-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 58px;
+    }
+
+    .box-text {
+        font-size: 34px;
+    }
+
+    .star {
+        right: 0px;
+        bottom: -45px;
+        z-index: 1;
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .box {
+        height: 200px;
+    }
 }

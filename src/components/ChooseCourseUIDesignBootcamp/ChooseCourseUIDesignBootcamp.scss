@@ -1,9 +1,15 @@
 @import "../../style/colors";
 
+.topsmallheading{
+  display: flex;
+  gap: 10px;
+  color: $pink;
+}
+
 
 .maindiv{
     background: rgba(93, 169, 233, 0.08);
-    height: 430px;
+    height: 453px;
 }
 
 .forflex{
@@ -29,7 +35,7 @@
     font-size: 40px;
     line-height: 48px;
     font-weight: bold;
-    max-width: 90vh;
+    max-width: 550px;
     padding: 5px 0px;
   font-family: rangeSanebold;
 }
@@ -37,12 +43,16 @@
 .paraLevelup{
     color: $darkgrey;
     font-size: 16px;
-    line-height: 19px;
-    max-width: 85vh;
+    line-height: 25px;
+    max-width: 520px;
     padding: 5px 0px;
-    font-weight: 500;
-  font-family: rangeSane;
+    font-weight: 400;
+    font-family: rangeSaneregular;
 
+}
+
+.starrat{
+  width: 19px;
 }
 
 .ages{
@@ -54,13 +64,31 @@
     font-family: rangeSanebold;
 }
 
+.forflexstarsandrating{
+  display: flex;
+  margin-top: 4px;
+  padding-bottom: 3px;
+}
+
+.sta{
+  padding-right: 3px;
+}
+
 .rating{
     color:$textColor;
     font-size: 13px;
     line-height: 15px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 5px 0px;
   font-family: rangeSane;
+}
+.peoplenums{
+  color:$textColor;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 600;
+  font-family: rangeSane;
+  padding-bottom: 7px;
 }
 
 .viewInstructor{
@@ -77,12 +105,12 @@
 }
 
 .tagsmain button{
-    border-radius: 4px;
-    padding: 4px 12px;
+    border-radius: 5px;
+    padding: 5px 12px 4px 12px;
     background-color: $CreamWhite;
     color: $blue;
     font-size: 11px;
-    margin-right: 8px;
+    margin-right: 10px;
     border: none;
   font-family: rangeSane;
 }
@@ -104,8 +132,8 @@
 
 .dollarssection{
     position: relative;
-    top: 70px;
-    height: 700px;
+    top: 100px;
+    height: 750px;
     background-color: $CreamWhite;
     box-shadow: 0px 8px 30px rgba(44, 63, 88, 0.15);
     border-radius: 8px;
@@ -118,6 +146,19 @@
     text-align: center;
   font-family: rangeSane;
   padding: 10px 0px;
+}
+
+.shareicon{
+  display: flex;
+  justify-content: space-between;
+}
+
+.shareicon button{
+  border: none;
+  height: fit-content;
+  border-radius: 50%;
+  margin-top: 7px;
+  margin-right: 20px;
 }
 
 .dollars{
@@ -140,26 +181,63 @@
     color: $CreamWhite;
     border-radius: 25px;
     border: none;
-    width: 52vh;
+    width: 400px;
     height: 50px;
   font-family: rangeSane;
 }
 
 .lessons li{
     padding-bottom: 10px;
+    word-spacing: 5px;
+    font-size: 17px;
+    line-height: 21px;
+  font-family: rangeSane;
+    color: $darkgrey;
 }
 
-.lessons{
-    font-size: 18px;
-    line-height: 21px;
-    color: $darkgrey;
-    list-style: none;
+.lessons li::marker{
+  font-size: 10px;
+}
+
+.lessons{    
     padding-top: 20px;
-    font-family: rangeSanebold;
 }
 
 .purchasevideocard{
     border-top-right-radius: 7px ;
     border-top-left-radius: 7px ;
     border: 2px solid $blue;
+    width: 100%;
+    height: 276px;
+
 }
+
+.purchasevideocard[poster]{
+  width: 100% !important;
+  height: 332px;
+  border-radius: 5px;
+}
+
+.forplayicon{
+  position: relative;
+}
+
+.playicon{
+  width: 100%;
+  height: 98%;
+  position: absolute;
+  background-color: rgba(0, 0, 0,0.2);
+
+  img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// ============================
+

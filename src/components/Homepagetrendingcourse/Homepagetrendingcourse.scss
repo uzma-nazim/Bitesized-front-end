@@ -2,17 +2,43 @@
 @import '../../style/globalStyle.scss';
 
 
-.course-section{
+.course-section {
 
     margin-top: 205px;
     // border: 1px solid black;
 }
-.heading-sec{
-    width: 637px;
+
+.heading-sec {
+    width: 100%;
     margin: auto;
 }
-.trendingcoursepara{
+
+.trendingcoursepara {
     margin-top: 10px;
     font-family: rangeSaneregular;
     font-weight: 500;
+}
+
+.para-sec {
+    // width: 80%;
+    max-width: 650px;
+    margin: auto;
+}
+@media only screen and (max-width: 768px) {
+    .course-section {
+
+        margin-top: 105px;
+        // border: 1px solid black;
+    }
+    
+    
+}
+@media only screen and (max-width: 425px) {
+
+    .course-section {
+
+        margin-top: 83px;
+        // border: 1px solid black;
+    }
+    
 }

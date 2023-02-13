@@ -53,8 +53,12 @@ $yellow: #ffff00;
   width: 100%;
   height: 98%;
   border-radius: 4px;
-  background-color: rgba(0, 0, 0,0.7);
+  background-color: rgba(0, 0, 0,0.6);
 
+}
+
+.lockicon{
+  padding-bottom: 7px;
 }
 
 .cardtext{
@@ -94,4 +98,9 @@ $yellow: #ffff00;
     display: flex;
     gap: 14px   ;
     margin-top: 12px;
+}
+
+.cardWidth{
+  width: 250px !important;
+  margin: 0px !important;
 }

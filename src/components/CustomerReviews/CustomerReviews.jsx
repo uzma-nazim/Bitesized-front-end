@@ -72,8 +72,10 @@ export const CustomerReviews = () => {
         
         </div>
     </div>
+    <div className="paddingforrev">
     <Reviews picture={devon} name="Devon Lane" date="3 dasy ago" />
     <Reviews picture={Albert} name="Albert Flores" date="19 aug 2022" />
+    </div>
     <button className="roundedbluebtn">
         See More
       </button>
