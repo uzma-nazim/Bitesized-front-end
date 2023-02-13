@@ -10,6 +10,7 @@ import Homepagecardsection from '../../components/Homepagecardsection/Homepageca
 import Howitworks from '../../components/howitworks/howitworks'
 import Meettheeducators from '../../components/Meettheeducators/Meettheeducators'
 import Signupuser from '../../components/Signup-User/Signupuser'
+import Signupuserform from '../../components/Signupuserform/Signupuserform'
 
 
 
@@ -17,13 +18,14 @@ const Home = () => {
   return (
     
     <>
-    <Header />
-    <HomePageCover/>
-    <HomePageBlocksection/>
-    <Homepagetrendingcourse/>
-    <Homepagecardsection/>
-    <Howitworks/>
-    <Meettheeducators/>
+    {/* <Header /> */}
+    {/* <HomePageCover/> */}
+    {/* <HomePageBlocksection/> */}
+    {/* <Homepagetrendingcourse/> */}
+    {/* <Homepagecardsection/> */}
+    {/* <Howitworks/> */}
+    {/* <Meettheeducators/> */}
+    <Signupuserform name={"Educator"}/>
 
     </>
   )
