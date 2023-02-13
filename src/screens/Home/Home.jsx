@@ -17,14 +17,13 @@ const Home = () => {
   return (
     
     <>
-    {/* <Header />
+    <Header />
     <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>
     <Homepagecardsection/>
     <Howitworks/>
-    <Meettheeducators/> */}
-    <Signupuser/>
+    <Meettheeducators/>
 
     </>
   )

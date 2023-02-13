@@ -24,9 +24,9 @@ export const PurchasingCard = () => {
               <p className="oldkids">For 8-10 years old kids.</p>
               <div className="shareicon">
                 <p className="dollars">$100.00</p>
-                <button>
+                {/* <button> */}
                   <img src={shareicon} alt="" />
-                </button>
+                {/* </button> */}
               </div>
               <div className="purchase">
                 <button className="purchasecourse">Purchase Course</button>

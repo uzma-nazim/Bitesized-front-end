@@ -231,11 +231,12 @@ line-height: 19px;
 }
 
 .roundedbluebtn {
+  padding: 10px 35px !important;
+
   background-color: $blue;
   color: $CreamWhite;
   border-radius: 12px;
   border: none;
-  padding: 10px 35px;
   font-size: 14px;
   font-family: rangeSanebold;
   margin-bottom: 20px;
@@ -298,6 +299,11 @@ line-height: 19px;
 }
 
 @media only screen and (max-width: 500px) {
+  .roundedbluebtn {
+    padding: 8px 21px !important;
+    border-radius: 9px;
+    font-size: 11px;
+  }  
   .bluebutton{
     
     min-width: 96px;

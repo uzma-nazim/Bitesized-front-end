@@ -73,6 +73,7 @@
         width: 530px;
     }
     .customerRevTop{
+        padding-left: 22px;
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
@@ -605,6 +606,6 @@
     }
     .roundedbluebtn{
         font-size: 9px;
-        padding: 10px 30px;
+        padding: 10px 30px !important;
     }
   }
