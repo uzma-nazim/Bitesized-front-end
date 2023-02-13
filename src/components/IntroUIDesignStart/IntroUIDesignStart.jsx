@@ -15,7 +15,7 @@ import coursesetting from "../../assets/coursesetting.svg";
 const IntroUIDesignStart = () => {
   return (
     <div className="container">
-      <div className="link-container">
+      <div className="link-container linkspadding">
         <a className="links" href="">
           Design
         </a>
@@ -62,8 +62,8 @@ const IntroUIDesignStart = () => {
         </div>
 
         <div>
-          <p className="lessontime">6 Lessons (20h 10m)</p> <hr />
-
+          <p className="lessontime">6 Lessons (20h 10m)</p>
+          <div className="forgreyline"></div>
           <p className="lessonintro">Introduction</p>
           <div className="howtodoeverythingflex2">
             <img src={howtodoeverything} alt="" />
