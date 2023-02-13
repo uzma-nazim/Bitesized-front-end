@@ -15,15 +15,19 @@
 }
 
 .linkspadding{
-    margin-bottom: 10px !important;
+    margin-bottom: 11px !important;
 }
 
 .uidesignpara{
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 25px;
     color: $darkgrey;
-    max-width: 760px;
+    max-width: 750px;
     font-family: rangeSaneregular;
+}
+
+.mainlesson{
+    margin-left: -8px;
 }
 
 .lessontime{
@@ -31,12 +35,12 @@
     line-height: 22px;
     font-family: rangeSanebold;
     margin-top: 25px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .forgreyline{
     background-color: #E9EDF1;
-    width: 328px;
+    width: 338px;
     height: 1px;
     margin-top: 12px;
     margin-bottom: 10px;
@@ -44,25 +48,25 @@
 
 .howtodoeverythingflex2{
     display: flex;
-    gap: 10px;
+    gap: 13px;
 }
 
 .howtodoeverythingflex{
     display: flex;
-    gap: 10px;
+    gap: 13px;
     padding-bottom: 20px;
 }
 
 .howtodoeverythingflex2 img{
     width: 50px;
     height: 50px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .howtodoeverythingflex img{
     width: 50px;
     height: 50px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .lessonintro{
@@ -71,7 +75,7 @@
   font-family: rangeSanebold;
   color: #808281;
   padding-bottom: 30px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .lessonintro2{
@@ -81,7 +85,7 @@
   color: #808281;
   padding-bottom: 30px;
   padding-top: 20px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .bolding{
@@ -97,4 +101,156 @@
     line-height: 20px;
     font-weight: 500;
     color: #808281;
+}
+
+.paddingforpara{
+    padding-top: 20px ;
+}
+
+// ==========================
+
+@media only screen and (max-width: 992px) {
+    .introUIflex{
+        flex-direction: column;
+    }
+    .forgreyline{
+        width: 710px !important; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .forgreyline{
+        width: 530px !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .linkspadding{
+        margin-bottom: 5px !important;
+    }
+    .introtoUIthumbnail{
+        margin-top: 14px !important;
+        margin-bottom: 12px !important;
+    }
+    .paddingforpara{
+        padding-top: 8px ;
+    }
+    .lessonintro{
+        padding-bottom: 18px;
+    }
+    .lessonintro2{
+        padding-bottom: 18px;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .forgreyline{
+        width: 480px !important;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .uidesignpara{
+        font-size: 15px;
+        max-width: 452px;
+    }
+    .forgreyline{
+        width: 440px !important;
+    }
+}
+
+@media only screen and (max-width: 449px) {
+    .forgreyline{
+        width: 370px !important;
+    }
+    .links{
+        font-size: 11px;
+    }
+    .introui{
+        font-size: 16px;
+    }
+    .lessontime{
+        font-size: 14px;
+    }
+    .lessonintro{
+        font-size: 15px;
+    }
+    .lessonintro2{
+        font-size: 15px;
+    }
+    .howtodoeverythingflex2 img{
+        width: 45px;
+        height: 45px;
+    }
+    .howtodoeverythingflex img{
+        width: 45px;
+        height: 45px;
+    }
+    .bolding{
+        font-size: 14px;
+    }
+    .forgrey{
+        font-size: 12px;
+    }
+    .introtoUIthumbnail{
+        margin-top: 7px !important;
+        margin-bottom: 10px !important;
+    }
+    .uidesignpara{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .forgreyline{
+        width: 300px !important;
+    }
+    .introui{
+        font-size: 14px;
+    }
+    .uidesignpara{
+        font-size: 13px !important;
+        line-height: 18px;
+    }
+    .lessontime{
+        font-size: 13px;
+    }
+    .lessonintro{
+        font-size: 14px;
+    }
+    .lessonintro2{
+        font-size: 14px;
+    }
+    .howtodoeverythingflex2 img{
+        width: 40px;
+        height: 40px;
+    }
+    .howtodoeverythingflex img{
+        width: 40px;
+        height: 40px;
+    }
+    .bolding{
+        font-size: 13px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 323px) {
+    .forgreyline{
+        width: 280px;
+    }
+    .links{
+        font-size: 10px;
+    }
+    .introtoUIthumbnail{
+        margin-top: 14px;
+        margin-bottom: 22px;
+    }
+    
+    .howtodoeverythingflex{
+        margin-bottom: 2px;
+    }
+    .howtodoeverythingflex2{
+        margin-bottom: 2px;
+    }
 }

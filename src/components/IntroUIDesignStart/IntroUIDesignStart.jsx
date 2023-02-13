@@ -40,7 +40,7 @@ const IntroUIDesignStart = () => {
       <div className="introUIflex">
 
         <div>
-          <h1 className="heading3">Introduction to User Interface Design</h1>
+          <h1 className="heading3 introui">Introduction to User Interface Design</h1>
           <video 
           className="introtoUIthumbnail"
           poster={introtoUIthumbnail}
@@ -53,7 +53,8 @@ const IntroUIDesignStart = () => {
             user expectations. If your team is designing a travel app, it’s
             important to research how other travel apps have been developed in
             the past. Which ones worked? Which ones didn’t? There are design
-            lessons to be learned from the work others have done before.  <br /><br />
+            lessons to be learned from the work others have done before. </p>
+            <p className="uidesignpara paddingforpara">
             Research might indicate that people prefer outlined icons instead of
             bold shapes. This is a visual shorthand that people are comfortable
             with and enjoy. UI designers would then do well to incorporate that
@@ -61,7 +62,7 @@ const IntroUIDesignStart = () => {
           </p>
         </div>
 
-        <div>
+        <div className="mainlesson">
           <p className="lessontime">6 Lessons (20h 10m)</p>
           <div className="forgreyline"></div>
           <p className="lessonintro">Introduction</p>
