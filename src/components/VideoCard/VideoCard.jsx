@@ -7,7 +7,9 @@ import { BsPlayFill } from "react-icons/bs";
 import clock from "../../assets/clock.svg";
 import book from "../../assets/book.svg";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import { useNavigate } from "react-router-dom";
 const VideoCard = ({hideprogressbar , lockvideo , cardWidth}) => {
+  const navigate = useNavigate()
   const [play, setplay] = useState(false);
 
   const videoPlayer = useRef();
@@ -16,7 +18,7 @@ const VideoCard = ({hideprogressbar , lockvideo , cardWidth}) => {
     setplay(true);
   };
   return (
-    <div className={`videoCard ${cardWidth}`}>
+    <div onClick={()=>navigate("/course-vidoe")} className={`videoCard ${cardWidth}`}>
       <div className="video-Box">
         <video className="thumbnail" ref={videoPlayer} poster={thumbnail} width="100%" height="208">
           <source type="video/mp4" src={""} />

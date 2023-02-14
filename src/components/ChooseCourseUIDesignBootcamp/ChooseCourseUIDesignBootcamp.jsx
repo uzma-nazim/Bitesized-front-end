@@ -8,8 +8,10 @@ import onlystar from "../../assets/onlystar.svg";
 import shareicon from "../../assets/shareicon.svg";
 import playicon from "../../assets/playicon.svg";
 import PurchasingCard from "../PurchasingCard/PurchasingCard";
+import { useNavigate } from "react-router-dom";
 
 const ChooseCourseUIDesignBootcamp = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="maindiv">
@@ -54,7 +56,7 @@ const ChooseCourseUIDesignBootcamp = () => {
                 </div>
               </div>
               <p className="peoplenums">100 Peoples Reviews</p>
-              <p className="paraLevelup">
+              <p onClick={()=>navigate("/user-profile")} className="paraLevelup">
                 <img className="profileChoose" src={profile} alt="" /> Esther
                 Howard <img className="dot" src={dot} alt="" />{" "}
                 <span className="viewInstructor">View Instructor Profile</span>

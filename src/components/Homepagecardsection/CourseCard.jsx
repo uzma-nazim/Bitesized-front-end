@@ -9,11 +9,13 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import profile from '../../assets/profile2.png'
 import dot from '../../assets/Ellipse 388.svg'
 import rating from '../../assets/Ratings.svg'
+import { useNavigate } from 'react-router-dom';
 
 
 const CourseCard = () => {
+    const navigate = useNavigate()
     return (
-        <div className="videoCard">
+        <div onClick={()=>navigate("/choose-course-user")} className="videoCard">
             <div className="video-Box">
                 <video  poster={thumbnail} width="100%" height="208">
                     <source type="video/mp4" src={""} />

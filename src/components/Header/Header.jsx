@@ -1,49 +1,80 @@
-import React from 'react'
-import "../../style/globalStyle.scss"
-import "./header.scss"
-import profile from "../../assets/profile.png"
+import React from "react";
+import "../../style/globalStyle.scss";
+import "./header.scss";
+import profile from "../../assets/profile.png";
+import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 const Header = ({ userLogin }) => {
+  const navigate = useNavigate();
   return (
     <>
-      {userLogin ?
+      {userLogin ? (
         <>
-          <div className='headerContainer container'>
+          <div className="headerContainer container">
             <div>
-              <h1 className='logo'>Bitesized</h1>
+              <h1 className="logo">Bitesized</h1>
             </div>
-            <div className='header-link'>
-
+            <div className="header-link">
               <ul>
-                <li><a href="">Home</a></li>
-                <li ><a className='activeLink' href="">My Courses</a></li>
-                <li><img src={profile} alt="" /></li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "activeLink" : undefined
+                    }
+                    to={"/"}
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/my-courese"}
+                    className={({ isActive }) =>
+                      isActive ? "activeLink" : undefined
+                    }
+                  >
+                    My Courses
+                  </NavLink>
+                </li>
+                <li>
+                  <img src={profile} alt="" />
+                </li>
               </ul>
-
-
             </div>
           </div>
         </>
-        :
+      ) : (
         <>
           <div className="container headerContainer">
             <div>
-              <h1 className='logo'>Bitesized</h1>
+              <h1 className="logo">Bitesized</h1>
             </div>
-            <div className='header-link'>
-
+            <div className="header-link">
               <ul>
-                <li><a href="">Sign Up as a Educator</a></li>
-                <li><button className='bluebutton textadjust'>Sign Up</button></li>
-                
+                <li>
+                  <NavLink
+                    to={"/aducator-signup"}
+                    className={({ isActive }) =>
+                      isActive ? "activeLink" : undefined
+                    }
+                  >
+                    Sign Up as a Educator
+                  </NavLink>
+                </li>
+                <li>
+                  <button
+                    onClick={() => navigate("/sign-up")}
+                    className="bluebutton textadjust"
+                  >
+                    Sign Up
+                  </button>
+                </li>
               </ul>
-
-
             </div>
           </div>
-        </>}
-
+        </>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
