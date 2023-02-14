@@ -46,10 +46,10 @@ const Signupuserform = (props) => {
                                 <img src={hide} alt="" />
                             </div>
                             <div className="passcheckfield">
+                                <div className="filed1 "></div>
                                 <div className="filed1"></div>
-                                <div className="filed1"></div>
-                                <div className="filed1"></div>
-                                <div className="filed1"></div>
+                                <div className="filed1 light-white"></div>
+                                <div className="filed1 light-white"></div>
                             </div>
                             <span>Use 8 or more characters with a mix of letters, numbers & symbols.</span>
                             <p>Confirm Password</p>

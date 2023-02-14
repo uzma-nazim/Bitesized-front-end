@@ -7,12 +7,179 @@
     align-items: center;
 }
 
+.mainrateusercenter{
+    text-align: center;
+}
+
+.whitestargap{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 12px;
+}
+
+.whitestargap img{
+    width: 50px;
+}
+
 .tellushow{
     font-size: 32px;
     line-height: 37px;
   font-family: rangeSanebold;
+  margin-top: 35px;
 }
 
-.forflexfourcolumn{
-    display: flex;
+.textareaforratecourse{
+    border-radius: 8px;
+    background-color: #F2F5FA;
+    border: none;
+    padding-left: 15px;
+    padding-top: 15px;
+    width: 430px;
+    height:120px;
+}
+
+.textareaforratecourse::placeholder{
+    font-size: 15px;
+    line-height: 17px;
+    color: #929292;
+}
+
+.textareaforwritecomment{
+    margin-top: 40px;
+    
+}
+
+.submitreview{
+    background-color: $blue;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: rangeSane;
+    width: 429px;
+    height: 37px;
+    border: none;
+    border-radius: 37px;
+    margin-top: 12px;
+}
+
+.watchnext{
+    font-size: 14px;
+    line-height: 16px;
+    font-family: rangeSane;
+    color: #FF7477;
+    border: none;
+    margin: 30px 0px;
+    background-color: white;
+}
+
+.navlinkpadding{
+    margin-bottom: 30px;
+}
+
+.takemeback{
+    font-family: rangeSane;
+    font-size: 15px;
+    line-height: 17px;
+    color: #818386;
+}
+
+.spancourse{
+    font-family:"Poppins";
+    font-size: 15px;
+    line-height: 22px;
+    color: #0B1F22;
+    font-weight: 600;
+
+}
+
+// ==================================
+
+@media only screen and (max-width: 992px) {
+    .tellushow{
+        font-size: 28px;
+    }
+    .whitestargap{
+        margin-top: 30px;
+    }
+    .textareaforwritecomment{
+        margin-top: 35px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .whitestargap{
+        margin-top: 18px;
+    }
+    .textareaforwritecomment{
+        margin-top: 30px;
+    }
+   
+}
+
+@media only screen and (max-width: 480px) {
+    .whitestargap img{
+        width: 45px;
+    }
+    .textareaforratecourse{
+        width: 380px;
+    }
+    .submitreview{
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .tellushow{
+        font-size: 22px;
+    }
+    .whitestargap img{
+        width: 35px;
+    }
+    .textareaforratecourse{
+        width: 320px;
+    }
+    .textareaforratecourse::placeholder{
+        font-size: 13px;
+    }
+    .submitreview{
+        width: 320px;
+        font-size: 12px;
+    }
+    .watchnext{
+        font-size: 12px;
+    }
+    .takemeback{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .tellushow{
+        font-size: 18px;
+    }
+    .whitestargap img{
+        width: 25px;
+    }
+    .whitestargap{
+        margin-top: 7px;
+    }
+    .textareaforratecourse{
+        width: 280px;
+    }
+    .textareaforratecourse::placeholder{
+        font-size: 12px;
+    }
+    .submitreview{
+        width: 280px;
+        font-size: 12px;
+    }
+    .takemeback{
+        font-size: 12px;
+    }
+    .spancourse{
+        font-size: 12px;
+    }
+    .textareaforwritecomment{
+        margin-top: 20px;
+    }
 }

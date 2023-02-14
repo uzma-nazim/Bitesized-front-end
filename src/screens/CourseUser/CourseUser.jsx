@@ -6,7 +6,7 @@ import Header from '../../components/Header/Header'
 const CourseUser = () => {
   return (
     <>
-    <Header/>
+    <Header userLogin/>
     <CourseUserProfile/>
     <CourseTabs/>
     </>

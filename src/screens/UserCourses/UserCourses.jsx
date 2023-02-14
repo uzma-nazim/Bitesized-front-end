@@ -7,7 +7,7 @@ const UserCourses = () => {
   return (
     <>
     
-    <Header userLogin/>
+    <Header  userLogin/>
     
 
     <MybiteSizedCourse/>

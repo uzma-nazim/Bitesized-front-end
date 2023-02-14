@@ -18,14 +18,13 @@ const Home = () => {
   return (
     
     <>
-    {/* <Header /> */}
-    {/* <HomePageCover/> */}
-    {/* <HomePageBlocksection/> */}
-    {/* <Homepagetrendingcourse/> */}
-    {/* <Homepagecardsection/> */}
-    {/* <Howitworks/> */}
-    {/* <Meettheeducators/> */}
-    <Signupuserform name={"Educator"}/>
+    <Header  />
+    <HomePageCover/>
+    <HomePageBlocksection/>
+    <Homepagetrendingcourse/>
+    <Homepagecardsection/>
+    <Howitworks/>
+    <Meettheeducators/>
 
     </>
   )

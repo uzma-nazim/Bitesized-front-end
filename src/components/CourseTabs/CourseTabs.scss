@@ -85,9 +85,12 @@
   }
 }
 @media only screen and (max-width: 551px) {
-  button {
-    font-size: 12px !important;
-    padding: 10px 4px !important;
+  .nav-item {
+
+    button {
+      font-size: 12px !important;
+      padding: 10px 4px !important;
+    }
   }
 }
 
