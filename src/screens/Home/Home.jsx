@@ -11,6 +11,7 @@ import Howitworks from '../../components/howitworks/howitworks'
 import Meettheeducators from '../../components/Meettheeducators/Meettheeducators'
 import Signupuser from '../../components/Signup-User/Signupuser'
 import Signupuserform from '../../components/Signupuserform/Signupuserform'
+import Createprofileeducator from '../../components/Createprofileeducator/Createprofileeducator'
 
 
 
@@ -18,13 +19,14 @@ const Home = () => {
   return (
     
     <>
-    <Header  />
-    <HomePageCover/>
+    <Header userLogin  />
+    {/* <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>
     <Homepagecardsection/>
     <Howitworks/>
-    <Meettheeducators/>
+    <Meettheeducators/> */}
+    <Createprofileeducator/>
 
     </>
   )
