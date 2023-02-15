@@ -8,6 +8,7 @@ import Signup from "./screens/Signup/Signup";
 import IntroToUIDesign from "./screens/IntroToUIDesign/IntroToUIDesign";
 import LeanerSignup from "./screens/LeanerSignup/LeanerSignup";
 import EducatorSignup from "./screens/EducatorSignup/EducatorSignup";
+import CreateEducatorProfile from "./screens/CreateEducatorProfile/CreateEducatorProfile";
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/course-video" element={<IntroToUIDesign/>} />
           <Route exact path="/learner-signup" element={<LeanerSignup/>} />
           <Route exact path="/aducator-signup" element={<EducatorSignup/>} />
+          <Route exact path="/create-profile" element={<CreateEducatorProfile/>} />
           
         </Routes>
       </BrowserRouter>

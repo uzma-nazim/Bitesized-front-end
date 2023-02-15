@@ -72,6 +72,15 @@ form{
     border: 1px solid #B4B4B4;
     resize: none;
 }
+.decription1::placeholder{
+    color:  #B4B4B4 !important;
+    font-weight: 400;
+font-size: 15px;
+line-height: 22px;
+font-family: "Poppins", sans-serif;
+
+}
+
 
 .decription2 {
     padding: 12px 16px;
@@ -82,7 +91,6 @@ form{
     border: 1px solid #B4B4B4;
     resize: none;
 }
-
 .decription3 {
     padding: 12px 16px;
     gap: 8px;

@@ -3,7 +3,7 @@ import "../../style/globalStyle.scss";
 import "./header.scss";
 import profile from "../../assets/profile.png";
 import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
-const Header = ({ userLogin }) => {
+const Header = ({ userLogin, educatorLogin }) => {
   const navigate = useNavigate();
   return (
     <>
@@ -39,6 +39,33 @@ const Header = ({ userLogin }) => {
                   <img src={profile} alt="" />
                 </li>
               </ul>
+            </div>
+          </div>
+        </>
+      ) : educatorLogin ? (
+        <>
+          <div className="headerBoxShadow">
+            <div className="headerContainer container ">
+              <div>
+                <h1 className="logo">Bitesized</h1>
+              </div>
+              <div className="header-link">
+                <ul>
+                  <li>
+                    <NavLink
+                      to={"/create-profile"}
+                      className={({ isActive }) =>
+                        isActive ? "activeLink" : undefined
+                      }
+                    >
+                      My Profile
+                    </NavLink>
+                  </li>
+                  <li>
+                    <img src={profile} alt="" />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </>

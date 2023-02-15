@@ -20,13 +20,12 @@ const Home = () => {
     
     <>
     <Header userLogin  />
-    {/* <HomePageCover/>
+    <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>
     <Homepagecardsection/>
     <Howitworks/>
-    <Meettheeducators/> */}
-    <Createprofileeducator/>
+    <Meettheeducators/>
 
     </>
   )
