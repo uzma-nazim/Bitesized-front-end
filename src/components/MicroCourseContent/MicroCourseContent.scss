@@ -1,0 +1,385 @@
+@import "../../style/colors";
+
+.allcontentpadding{
+    margin-left: 100px;
+    margin-right: 74px;
+}
+
+.stepbystepprocess{
+    font-size: 24px;
+    line-height: 28px;
+  font-family: rangeSanebold;
+  color: #141414;
+  padding-top: 38px;
+  padding-bottom: 15px;
+}
+
+.stepbysteppoints{
+    font-size: 16px;
+    line-height: 20px;
+  font-family: rangeSane;
+  color: #898989;
+  margin-left: 7px;
+  padding-bottom: 8px;
+}
+
+.greyline{
+    width: 100%;
+    background-color: #B7B7B7;
+    height: 1px;
+    margin-top: 40px;
+}
+
+
+.inputbtn{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.microheading{
+    color: #141414;
+    font-size: 20px;
+    line-height: 23px;
+    font-family: rangeSanebold;
+    margin-top: 25px;
+    padding-bottom: 7px;
+}
+
+.microcourseparas{
+    color: #818386 ;
+    font-size: 12px ;
+    line-height: 14px ;
+    font-family: rangeSane ;
+    padding-bottom: 12px;
+}
+
+
+.createaddtags{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 8px;
+    padding-bottom: 5px;
+    border: 1px solid #818386;
+}
+
+.createaddtags::placeholder{
+    color: #B4B4B4;
+    font-size: 15px;
+    line-height: 17px;
+  font-family: rangeSaneregular;
+}
+
+.numsflex{
+    display: flex;
+    gap: 13px;
+    margin-top: 8px;
+}
+
+.numsflex p{
+    width: 46px;
+    height: 46px;
+    color: #0B1F22;
+    font-size: 17px;
+    border-radius: 4px;
+    display: flex;
+    font-family: 'Poppins';
+    justify-content: center;
+    align-items: center;
+}
+
+.numsflex p:hover{
+    background-color: #FF7477;
+    color: white;
+
+}
+
+.pencilinp{
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid $darkgrey;
+    background-color: #F2F5FA;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.pencilinp::placeholder{
+    font-size: 15px;
+    line-height: 17px;
+    font-family: rangeSanebold;
+    color: #0B1F22;
+}
+
+.plusadd{
+    padding: 6px 8px;
+    background-color: $blue;
+    border-radius: 18px;
+    border: none;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.uploaddiv{
+    width: 277px;
+    height: 138px;
+    border-radius: 24px;
+    border: dashed 2px #0B1F22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(93, 169, 233,0.08);
+    margin-top: 40px;
+}
+
+.uploaddiv img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.uploadheading{
+    font-size: 15px;
+    line-height: 17px;
+    font-family: rangeSanebold;
+    color:#0B1F22;
+    padding-bottom: 7px;
+}
+
+.fileallowed{
+    font-size: 10px;
+    line-height: 11px;
+    font-family: rangeSane;
+    color: #7C7C7C;
+    padding-bottom: 5px;
+}
+
+.savebtnflex{
+    display: flex;
+    justify-content: end;
+    gap: 13px;
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+.saveexit{
+    width: 207px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: rgba(255, 116, 119, 0.08);
+    border: none;
+    font-size: 15px;
+    line-height: 17px;
+    font-family: rangeSanebold;
+    color: #0B1F22;
+}
+.savecontinue{
+    width: 207px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: $blue;
+    border: none;
+    font-size: 15px;
+    line-height: 17px;
+    font-family: rangeSanebold;
+    color: #FFFFFF;
+}
+
+// ===========================
+
+@media only screen and (max-width: 992px) {
+    .createaddtags::placeholder{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .handwaveflex img{
+        width: 40px;
+        height: 40px;
+    }
+    .handwaveflex h1{
+        font-size: 30px;
+    }
+    .istiaqsectionpara{
+        font-size: 18px;
+    }
+    .stepbystepprocess{
+        font-size: 26px;
+    }
+    .stepbysteppoints{
+        font-size: 15px;
+    }
+    .microheading{
+        font-size: 22px;
+    }
+    .allcontentpadding{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .istiaqpadding{
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .istiaqpadding{
+        padding-top: 60px;
+    }
+    .istiaqsectionstart{
+        height: 200px;
+    }
+    .handwaveflex{
+        margin-bottom: 0px;
+    }
+    .handwaveflex img{
+        width: 38px;
+        height: 38px;
+    }
+    .handwaveflex h1{
+        font-size: 22px;
+    }
+    .istiaqsectionpara{
+        font-size: 17px;
+    }
+    .stepbystepprocess{
+        font-size: 23px;
+    }
+    .stepbysteppoints{
+        font-size: 14px;
+    }
+    .microheading{
+        font-size:20px;
+    }
+    .allcontentpadding{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .istiaqpadding{
+        margin-left: 0px;
+    }
+    .numsflex p{
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+    .saveexit{
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .savecontinue{
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .handwaveflex img{
+        width: 32px;
+        height: 32px;
+    }
+    .handwaveflex h1{
+        font-size: 22px;
+    }
+    .istiaqsectionpara{
+        font-size: 15px;
+    }
+    .stepbystepprocess{
+        font-size: 21px;
+    }
+    .stepbysteppoints{
+        font-size: 14px;
+    }
+    .microheading{
+        font-size:18px;
+    }
+    .microcourseparas{
+        font-size: 12px;
+    }
+    .allcontentpadding{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .istiaqpadding{
+        margin-left: 0px;
+    }
+    .numsflex p{
+        width: 33px;
+        height: 33px;
+        font-size: 13px;
+    }
+    .saveexit{
+        width: 140px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .savecontinue{
+        width: 140px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 386px) {
+    .handwaveflex img{
+        width: 30px;
+        height: 30px;
+    }
+    .handwaveflex h1{
+        font-size: 16px;
+    }
+    .istiaqsectionpara{
+        font-size: 15px;
+        max-width: 230px;
+    }
+    .stepbystepprocess{
+        font-size: 18px;
+    }
+    .stepbysteppoints{
+        font-size: 13px;
+    }
+    .microheading{
+        font-size:16px;
+    }
+    .createaddtags{
+        height: 40px;
+    }
+    .pencilinp{
+        height: 40px;
+    }
+    .plusadd{
+        padding: 4px 4px;
+        font-size: 11px;
+    }
+    .microcourseparas{
+        font-size: 12px;
+    }
+    .allcontentpadding{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .istiaqpadding{
+        margin-left: 0px;
+    }
+    .numsflex p{
+        width: 33px;
+        height: 33px;
+        font-size: 13px;
+    }
+    .saveexit{
+        width: 140px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .savecontinue{
+        width: 140px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
