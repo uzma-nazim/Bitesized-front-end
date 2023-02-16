@@ -20,6 +20,8 @@ function CourseTabs() {
         
       </Tab>
       <Tab eventKey="Ratings and Reviews" title="Ratings and Reviews" >
+
+        
       <AboutMe/>
         
       </Tab>
