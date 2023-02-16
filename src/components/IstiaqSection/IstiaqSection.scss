@@ -1,0 +1,34 @@
+@import "../../style/colors";
+
+.istiaqsectionstart{
+    background-color: rgba(93, 169, 233, 0.08);
+    height: 250px;
+}
+
+.istiaqpadding{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    padding-top: 80px;
+}
+
+.handwaveflex{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.handwaveflex h1{
+    font-size: 40px;
+    line-height: 46px;
+  font-family: rangeSanebold;
+  color: #141414;
+}
+
+.istiaqsectionpara{
+    font-size: 20px;
+    line-height: 23px;
+  font-family: rangeSanebold;
+  color: $darkgrey;
+}
+
