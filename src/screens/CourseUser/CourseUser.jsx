@@ -7,7 +7,7 @@ const CourseUser = () => {
   return (
     <>
     <Header userLogin/>
-    <CourseUserProfile/>
+    <CourseUserProfile />
     <CourseTabs/>
     </>
   )

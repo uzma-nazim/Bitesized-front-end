@@ -7,7 +7,7 @@ import whiteStar from "../../assets/whiteStar.svg";
 import pinkBook from "../../assets/pinkBook.svg";
 import Playpink from "../../assets/Playpink.svg";
 
-const CourseUserProfile = () => {
+const CourseUserProfile = ({linkbtn}) => {
   return (
     <div className="userprofileBox">
       <div className="container  userprofilewrapper">
@@ -60,6 +60,8 @@ const CourseUserProfile = () => {
 
           <button className="largebluebtn">Follow Me</button>
           <button className="largebluebtn bg-pink">Watch my intro video</button>
+          {linkbtn ?<button className="largebluebtn bg-black">Copy and share <br /> profile link</button>:null}
+          
         </div>
       </div>
     </div>
