@@ -60,7 +60,7 @@ const CourseUserProfile = ({linkbtn}) => {
 
           <button className="largebluebtn">Follow Me</button>
           <button className="largebluebtn bg-pink">Watch my intro video</button>
-          {linkbtn ?<button className="largebluebtn bg-black">Copy and share <br /> profile link</button>:null}
+          {linkbtn ?<button className="copyshare">Copy and share<br />profile link</button>:null}
           
         </div>
       </div>
