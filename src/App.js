@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/learner-signup" element={<LeanerSignup/>} />
           <Route exact path="/aducator-signup" element={<EducatorSignup/>} />
           <Route exact path="/create-profile" element={<CreateEducatorProfile/>} />
-          <Route exact path="/upload-micro-course-educator" element={<UploadMicroCourseEducator/>} />
+          <Route exact path="/upload-micro-course" element={<UploadMicroCourseEducator/>} />
           
         </Routes>
       </BrowserRouter>
