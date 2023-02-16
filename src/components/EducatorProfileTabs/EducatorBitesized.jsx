@@ -14,7 +14,9 @@ const EducatorBitesized = ({finishdraftsbtn}) => {
         <div className='container mainfinish'>
             {finishdraftsbtn ? <button className='finishdrafts'>Finish Drafts</button> : null}
         </div>
+        <div className='customrevlowpad'>
          <CustomerReviews/>
+        </div>
         </div>
   )
 }
