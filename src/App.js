@@ -10,6 +10,7 @@ import LeanerSignup from "./screens/LeanerSignup/LeanerSignup";
 import EducatorSignup from "./screens/EducatorSignup/EducatorSignup";
 import CreateEducatorProfile from "./screens/CreateEducatorProfile/CreateEducatorProfile";
 import UploadMicroCourseEducator from "./screens/UploadMicroCourseEducator/UploadMicroCourseEducator";
+import SecondUploadMicroEducator from "./screens/SecondUploadMicroEducator/SecondUploadMicroEducator";
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/aducator-signup" element={<EducatorSignup/>} />
           <Route exact path="/create-profile" element={<CreateEducatorProfile/>} />
           <Route exact path="/upload-micro-course-educator" element={<UploadMicroCourseEducator/>} />
+          <Route exact path="/second-upload-micro-educator" element={<SecondUploadMicroEducator/>} />
           
         </Routes>
       </BrowserRouter>
