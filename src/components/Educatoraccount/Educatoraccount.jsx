@@ -7,49 +7,36 @@ import book from '../../assets/Book-1.svg';
 import help from '../../assets/Help-1.svg';
 import logout from '../../assets/Logout-1.svg';
 import setting from '../../assets/Settings-1.svg';
+import banner from '../../assets/Banner.svg';
+import Camerabutton from '../../assets/Camera button.svg';
+import profilecamera from '../../assets/profile-camera.svg';
+import ProfileImage from '../../assets/Profile Image.svg';
+import Educatoraccounttab1 from "./Educatoraccounttab1";
+import Educatoraccounttab2 from "./Educatoraccounttab2";
+import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
+import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
 
 
 const Educatoraccount = () => {
     return (
-        <div className="container">
+        <div className="container main-container-account">
             <h1 className="fontbold setting">Settings</h1>
             <div className="sub-main-container">
                 <div className="tab-sec">
-                    <button className="tab-button fontmed">Account</button>
-                    <button className="tab-button">Payment Settings</button>
-                </div>
-                <div className="card-sec">
-                    <h1 className="fontbold credit-heading">Credit/debit card</h1>
-                    <div className="methods">
-                        <div className="method-1"><img src={visa} alt="" /></div>
-                        <div className="method-1"><img src={master} alt="" /></div>
-                        <div className="method-1"><img src={stripe} alt="" /></div>
-                    </div>
-                    <div className="details">
-                        <h2 className="detail-heading fontmed">Cardholder Name</h2>
-                        <input className="detail-input fontmed" type="text" placeholder="Name surname" />
-                    </div>
-                    <div className="details">
-                        <h2 className="detail-heading fontmed">Card Number</h2>
-                        <input className="detail-input fontmed" type="text" placeholder="0000-0000-0000-0000" />
-                    </div>
-                    <div className="details">
-                        <h2 className="detail-heading fontmed">Card Number</h2>
-                        <input className="detail-input fontmed" type="text" placeholder="0000-0000-0000-0000" />
-                    </div>
-                    <div className="date">
-                        <div className="date-1">
-                            <h2 className="detail-heading fontmed">Expiration Date</h2>
-                            <input className="detail-input fontmed" type="text" placeholder="MM/YY" />
-                        </div>
-                        <div className="date-1">
-                            <h2 className="detail-heading fontmed">CVV</h2>
-                            <input className="detail-input fontmed" type="text" placeholder="000" />
-                        </div>
-                    </div>
-                    <button className="card-button fontmed">Get Paid</button>
+                    <button  className="tab-button fontmed">Account</button>
+                    <button  className="tab-button">Payment Settings</button>
 
                 </div>
+               
+
+
+                <div className="secondcomponent">
+                    <Educatoraccounttab2/>
+                </div>
+
+
 
             </div>
         </div>

@@ -1,3 +1,7 @@
+.main-container-account {
+    margin-top: 30px auto;
+}
+
 .setting {
     font-size: 30px;
     line-height: 38px;
@@ -6,9 +10,9 @@
 
 .sub-main-container {
     // border: 1px solid black;
-    width: 85%;
+    width: 95%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .tab-sec {
@@ -40,96 +44,11 @@
     color: #11142D;
     font-family: rangeSanebold;
 }
-
-.card-sec {
-    // border: 1px solid black;
-    width: 57%;
-
+.secondcomponent{
+    width: 820px;
+    // border: 5px solid rgb(239, 0, 0);
+    margin-left: 52px;
 }
-
-.credit-heading {
-    font-size: 26px;
-    line-height: 34px;
-}
-
-.methods {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    height: fit-content;
-    border-bottom: 1px solid #D8D8D8;
-    padding: 0 0 25px 0;
-
-}
-
-.method-1 {
-    // border: 1px solid black;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF;
-    box-shadow: -2px 6px 28px rgba(44, 63, 88, 0.08);
-    border-radius: 12px;
-}
-
-.detail-heading {
-    font-size: 20px;
-    line-height: 24px;
-    margin: 10px auto;
-}
-
-.details {
-    border-bottom: 1px solid #D8D8D8;
-    margin: 20px auto;
-
-}
-
-.detail-input {
-    margin: 10px auto;
-    border: none;
-    font-size: 16px;
-    line-height: 24px;
-    color: #808191;
-}
-
-.date {
-    display: flex;
-    justify-content: space-between;
-}
-
-.date-1 {
-    border-bottom: 1px solid #D8D8D8;
-    // border: 1px solid black;
-    width: 47%;
-
-}
-
-.card-button {
-    background: #5DA9E9;
-    border-radius: 12px;
-    width: 100%;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
-    border: none;
-    padding: 14px;
-    margin: 30px auto;
-}
-
-@media only screen and (max-width: 768px) {
-    .method-1 {
-        // border: 1px solid black;
-        padding: 15px;
-
-        img {
-            width: 70px;
-        }
-
-    }
-}
-
 @media only screen and (min-width: 768px) {
 
     .setting {
@@ -144,42 +63,10 @@
 
     }
 
-    .credit-heading {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .detail-heading {
-        font-size: 15px;
-        line-height: 20px;
-
-    }
-
-    .card-button {
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-
 }
 
 @media only screen and (max-width: 425px) {
-    .method-1 {
-        // border: 1px solid black;
-        padding: 10px;
-
-        img {
-            width: 40px;
-        }
-
-    }
-
-    .card-sec {
-        // border: 1px solid black;
-        width: 65%;
-
-    }
-
+    
     .sub-main-container {
         width: 100%;
     }
@@ -195,23 +82,6 @@
         line-height: 16px;
 
     }
-
-    .credit-heading {
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .detail-heading {
-        font-size: 12px;
-        line-height: 15px;
-
-    }
-
-    .card-button {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
     .tab-sec {
 
         height: 150px;
@@ -219,6 +89,7 @@
 
 
 }
+
 
 
 
