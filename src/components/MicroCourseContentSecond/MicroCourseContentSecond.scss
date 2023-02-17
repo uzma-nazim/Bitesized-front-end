@@ -2,4 +2,152 @@
 
 .instructionvideo{
     background-color: rgba(93, 169, 233, 0.08);
+    border-radius: 8px;
+    padding: 14px 24px 2px 24px;
+}
+
+.instructionvideo h1{
+    font-size: 18px;
+    line-height: 21px;
+    font-family: rangeSanebold;
+    color: #141414;
+    padding-bottom: 10px;
+}
+
+.instructionvideo ol{
+    padding-left: 18px;
+}
+
+.instructionvideo li{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: rangeSane;
+    color: #818386;
+    padding-bottom: 5px;
+}
+
+.thinkpad{
+    margin-bottom: 8px !important;
+}
+
+.stepforlowpad{
+    padding-left: 15px;
+}
+
+.steptwo{
+    padding-bottom: 13px;
+    line-height: 25px;
+}
+
+.stepforpad{
+    padding-left: 3px;
+}
+
+
+.greyforpadding{
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.plusaddmore{
+    color: #FFFF00;
+    background-color: #0B1F22;
+}
+
+.uploadvideosecond{
+    width: 277px;
+    height: 279px;
+    border-radius: 24px;
+    background-color: #F2F5FA;
+    color: #0B1F22;
+    border: #0B1F22 2px dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexforvideomicrocourse{
+    display: flex;
+    gap: 38px;
+}
+
+.uploadvideosecond img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 7px;
+}
+
+.placeholderformicro::placeholder{
+    font-size: 15px;
+    line-height: 17px;
+    font-family: rangeSane;
+}
+
+.uploadvideosecond p{
+    font-size: 15px;
+    line-height: 17px;
+    font-family: rangeSane;
+}
+
+.microsupply{
+    width: 100%;
+}
+
+.microlesson{
+    font-size: 24px;
+    line-height: 28px;
+  font-family: rangeSanebold;
+  margin-top: 40px;
+  margin-bottom: 20px !important;
+}
+
+.microheadingpad{
+    margin-top: 5px;
+}
+
+.uploaddivcolor{
+    background-color:rgba(235, 193, 255, 0.24);
+}
+
+.placeholderformicro{
+    background-color: #F2F5FA;
+}
+
+.flexforuploadsave{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fortopmarginsave{
+    margin-top: 80px;
+}
+
+.lessonformatmain{
+    margin-top: 30px;
+    padding: 12px 18px 2px 18px;
+    border-radius: 8px;
+    background-color: rgba(255, 116, 119, 0.08);
+    margin-bottom: 50px;
+}
+
+.lessonformatmain h1{
+    font-size: 20px;
+    line-height: 23px;
+    color: #0B1F22;
+    font-family: rangeSanebold;
+    padding-bottom: 10px;
+}
+
+.lessonformatmain li{
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    font-family: rangeSaneregular;
+    max-width: 220px;
+    margin-bottom: 7px;
+}
+
+.lessonformatmain ol{
+    padding-left: 15px;
 }

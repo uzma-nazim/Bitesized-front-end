@@ -11,6 +11,7 @@ import EducatorSignup from "./screens/EducatorSignup/EducatorSignup";
 import CreateEducatorProfile from "./screens/CreateEducatorProfile/CreateEducatorProfile";
 import UploadMicroCourseEducator from "./screens/UploadMicroCourseEducator/UploadMicroCourseEducator";
 import SecondUploadMicroEducator from "./screens/SecondUploadMicroEducator/SecondUploadMicroEducator";
+import EducatorProfileMicro from "./screens/EducatorProfileMicro/EducatorProfileMicro";
 function App() {
   return (
     <>
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/sign-up" element={<Signup />} />
-          <Route exact path="/my-courese" element={<UserCourses />} />
+          <Route exact path="/my-course" element={<UserCourses />} />
           <Route exact path="/choose-course-user" element={<ChooseCourseUser />} />
           <Route exact path="/user-profile" element={<CourseUser />} />
           <Route exact path="/course-video" element={<IntroToUIDesign/>} />
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/create-profile" element={<CreateEducatorProfile/>} />
           <Route exact path="/upload-micro-course-educator" element={<UploadMicroCourseEducator/>} />
           <Route exact path="/second-upload-micro-educator" element={<SecondUploadMicroEducator/>} />
+          <Route exact path="/educator-profile-micro" element={<EducatorProfileMicro/>} />
           
         </Routes>
       </BrowserRouter>
