@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../style/globalStyle.scss";
 import "./header.scss";
 import profile from "../../assets/profile.png";
 import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
+import Dropdownmenu from '../../components/Dropdownmenu/Dropdownmenu';
 const Header = ({ userLogin, educatorLogin }) => {
+  const  [open , setopen] = useState(false)
+
   const navigate = useNavigate();
   return (
     <>
@@ -58,13 +62,17 @@ const Header = ({ userLogin, educatorLogin }) => {
                         isActive ? "activeLink" : undefined
                       }
                     >
-                      My Profile
+                      My Courses
                     </NavLink>
                   </li>
-                  <li>
+                  <li onClick={()=>setopen(!open)} className="dropdown-adjust" >
                     <img src={profile} alt="" />
+                    <div style={{display:open?"block":"none"}} className="dropdown-adjust2"><Dropdownmenu/></div>
                   </li>
+                  <li></li>
+                  
                 </ul>
+                
               </div>
             </div>
           </div>
