@@ -5,8 +5,8 @@ import uploadthumbnail from "../../assets/upload.svg";
 const MicroCourseContentSecond = () => {
   return (
     <div className='container'>
-        <div className='allcontentpadding'>
-        <div>
+       <div className='allcontentpadding'>
+         <div>
             <h1 className='stepbystepprocess thinkpad'>Thinks to know</h1>
             <ol className='stepforlowpad'>
                 <li className='stepbysteppoints steptwo'>You will upload 6 micro-lessons for your course.</li>
@@ -16,7 +16,7 @@ const MicroCourseContentSecond = () => {
                 <li className='stepbysteppoints steptwo'>Once all lessons (the whole micro-course) is submitted. the bitesized team will review, edit, and price it. Then we’ll reupload it to your educator profile and trending page for users (kids, parents, homeschoolers,etc.) to purchase. You’ll receive a payment and notification for each purchase.</li>
             </ol>
                 
-            </div> 
+          </div> 
             <div className='greyline greyforpadding'></div>
             <div className='instructionvideo'>
                 <h1>Instructions for Video</h1>
