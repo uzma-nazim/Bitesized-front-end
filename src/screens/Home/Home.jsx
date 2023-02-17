@@ -12,7 +12,6 @@ import Meettheeducators from '../../components/Meettheeducators/Meettheeducators
 import Signupuser from '../../components/Signup-User/Signupuser'
 import Signupuserform from '../../components/Signupuserform/Signupuserform'
 import Createprofileeducator from '../../components/Createprofileeducator/Createprofileeducator'
-import Educatoraccount from '../../components/Educatoraccount/Educatoraccount';
 
 
 
@@ -21,6 +20,7 @@ const Home = () => {
     
     <>
     <Header educatorLogin  />
+    <Createprofileeducator/>
     <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>
@@ -28,7 +28,7 @@ const Home = () => {
     <Howitworks/>
   <Meettheeducators/>
 
-  {/* <Educatoraccount   /> */}
+  
     </>
   )
 }

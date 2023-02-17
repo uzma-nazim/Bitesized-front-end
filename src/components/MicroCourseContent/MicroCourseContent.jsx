@@ -29,7 +29,7 @@ const MicroCourseContent = () => {
                 <p>13</p>
             </div>
             <p className='microheading'>Choose a Theme</p>
-            <select className='createaddtags' placeholder='Select a theme'>
+            <select className='createaddtags selecttheme'>
                 <option value="">Select a theme</option>
             </select>
             <p className='microheading'>Supply list for this Course</p>
