@@ -20,7 +20,7 @@ const Home = () => {
     
     <>
     <Header educatorLogin  />
-    <Createprofileeducator/>
+    
     <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>

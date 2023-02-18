@@ -27,9 +27,9 @@ function App() {
           <Route exact path="/learner-signup" element={<LeanerSignup/>} />
           <Route exact path="/aducator-signup" element={<EducatorSignup/>} />
           <Route exact path="/create-profile" element={<CreateEducatorProfile/>} />
-          <Route exact path="/upload-micro-course-educator" element={<UploadMicroCourseEducator/>} />
-          <Route exact path="/second-upload-micro-educator" element={<SecondUploadMicroEducator/>} />
-          <Route exact path="/educator-profile-micro" element={<EducatorProfileMicro/>} />
+          <Route exact path="/upload-course" element={<UploadMicroCourseEducator/>} />
+          <Route exact path="/upload-video-course" element={<SecondUploadMicroEducator/>} />
+          <Route exact path="/educator-profile" element={<EducatorProfileMicro/>} />
           <Route exact path="/educator-account" element={<EducatorAccount/>} />
           
         </Routes>

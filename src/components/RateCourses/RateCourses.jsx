@@ -35,14 +35,11 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-function RateCourses() {
-  const [modalShow, setModalShow] = useState(false);
+function RateCourses({setModalShow ,modalShow}) {
 
   return (
     <>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
+
 
       <MyVerticallyCenteredModal
         show={modalShow}

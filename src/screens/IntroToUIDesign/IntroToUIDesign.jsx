@@ -8,7 +8,6 @@ const IntroToUIDesign = () => {
     <div>
         <Header userLogin/>
         <IntroUIDesignStart/>
-        <RateCourses/>
     </div>
   )
 }
