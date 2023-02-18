@@ -42,7 +42,7 @@ const MicroCourseContentSecond = () => {
               <p className="microcourseparas">Each micro-course 1 project</p>
               <input className='createaddtags placeholderformicro' type="text" placeholder='You can name this lesson that is descriptive of the project you’ll be teaching.' />
 
-              <p className='microheading'>Add Supply list for this lesson</p>
+              <p className='microheading addsupply'>Add Supply list for this lesson</p>
               <p className="microcourseparas">Paper, pencil, etc (if any supplies are needed)</p>
               <div className='inputbtn'>
                 <div>

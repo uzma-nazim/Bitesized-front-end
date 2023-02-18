@@ -13,7 +13,6 @@ import UploadMicroCourseEducator from "./screens/UploadMicroCourseEducator/Uploa
 import SecondUploadMicroEducator from "./screens/SecondUploadMicroEducator/SecondUploadMicroEducator";
 import EducatorProfileMicro from "./screens/EducatorProfileMicro/EducatorProfileMicro";
 import EducatorAccount from "./screens/EducatorAccount/EducatorAccount";
-import UploadMicroCourse from "./components/UploadMicroCourse/UploadMicroCourse";
 function App() {
   return (
     <>
@@ -32,7 +31,6 @@ function App() {
           <Route exact path="/upload-video-course" element={<SecondUploadMicroEducator/>} />
           <Route exact path="/educator-profile" element={<EducatorProfileMicro/>} />
           <Route exact path="/educator-account" element={<EducatorAccount/>} />
-          <Route exact path="/upload-microcourse" element={<UploadMicroCourse/>} />
           
         </Routes>
       </BrowserRouter>
