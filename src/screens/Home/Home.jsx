@@ -19,7 +19,7 @@ const Home = () => {
   return (
     
     <>
-    <Header educatorLogin  />
+    <Header   />
     
     <HomePageCover/>
     <HomePageBlocksection/>
