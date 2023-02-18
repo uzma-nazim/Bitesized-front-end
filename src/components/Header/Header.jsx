@@ -4,9 +4,9 @@ import "./header.scss";
 import profile from "../../assets/profile.png";
 import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
-import Dropdownmenu from '../../components/Dropdownmenu/Dropdownmenu';
-const Header = ({ userLogin, educatorLogin }) => {
-  const  [open , setopen] = useState(false)
+import Dropdownmenu from "../../components/Dropdownmenu/Dropdownmenu";
+const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
+  const [open, setopen] = useState(false);
 
   const navigate = useNavigate();
   return (
@@ -59,20 +59,63 @@ const Header = ({ userLogin, educatorLogin }) => {
                     <NavLink
                       to={"/create-profile"}
                       className={({ isActive }) =>
-                        isActive ? "activeLink" : undefined
+                        isActive ? "activeLink" : "activeLink"
                       }
                     >
-                      My Courses
+                      My Profile
                     </NavLink>
                   </li>
-                  <li onClick={()=>setopen(!open)} className="dropdown-adjust" >
+                  <li
+                    onClick={() => setopen(!open)}
+                    className="dropdown-adjust"
+                  >
                     <img src={profile} alt="" />
-                    <div style={{display:open?"block":"none"}} className="dropdown-adjust2"><Dropdownmenu/></div>
+                    <div
+                      style={{ display: open ? "block" : "none" }}
+                      className="dropdown-adjust2"
+                    >
+                      <Dropdownmenu />
+                    </div>
                   </li>
                   <li></li>
-                  
                 </ul>
-                
+              </div>
+            </div>
+          </div>
+        </>
+      ) : educatorProfile ? (
+        <>
+          <div className="headerBoxShadow">
+            <div className="headerContainer container ">
+              <div>
+                <h1 className="logo">Bitesized</h1>
+              </div>
+              <div className="header-link">
+                <ul>
+                  <li>
+                    <NavLink
+                      to={"/create-profile"}
+                      className={({ isActive }) =>
+                        isActive ? "activeLink" : "activeLink"
+                      }
+                    >
+                      My Course
+                    </NavLink>
+                  </li>
+                  <li
+                    onClick={() => setopen(!open)}
+                    className="dropdown-adjust"
+                  >
+                    <img src={profile} alt="" />
+                    <div
+                      style={{ display: open ? "block" : "none" }}
+                      className="dropdown-adjust2"
+                    >
+                      <Dropdownmenu />
+                    </div>
+                  </li>
+                  <li></li>
+                </ul>
               </div>
             </div>
           </div>

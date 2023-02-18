@@ -1,0 +1,12 @@
+.component-display{
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .component-display{
+        display: contents;
+    }
+    .content-hide{
+        display: none;
+    }
+}

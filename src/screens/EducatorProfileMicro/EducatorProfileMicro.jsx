@@ -6,7 +6,7 @@ import Header from '../../components/Header/Header';
 const EducatorProfileMicro = () => {
   return (
     <div>
-        <Header userLogin/>
+        <Header educatorProfile/>
         <CourseUserProfile linkbtn />
         <EducatorTabs />
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
 import introtoUIthumbnail from "../../assets/introtoUIthumbnail.png";
 import "./IntroUIDesignStart.scss";
@@ -10,11 +10,16 @@ import smartassigning from "../../assets/smartassigning.svg";
 import manageuser from "../../assets/manageuser.svg";
 import tracktraining from "../../assets/tracktraining.svg";
 import coursesetting from "../../assets/coursesetting.svg";
+import RateCourses from "../RateCourses/RateCourses";
 
 
 const IntroUIDesignStart = () => {
+  const [modalShow, setModalShow] = useState(true);
+
   return (
     <div className="container">
+      <RateCourses modalShow={modalShow} setModalShow={setModalShow}/>
+
       <div className="link-container linkspadding">
         <a className="links" href="">
           Design
@@ -66,7 +71,7 @@ const IntroUIDesignStart = () => {
           <p className="lessontime">6 Lessons (20h 10m)</p>
           <div className="forgreyline"></div>
           <p className="lessonintro">Introduction</p>
-          <div className="howtodoeverythingflex2">
+          <div onClick={()=>setModalShow(true)} className="howtodoeverythingflex2">
             <img src={howtodoeverything} alt="" />
             <p className="bolding">How to do every thing in Learning <br /> <span className="forgrey">12:47</span></p>
           </div>

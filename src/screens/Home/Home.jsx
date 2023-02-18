@@ -19,8 +19,8 @@ const Home = () => {
   return (
     
     <>
-    <Header educatorLogin  />
-    <Createprofileeducator/>
+    <Header   />
+    
     <HomePageCover/>
     <HomePageBlocksection/>
     <Homepagetrendingcourse/>

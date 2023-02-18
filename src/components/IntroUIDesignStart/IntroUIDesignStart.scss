@@ -1,86 +1,85 @@
 @import "../../style/colors";
 
-.introUIflex{
-    display: flex;
-
+.introUIflex {
+  display: flex;
 }
 
-.introtoUIthumbnail{
-    margin-top: 28px;
-    margin-bottom: 40px;
+.introtoUIthumbnail {
+  margin-top: 28px;
+  margin-bottom: 40px;
 }
 
-.introtoUIthumbnail[poster]{
-    width: 96%;
+.introtoUIthumbnail[poster] {
+  width: 96%;
 }
 
-.linkspadding{
-    margin-bottom: 11px !important;
+.linkspadding {
+  margin-bottom: 11px !important;
 }
 
-.uidesignpara{
-    font-size: 16px !important;
-    line-height: 25px;
-    color: $darkgrey;
-    max-width: 750px;
-    font-family: rangeSaneregular;
+.uidesignpara {
+  font-size: 16px !important;
+  line-height: 25px;
+  color: $darkgrey;
+  max-width: 750px;
+  font-family: rangeSaneregular;
 }
 
-.mainlesson{
-    margin-left: -8px;
+.mainlesson {
+  margin-left: -8px;
 }
 
-.lessontime{
-    font-size: 16px;
-    line-height: 22px;
-    font-family: rangeSanebold;
-    margin-top: 25px;
-    margin-left: 20px;
+.lessontime {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: rangeSanebold;
+  margin-top: 25px;
+  margin-left: 20px;
 }
 
-.forgreyline{
-    background-color: #E9EDF1;
-    width: 338px;
-    height: 1px;
-    margin-top: 12px;
-    margin-bottom: 10px;
+.forgreyline {
+  background-color: #e9edf1;
+  width: 338px;
+  height: 1px;
+  margin-top: 12px;
+  margin-bottom: 10px;
 }
 
-.howtodoeverythingflex2{
-    display: flex;
-    gap: 13px;
+.howtodoeverythingflex2 {
+  display: flex;
+  gap: 13px;
 }
 
-.howtodoeverythingflex{
-    display: flex;
-    gap: 13px;
-    padding-bottom: 20px;
+.howtodoeverythingflex {
+  display: flex;
+  gap: 13px;
+  padding-bottom: 20px;
 }
 
-.howtodoeverythingflex2 img{
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
+.howtodoeverythingflex2 img {
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
 }
 
-.howtodoeverythingflex img{
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
+.howtodoeverythingflex img {
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
 }
 
-.lessonintro{
-    font-size: 18px;
-    line-height: 24px;
+.lessonintro {
+  font-size: 18px;
+  line-height: 24px;
   font-family: rangeSanebold;
   color: #808281;
   padding-bottom: 30px;
   margin-left: 20px;
 }
 
-.lessonintro2{
-    font-size: 18px;
-    line-height: 24px;
+.lessonintro2 {
+  font-size: 18px;
+  line-height: 24px;
   font-family: rangeSanebold;
   color: #808281;
   padding-bottom: 30px;
@@ -88,183 +87,193 @@
   margin-left: 20px;
 }
 
-.bolding{
-    font-size: 16px;
-    line-height: 27px;
+.bolding {
+  font-size: 16px;
+  line-height: 27px;
   font-family: rangeSane;
-  color: #05162E;
+  color: #05162e;
 }
 
-.forgrey{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #808281;
+.forgrey {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #808281;
 }
 
-.paddingforpara{
-    padding-top: 20px ;
+.paddingforpara {
+  padding-top: 20px;
 }
 
 // ==========================
 
 @media only screen and (max-width: 992px) {
-    .introUIflex{
-        flex-direction: column;
-    }
-    .forgreyline{
-        width: 710px !important; 
-    }
+  .introUIflex {
+    flex-direction: column;
+  }
+  .forgreyline {
+    width: 710px !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .forgreyline{
-        width: 530px !important;
-    }
+  .forgreyline {
+    width: 530px !important;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    .linkspadding{
-        margin-bottom: 5px !important;
-    }
-    .introtoUIthumbnail{
-        margin-top: 14px !important;
-        margin-bottom: 12px !important;
-    }
-    .paddingforpara{
-        padding-top: 8px ;
-    }
-    .lessonintro{
-        padding-bottom: 18px;
-    }
-    .lessonintro2{
-        padding-bottom: 18px;
-    }
+  .linkspadding {
+    margin-bottom: 5px !important;
+  }
+  .introtoUIthumbnail {
+    margin-top: 14px !important;
+    margin-bottom: 12px !important;
+  }
+  .paddingforpara {
+    padding-top: 8px;
+  }
+  .lessonintro {
+    padding-bottom: 18px;
+  }
+  .lessonintro2 {
+    padding-bottom: 18px;
+  }
 }
 
 @media only screen and (max-width: 555px) {
-    .forgreyline{
-        width: 480px !important;
-    }
-    .howtodoeverythingflex2 img {
-        margin-left: 13px;
-    }
-    .howtodoeverythingflex img {
-        margin-left: 13px;
-    }
-    .lessontime{
-        margin-top: 19px;
-        margin-left: 11px;
-    }
-    .lessonintro2{
-        padding-top: 9px;
+  .forgreyline {
+    width: 480px !important;
+  }
+  .howtodoeverythingflex2 img {
+    margin-left: 13px;
+  }
+  .howtodoeverythingflex img {
+    margin-left: 13px;
+  }
+  .lessontime {
+    margin-top: 19px;
+    margin-left: 11px;
+  }
+  .lessonintro2 {
+    padding-top: 9px;
     margin-left: 15px;
-    }
+  }
 }
 
 @media only screen and (max-width: 510px) {
-    .uidesignpara{
-        font-size: 15px;
-        max-width: 452px;
-    }
-    .forgreyline{
-        width: 440px !important;
-    }
+  .uidesignpara {
+    font-size: 15px;
+    max-width: 452px;
+  }
+  .forgreyline {
+    width: 440px !important;
+  }
 }
 
 @media only screen and (max-width: 449px) {
-    .forgreyline{
-        width: 370px !important;
-    }
-    .links{
-        font-size: 11px;
-    }
-    .introui{
-        font-size: 16px;
-    }
-    .lessontime{
-        font-size: 14px;
-    }
-    .lessonintro{
-        font-size: 15px;
-    }
-    .lessonintro2{
-        font-size: 15px;
-    }
-    .howtodoeverythingflex2 img{
-        width: 45px;
-        height: 45px;
-    }
-    .howtodoeverythingflex img{
-        width: 45px;
-        height: 45px;
-    }
-    .bolding{
-        font-size: 14px;
-    }
-    .forgrey{
-        font-size: 12px;
-    }
-    .introtoUIthumbnail{
-        margin-top: 7px !important;
-        margin-bottom: 10px !important;
-    }
-    .uidesignpara{
-        font-size: 14px !important;
-    }
+  .forgreyline {
+    width: 370px !important;
+  }
+  .links {
+    font-size: 11px;
+  }
+  .introui {
+    font-size: 16px;
+  }
+  .lessontime {
+    font-size: 14px;
+  }
+  .lessonintro {
+    font-size: 15px;
+  }
+  .lessonintro2 {
+    font-size: 15px;
+  }
+  .howtodoeverythingflex2 img {
+    width: 45px;
+    height: 45px;
+  }
+  .howtodoeverythingflex img {
+    width: 45px;
+    height: 45px;
+  }
+  .bolding {
+    font-size: 14px;
+  }
+  .forgrey {
+    font-size: 12px;
+  }
+  .introtoUIthumbnail {
+    margin-top: 7px !important;
+    margin-bottom: 10px !important;
+  }
+  .uidesignpara {
+    font-size: 14px !important;
+  }
 }
 
 @media only screen and (max-width: 345px) {
-    .forgreyline{
-        width: 300px !important;
-    }
-    .introui{
-        font-size: 14px;
-    }
-    .uidesignpara{
-        font-size: 13px !important;
-        line-height: 18px;
-    }
-    .lessontime{
-        font-size: 13px;
-    }
-    .lessonintro{
-        font-size: 14px;
-    }
-    .lessonintro2{
-        font-size: 14px;
-    }
-    .howtodoeverythingflex2 img{
-        width: 40px;
-        height: 40px;
-    }
-    .howtodoeverythingflex img{
-        width: 40px;
-        height: 40px;
-    }
-    .bolding{
-        font-size: 13px;
-        line-height: 22px;
-    }
+  .forgreyline {
+    width: 300px !important;
+  }
+  .introui {
+    font-size: 14px;
+  }
+  .uidesignpara {
+    font-size: 13px !important;
+    line-height: 18px;
+  }
+  .lessontime {
+    font-size: 13px;
+  }
+  .lessonintro {
+    font-size: 14px;
+  }
+  .lessonintro2 {
+    font-size: 14px;
+  }
+  .howtodoeverythingflex2 img {
+    width: 40px;
+    height: 40px;
+  }
+  .howtodoeverythingflex img {
+    width: 40px;
+    height: 40px;
+  }
+  .bolding {
+    font-size: 13px;
+    line-height: 22px;
+  }
 }
 
 @media only screen and (max-width: 323px) {
-    .forgreyline{
-        width: 280px;
-    }
-    .links{
-        font-size: 10px;
-    }
-    .introtoUIthumbnail{
-        margin-top: 14px;
-        margin-bottom: 22px;
-    }
-    
-    .howtodoeverythingflex{
-        margin-bottom: 2px;
-    }
-    .howtodoeverythingflex2{
-        margin-bottom: 2px;
-    }
+  .forgreyline {
+    width: 280px;
+  }
+  .links {
+    font-size: 10px;
+  }
+  .introtoUIthumbnail {
+    margin-top: 14px;
+    margin-bottom: 22px;
+  }
+
+  .howtodoeverythingflex {
+    margin-bottom: 2px;
+  }
+  .howtodoeverythingflex2 {
+    margin-bottom: 2px;
+  }
+}
+.modal-content{
+    border-radius: 16px !important;
+}
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    width: 778px !important;
+  }
 }
