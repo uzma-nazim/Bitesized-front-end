@@ -1,0 +1,67 @@
+.course-card-text {
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.upload-button {
+    text-align: center;
+    width: 100%;
+    // border: 1px solid black;
+    background: #5DA9E9;
+    border-radius: 18px;
+
+    button {
+        padding: 8px;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.microcourse-designation {
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+
+    /* Color 2 */
+
+    color: #5DA9E9;
+}
+
+.microcourse-cardprofile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+
+}
+
+.micro-profiletag {
+    width: 229px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.micro-tags {
+    background: rgba(231, 79, 52, 0.08);
+    border-radius: 5px;
+    border: none;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FF7477;
+    font-weight: 500;
+    padding: 3px 10px 3px 10px;
+    margin: 5px auto;
+    font-family: rangeSane;
+    word-spacing: 1px;
+}
