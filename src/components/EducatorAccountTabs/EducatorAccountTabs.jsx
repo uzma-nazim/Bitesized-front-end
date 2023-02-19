@@ -12,7 +12,7 @@ function EducatorAccountTabs() {
     <Tab.Container id="left-tabs-example" defaultActiveKey="first">
       <Row>
         <h1 className="fontbold setting">Settings</h1>
-        <Col sm={3}>
+        <Col sm={3} className="tab-sec-one">
           <Nav  variant="pills" className="flex-column tab-items-sec">
             <Nav.Item className='tab-item-one'>
               <Nav.Link eventKey="first">Account</Nav.Link>

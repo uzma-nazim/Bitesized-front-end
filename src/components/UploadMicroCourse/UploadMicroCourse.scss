@@ -83,6 +83,7 @@
     color: #0B1F22;
     border: none;
 }
+
 .continue-button {
     background: rgba(255, 116, 119, 0.08);
     border-radius: 40px;
@@ -93,4 +94,85 @@
     background: #5DA9E9;
     color: #FFFFFF;
     border: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .exit-button {
+
+        width: 50%;
+
+    }
+
+    .continue-button {
+
+        width: 50%;
+
+    }
+
+    .microprofile-heading {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .microcourse-heading{
+        font-size: 22px;
+        line-height: 28px;
+    
+    }
+    .course-name{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .tag-button {
+        
+        padding: 2px 6px;
+        font-size: 8px;
+        line-height: 10px;
+        
+    
+    }
+    .upload-ui-heading{
+        h1{
+            
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+
+}
+@media only screen and (max-width: 425px) {
+    .microcourse-name {
+        
+        width: 95%;
+        
+    }
+    .exit-button {
+
+        width: 40%;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 5px;
+    }
+
+    .continue-button {
+
+        width: 40%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+@media only screen and (max-width: 320px) {
+   
+    .exit-button {
+
+        width: 50%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .continue-button {
+
+        width: 50%;
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
