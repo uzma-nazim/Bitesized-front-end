@@ -12,7 +12,7 @@ const Educatoraccounttab2 = () => {
 
             <div className="banner">
                 <img className="banner-cover" src={banner} alt="" />
-                <div className="button"><img src={Camerabutton} alt="" />Edit Cover</div>
+                <label htmlFor="upload-photo"> <div className="button"><input type="file" name="" id="upload-photo" hidden /><img src={Camerabutton} alt="" />Edit Cover</div></label>
             </div>
             <div className="banner-details">
                 <div className="profile-image">
@@ -35,7 +35,7 @@ const Educatoraccounttab2 = () => {
             </div>
             <div className="bio-data">
                 <h1 className="fontbold heading-bio">Email</h1>
-                <p className="heading-para">istiaqahmed@gmail.com </p>
+                <p className="heading-para color-para">istiaqahmed@gmail.com </p>
             </div>
             <div className="password">
                 <h1 className="fontbold password-heading">Change Password</h1>

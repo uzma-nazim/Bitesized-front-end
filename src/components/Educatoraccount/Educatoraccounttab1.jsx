@@ -38,7 +38,7 @@ const Educatoraccounttab1 = () => {
                     <input className="detail-input fontmed" type="text" placeholder="000" />
                 </div>
             </div>
-            <button className="card-button fontmed">Get Paid</button>
+            <button className="card-button fontbold">Get Paid</button>
 
         </div>
     )
