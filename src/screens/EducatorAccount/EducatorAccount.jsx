@@ -8,7 +8,7 @@ import './EducatorAccount.scss'
 export default function EducatorAccount() {
     return (
         <div>
-            <Header educatorLogin />
+            <Header educatorProfile />
             <div className="container content-hide">
 
             <EducatorAccountTabs />

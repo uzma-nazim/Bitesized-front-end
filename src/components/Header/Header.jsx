@@ -85,7 +85,7 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
         </>
       ) : educatorProfile ? (
         <>
-          <div className="headerBoxShadow">
+          <div className="">
             <div className="headerContainer container ">
               <div>
                 <h1 className="logo">Bitesized</h1>
