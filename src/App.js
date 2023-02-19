@@ -14,6 +14,7 @@ import SecondUploadMicroEducator from "./screens/SecondUploadMicroEducator/Secon
 import EducatorProfileMicro from "./screens/EducatorProfileMicro/EducatorProfileMicro";
 import EducatorAccount from "./screens/EducatorAccount/EducatorAccount";
 import UploadMicroCourse from "./components/UploadMicroCourse/UploadMicroCourse";
+import DashboardUser from "./screens/DashboardUser/DashboardUser";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/educator-profile" element={<EducatorProfileMicro/>} />
           <Route exact path="/educator-account" element={<EducatorAccount/>} />
           <Route exact path="/upload-microcourse" element={<UploadMicroCourse/>} />
+          <Route exact path="/dashboard-user" element={<DashboardUser/>} />
           
         </Routes>
       </BrowserRouter>
