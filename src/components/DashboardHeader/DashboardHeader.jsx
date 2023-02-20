@@ -3,10 +3,12 @@ import DashboardSearch from "../../assets/DashboardSearch.svg";
 import "./DashboardHeader.scss";
 import DashboardNotification from "../../assets/DashboardNotification.svg";
 import Dashboardemoji from "../../assets/Dashboardemoji.svg";
+import { SlMenu } from "react-icons/sl";
 
-const DashboardHeader = () => {
+const DashboardHeader = ({HandleOpen}) => {
   return (
     <div className="dashboarduserheader">
+      <SlMenu className="slmenu" onClick={HandleOpen}/>
       <div className="dashheadinp">
         <img src={DashboardSearch} alt="" />
       <input className="searchmicroinput" type="text" placeholder="Search microcourse" />
