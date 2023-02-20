@@ -9,7 +9,7 @@
     background-color: #FFFFFF;
     border-radius: 12px;
     width: 550px;
-    height: 50px;
+    height: 46px;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -60,4 +60,24 @@
     font-size: 30px;
     margin-right: 20px;
     display: none;
+}
+
+// =======================
+
+.CSVbtn{
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    line-height: 15px;
+  font-family: rangeSane;
+  color:#006CFF;
+  width: 146px;
+  height: 46px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
 }

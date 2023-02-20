@@ -7,14 +7,14 @@ import educatorslink from "../../assets/educatorslink.svg";
 import learnerslink from "../../assets/learnerslink.svg";
 import paymentslink from "../../assets/paymentslink.svg";
 import liveandtrendinglink from "../../assets/liveandtrendinglink.svg";
-import microcourseapprovalwhite from "../../assets/microcourseapproval.svg"; 
+import microapprovalwhite from "../../assets/microapprovalwhite.svg";
 import { RxCrossCircled } from "react-icons/rx";
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
-
+import educatorwhite from "../../assets/educatorwhite.svg"
 
 const DashboardSideBar = () => {
   const {pathname} = useLocation()
-  const [toggle , settoggle] = useState(false)
+  const [toggle , settoggle] = useState(true)
 
   const HandleOpen = () =>{
     settoggle(true)
@@ -27,8 +27,10 @@ const DashboardSideBar = () => {
   console.log(pathname)
   return (
     <>
-    <DashboardHeader HandleOpen = {HandleOpen}/>
-    <div className="sidebar" style={{left:toggle ? "0%" : "-100%"}}>
+    <DashboardHeader HandleOpen = {HandleOpen} downloadcsv/>
+    <div className="sidebar" 
+    style={{left:toggle ? "0%" : "-100%"}}
+    >
       <div className="mainrxcross">
       <RxCrossCircled className="rxcross" onClick={HandleClosed}/>
       </div>
@@ -47,15 +49,15 @@ const DashboardSideBar = () => {
             <NavLink to="/microcourse-approval" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     }>
-              <img src={pathname == "/microcourse-approval" ? microcourseapprovalwhite : microcourseapprovalgrey} alt="" />
+              <img src={pathname == "/microcourse-approval" ? microapprovalwhite : microcourseapprovalgrey} alt="" />
                <span className="dashboardspan">Microcourse Approval</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dasdsadasds" className={({ isActive }) =>
+            <NavLink to="/educators" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     }>
-              <img src={educatorslink} alt="" />
+              <img src={pathname == "/educators" ? educatorwhite : educatorslink} alt="" />
                <span className="dashboardspan">Educators</span>
             </NavLink>
           </li>
