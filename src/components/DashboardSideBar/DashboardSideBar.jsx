@@ -11,8 +11,11 @@ import microapprovalwhite from "../../assets/microapprovalwhite.svg";
 import { RxCrossCircled } from "react-icons/rx";
 import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import educatorwhite from "../../assets/educatorwhite.svg"
+import learnerwhite from "../../assets/learnerwhite.svg";
+import paymentwhite from "../../assets/paymentwhite.svg";
+import dashboardwhite from "../../assets/dashboardwhite.svg";
 
-const DashboardSideBar = () => {
+const DashboardSideBar = ({csvbtn}) => {
   const {pathname} = useLocation()
   const [toggle , settoggle] = useState(true)
 
@@ -27,7 +30,8 @@ const DashboardSideBar = () => {
   console.log(pathname)
   return (
     <>
-    <DashboardHeader HandleOpen = {HandleOpen} downloadcsv/>
+    {csvbtn ? <DashboardHeader HandleOpen = {HandleOpen} downloadcsv/> : <DashboardHeader HandleOpen = {HandleOpen}/>}
+
     <div className="sidebar" 
     style={{left:toggle ? "0%" : "-100%"}}
     >
@@ -41,7 +45,7 @@ const DashboardSideBar = () => {
             <NavLink to="/dashboard-user" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     } >
-              <img src={dashboardlink} alt="" />
+              <img src={pathname == "/dashboard-user" ? dashboardwhite : dashboardlink} alt="" />
                <span className="dashboardspan">DashBoard</span>
             </NavLink>
           </li>
@@ -62,23 +66,23 @@ const DashboardSideBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dasdsadasds" className={({ isActive }) =>
+            <NavLink to="/learners" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     }>
-              <img src={learnerslink} alt="" />
+              <img src={pathname == "/learners" ? learnerwhite : learnerslink} alt="" />
                <span className="dashboardspan">Learners</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dasdsadasds" className={({ isActive }) =>
+            <NavLink to="/payments" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     }>
-              <img src={paymentslink} alt="" />
+              <img src={pathname == "/payments" ? paymentwhite : paymentslink} alt="" />
                <span className="dashboardspan">Payments</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dasdsadasds" className={({ isActive }) =>
+            <NavLink to="/liveandtrending" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     }>
               <img src={liveandtrendinglink} alt="" />

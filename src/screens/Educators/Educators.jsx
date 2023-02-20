@@ -7,7 +7,7 @@ const Educators = () => {
     <div>
       <div className='dashboardbackground'>
       <div className='dashboardhead'>
-      <DashboardSideBar/>  
+      <DashboardSideBar csvbtn/>  
       </div>
       </div>
     </div>
