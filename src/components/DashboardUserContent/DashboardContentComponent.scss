@@ -1,0 +1,162 @@
+
+// =============================
+// DashboardUserContent
+
+.mainusercontent{
+    display: flex;
+    gap: 65px;
+    margin-top: 30px;
+}
+
+
+// ==========================
+// DashboardContentComponent
+
+.userpiccontentflex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.userpiccontentflex img{
+    width: 56px;
+    height: 56px;
+}
+
+.usernamecontent h1{
+    font-size: 20px;
+    line-height: 23px;
+    font-family: rangeSanebold;
+    color:#0B1F22;
+}
+
+.usernamecontent p{
+    font-size: 14px;
+    line-height: 16px;
+    font-family: rangeSane;
+    color:#808281;
+    margin-top: 2px;
+}
+
+.dashviewhere{
+    border: 1px solid #000000;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: rangeSanebold;
+    color: #2A3B3E;
+    height: 45px;
+    padding: 0px 30px;
+    background-color: white;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.dashviewhere:hover{
+    border: none;
+    background-color: #5DA9E9;
+    color:#FFFFFF;
+}
+
+// ============================
+// DashboardStatus
+
+.dashboardstatusdiv{
+    width: 37% !important;
+}
+
+.statusdiv h1{
+    font-size: 24px;
+    line-height: 28px;
+    color: #0B1F22;
+    font-family: rangeSanebold;
+
+}
+
+.greystatus{
+    margin-top: 15px;
+    margin-bottom: 7px;
+    background-color: #DDDDDD;
+}
+
+.whitebtnforposition{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.statussec{
+    width: 150px;
+
+}
+
+.statussec video[poster]{
+    width: 100%;
+    height: 100%;
+}
+
+.videocontentforflex{
+    display: flex;
+    gap:15px;
+}
+
+.fundamentalheading{
+    margin-top: 5px;
+}
+
+.fundamentalheading h1{
+    font-size: 16px;
+    line-height: 21px;
+    font-family: rangeSane;
+    color: #0B1F22;
+    width: 80%;
+}
+
+.fundamentalheading p{
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 28, 164, 0.08);
+    font-size: 10px;
+    line-height: 11px;
+    width: 62%;
+    margin-top:7px;
+    font-family: rangeSane;
+    color: #FF7477;
+}
+
+.pending{
+    padding: 4px 16px;
+    border-radius: 6px;
+    background-color: rgba(0, 108, 255, 0.08);
+    color: #006CFF;
+    font-size: 10px;
+    line-height: 11px;
+    margin-top: 5px;
+    font-family: rangeSane;
+}
+
+.greystatussecond{
+    margin-top: 7px;
+    margin-bottom: 1px;
+    background-color: #DDDDDD;
+}
+
+.liveandtrendbtn{
+    flex-direction: column;
+}
+
+.liveandtrendbtn button{
+    padding: 12px 30px;
+    margin-top: 16px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    color: #0B1F22;
+    border: 1px solid #0B1F22;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: rangeSanebold;
+}
