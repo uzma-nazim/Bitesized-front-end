@@ -12,7 +12,9 @@ $blue: #5da9e9;
   justify-content: space-between;
   padding: 19px 0px 10px 0px;
   align-items: center;
-
+a{
+  text-decoration: none !important;
+}
   .logo {
     font-size: 24px;
     color: $textColor;
