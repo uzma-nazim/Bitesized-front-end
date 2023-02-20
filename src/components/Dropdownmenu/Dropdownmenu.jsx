@@ -25,28 +25,28 @@ const Dropdownmenu = () => {
             </div>
             <div className="dropdown-2">
                 <div className="dropdown-items">
-                    <img src={book} alt="" />
+                    <img src={book}  alt="" />
                     <p>My Bitesized Courses</p>
                 </div>
                 <div><p className="items-2">9</p></div>
             </div>
             <div className="dropdown-2">
                 <div className="dropdown-items">
-                    <img src={setting} alt="" />
+                    <img src={setting}  alt="" />
                     <p>Settings</p>
                 </div>
                 <div><p className="items-2">9</p></div>
             </div>
             <div className="dropdown-2">
                 <div className="dropdown-items">
-                    <img src={help} alt="" />
+                    <img src={help}  alt="" />
                     <p>Help</p>
                 </div>
                 <div><p className="items-2">9</p></div>
             </div>
-            <div className="dropdown-2">
+            <div className="dropdown-2 dropdown-3">
                 <div className="dropdown-items">
-                    <img src={logout} alt="" />
+                    <img src={logout}  alt="" />
                     <p>Logout</p>
                 </div>
                 <div><p className="items-2">9</p></div>

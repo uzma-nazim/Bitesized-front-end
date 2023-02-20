@@ -47,7 +47,7 @@ export default function MicrocourseCard({ hideprogressbar, lockvideo, cardWidth,
                     <button>Upload Thumbnail</button>
                 </div>:null}
 
-                <h2 className="heading2">Introduction to User Interface Design</h2>
+                <h2 className="heading2 introduc-heading">Introduction to User Interface Design</h2>
                 <div className="microcourse-cardprofile">
                     <img src={profile} alt="" />
                     <span className="name">Ester Howard  </span>

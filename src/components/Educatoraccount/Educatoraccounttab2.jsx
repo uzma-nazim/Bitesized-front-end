@@ -23,9 +23,11 @@ const Educatoraccounttab2 = () => {
                     <h3 className="fontbold profile-name">Benjamin Mai</h3>
                     <p className="profile-para fontregular">Update your photo and personal Details</p>
                 </div>
-                <div className="edit-profile fontbold">
-                    Edit Profile
-                </div>
+                <label htmlFor="editprofile">
+                    <div className="edit-profile fontbold">
+                        <input type="file" hidden id='editprofile' />
+                        Edit Profile
+                    </div></label>
             </div>
             <div className="bio-data">
                 <h1 className="fontbold heading-bio">Bio</h1>
@@ -56,7 +58,7 @@ const Educatoraccounttab2 = () => {
                     </div>
 
                 </div>
-                    <button className="password-button fontbold">Update Password</button>
+                <button className="password-button fontbold">Update Password</button>
 
             </div>
         </div>
