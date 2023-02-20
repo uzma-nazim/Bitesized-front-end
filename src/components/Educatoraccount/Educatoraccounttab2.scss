@@ -97,7 +97,7 @@
 .bio-data {
     // border: 1px solid black;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     padding: 0 25px;
 }
 
@@ -110,7 +110,7 @@
     color: #898989;
     font-size: 16px;
     line-height: 26px;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 .color-para{
     color: #808191 !important;
@@ -118,7 +118,7 @@
 
 .password {
     border-top: 1px solid #818386;
-    padding: 45px 25px;
+    padding: 35px 25px;
     
 }
 
@@ -145,8 +145,10 @@
 }
 
 .newpassword-sec {
+    gap: 43px;
+    
     display: flex;
-    justify-content: space-between;
+    
 }
 
 .newpassword {
