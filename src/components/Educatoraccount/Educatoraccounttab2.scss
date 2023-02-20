@@ -262,6 +262,15 @@
             width: 5px;
         }
     }
+    .bio-data {
+       
+        margin-bottom: 35px;
+       
+    }
+    .password {
+        margin-top: 8px;
+        padding: 24px 25px;
+    }
     
     .image-one{
         width: 40px;
@@ -270,48 +279,49 @@
         width: 10px;
     }
     .profile-name {
-        font-size: 8px;
-        line-height: 10px;
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 0px;
     }
     
     .profile-para {
-        font-size: 6px;
-        line-height: 8px;
+        font-size: 10px;
+        line-height: 12px;
         color: #808191;
     }
     .edit-profile {
         // border: 1px solid black;
         padding: 2px;
-        font-size: 6px;
-        line-height: 8px;
+        font-size: 10px;
+        line-height: 12px;
         background: #F0F3F6;
     
     
     }
     .heading-bio {
-        font-size: 8px;
-        line-height: 10px;
+        font-size: 10px;
+        line-height: 12px;
     }
     
     .heading-para {
-        font-size: 6px;
-        line-height: 8px;
+        font-size: 10px;
+        line-height: 12px;
     }
     .password-para {
-        font-size: 4px;
-        line-height: 10px;
+        font-size: 10px;
+        line-height: 12px;
     }
     .password-heading {
-        font-size: 8px;
-        line-height: 10px;
+        font-size: 12px;
+        line-height: 14px;
     
     }
     
     .password-button {
     
         padding: 4px 12px;
-        font-size: 6px;
-        line-height: 10px;
+        font-size: 10px;
+        line-height: 12px;
        
     }
     .profile-image {
@@ -328,7 +338,7 @@
         margin-top: 10px;
     }
     ::placeholder{
-        font-size: 4px;
-        line-height: 0%;
+        font-size: 10px;
+        line-height: 12px;
     }
 }
