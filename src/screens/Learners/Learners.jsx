@@ -1,19 +1,19 @@
 import React from 'react'
 import DashboardSideBar from '../../components/DashboardSideBar/DashboardSideBar';
-import EducatorsCotent from '../../components/EducatorsCotent/EducatorsCotent';
-import "./Educators.scss";
+import LearnersContent from '../../components/LearnersContent/LearnersContent';
+import "./Learners.scss";
 
-const Educators = () => {
+const Learners = () => {
   return (
-    <div>
+    <div> 
       <div className='dashboardbackground educatorbackground'>
       <div className='dashboardhead'>
-      <DashboardSideBar csvbtn />
-      <EducatorsCotent/>
+      <DashboardSideBar csvbtn/>  
+      <LearnersContent/>
       </div>
       </div>
     </div>
   )
 }
 
-export default Educators;
+export default Learners

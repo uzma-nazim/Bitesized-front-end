@@ -42,10 +42,10 @@ const DashboardSideBar = ({csvbtn}) => {
       <div className="dashboardslide">
         <ul>
           <li>
-            <NavLink to="/dashboard-user" className={({ isActive }) =>
+            <NavLink to="/dashboard" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     } >
-              <img src={pathname == "/dashboard-user" ? dashboardwhite : dashboardlink} alt="" />
+              <img src={pathname == "/dashboard" ? dashboardwhite : dashboardlink} alt="" />
                <span className="dashboardspan">DashBoard</span>
             </NavLink>
           </li>
@@ -66,10 +66,10 @@ const DashboardSideBar = ({csvbtn}) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/learners" className={({ isActive }) =>
+            <NavLink to="/Learners" className={({ isActive }) =>
                       isActive ? "dashboardactivelink" : "dashboardnavlink"
                     }>
-              <img src={pathname == "/learners" ? learnerwhite : learnerslink} alt="" />
+              <img src={pathname == "/Learners" ? learnerwhite : learnerslink} alt="" />
                <span className="dashboardspan">Learners</span>
             </NavLink>
           </li>

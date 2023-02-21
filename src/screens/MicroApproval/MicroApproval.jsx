@@ -1,6 +1,6 @@
 import React from 'react'
 import DashboardSideBar from '../../components/DashboardSideBar/DashboardSideBar';
-import MicroApprovalContent from '../../components/DashboardUserContent/MicroApprovalContent';
+import MicroApprovalContent from '../../components/MicroApprovalContentComponent/MicroApprovalContent';
 import "./MicroApproval.scss";
 
 const MicroCourseApproval = () => {
