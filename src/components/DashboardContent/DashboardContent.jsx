@@ -9,7 +9,7 @@ const DashboardContent = () => {
   return (
     <>
     <div className='doubledashboardcontentmain'>
-    <div className='dashboardcontentmain'>
+    <div className='dashboardcontentmain borderdashboardcontentmain'>
       <div className='dashboardparentdiv dashboardparentdivone'>
         <img className='arrowdashboard' src={ArrowDashboard} alt="" />
         <div>
@@ -47,7 +47,7 @@ const DashboardContent = () => {
 
 
 
-    
+
 
     <div className='dashboardcontentmain dashboardcontentmainpadding'>
       <div className='dashboardparentdiv dashboardparentdivfive'>
