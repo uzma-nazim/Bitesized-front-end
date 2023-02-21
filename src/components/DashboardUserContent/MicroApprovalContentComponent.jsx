@@ -2,7 +2,7 @@ import React from 'react'
 import "./DashboardContentComponent.scss";
 import Dashboarduserpic from "../../assets/Dashboarduserpic.svg";
 
-const DashboardContentComponent = () => {
+const MicroApprovalContentComponent = () => {
   return (
     <div>
         <div className='userpiccontentflex'>
@@ -17,4 +17,4 @@ const DashboardContentComponent = () => {
   )
 }
 
-export default DashboardContentComponent;
+export default MicroApprovalContentComponent;

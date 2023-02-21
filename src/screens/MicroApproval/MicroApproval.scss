@@ -1,0 +1,295 @@
+.dashboardhead{
+    margin-left: 290px;
+}
+
+.dashboardbackground{
+    background-color: #F6F8FA;
+
+}
+
+
+// ==============================
+
+@media only screen and (max-width: 1250px) {
+    .slmenu{
+        display: block;
+    }
+    .sidebar{
+        left: -100%;
+    }
+    .dashboardhead{
+        margin-left: 30px;
+    }
+    .rxcross{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1116px) {
+    .fundamentalheading p{
+        font-size: 9px;
+    }
+
+}
+
+@media only screen and (max-width: 1091px) {
+    .dashboardstatusdiv{
+        margin-right: 50px;
+    }
+    .mainusercontent{
+        gap: 30px;
+    }
+    .usernamecontent p{
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .mainusercontent{
+        flex-wrap: wrap;
+    }
+    .dashboardstatusdiv{
+        width: 470px !important;
+        margin-bottom: 40px;
+    }
+    .fundamentalheading p{
+        width: 110px;
+    }
+    .greystatus{
+        margin-bottom: 9px;
+    }
+    .greystatussecond{
+        margin-top: 9px;
+    }
+    .maindashboardcontentcomponent{
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .slmenu{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .dashheadinp{
+        width: 100%;
+        height: 35px;
+    }
+    .searchmicroinput{
+        width: 82%;
+    }
+}
+
+@media only screen and (max-width: 659px) {
+    .usernamecontent p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .dashviewhere{
+        padding: 0px 15px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .dashviewhere{
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .searchmicroinput{
+        font-size: 12px;
+    }
+    .searchmicroinput::placeholder{
+        font-size: 12px;
+    }
+    .dashviewhere{
+        margin-left: 5px;
+    }
+    .userpiccontentflex img{
+        width: 42px;   
+        height: 42px;   
+    }
+    .usernamecontent h1{
+        font-size: 16px;
+    }
+    .dashemoji{
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .dashviewhere{
+        padding: 0px 15px;
+        height: 30px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .fundamentalheading h1{
+        font-size: 13px;
+    }
+    .searchmicroinput{
+        width: 100px;
+    }
+    .searchmicroinput::placeholder{
+        font-size: 10px;
+    }
+    .dashheadinp img{
+        width: 15px;
+        height: 15px;
+    }
+    .dashnoti{
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .dashemoji{
+        height: 32px;
+        width: 32px;
+    }
+    .statusdiv{
+        width: 90%;
+    }
+    .statussec{
+        margin-right: -20px;
+    }
+    .fundamentalheading h1{
+        font-size: 10.5px;
+        line-height: 15px;
+    }
+    .videocontentforflex{
+        gap: 10px;
+    }
+    .liveandtrendbtn button{
+        font-size: 14px;
+    }
+    .statussec video[poster]{
+        width: 85%;
+        height: 85%;
+    }
+    .whitebtnforposition{
+        left: 43%;
+        top: 40%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .userpiccontentflex{
+        margin-bottom: 20px;
+    }
+    .mainusercontent{
+        margin-top: 20px;
+    }
+    .usernamecontent h1{
+        font-size: 14px;
+    }
+    .usernamecontent p{
+        font-size: 11px;
+        line-height: 14px;
+        margin-top: 0px;
+    }
+    .notiemoji{
+        margin-right: 25px;
+    }
+    .dashemoji{
+        margin-left: 18px;
+    }
+    .dashviewhere{
+        padding: 0px 8px;
+        height: 28px;
+        font-size: 12px;
+    }
+    .liveandtrendbtn button{
+        font-size: 14px;
+    }
+    .statusdiv{
+        width: 280px;
+    }
+    .fundamentalheading h1{
+        font-size: 10px;
+    }
+    .videocontentforflex{
+        gap: 4px;
+    }
+    .fundamentalheading p{
+        margin-top: 2px;
+        border-radius: 2px;
+        font-size: 8px;
+        width: 80%;
+        padding: 2px 1px;
+    }
+    .greystatussecond{
+        margin-top: 0px;
+    }
+    .greystatus{
+        margin-top: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 344px) {
+    .mainusercontent{
+        margin-top: 18px;
+    }
+    .usernamecontent h1{
+        font-size: 12px;
+    }
+    .usernamecontent p{
+        font-size: 10px;
+        line-height: 14px;
+        margin-top: 0px;
+    }
+    .dashemoji{
+        width: 28px;
+        height: 28px;
+    }
+    .dashviewhere{
+        padding: 0px 6px;
+        height: 25px;
+        font-size: 10px;
+        border-radius: 6px;
+    }
+    .liveandtrendbtn button{
+        font-size: 13px;
+    }
+    .mainusercontent{
+        gap:20px;
+    }
+    .fundamentalheading h1{
+        white-space: normal;
+    }
+    .fundamentalheading p{
+        white-space: normal;
+    }
+    .statussec video[poster]{
+        width: 75%;
+        height: 75%;
+    }
+    .statussec{
+        margin-right: -35px;
+    }
+    .whitebtnforposition{
+        left: 38%;
+        top: 38%;
+    }
+    .pending{
+        padding: 3px 8px;
+        font-size: 8px;
+        border-radius: 5px;
+    }
+    .dashboardhead{
+        margin-left: 16px;
+    }
+}
+

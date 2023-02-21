@@ -1,19 +1,17 @@
 import React from 'react'
-import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import DashboardSideBar from '../../components/DashboardSideBar/DashboardSideBar';
-import "./DashboardUser.scss";
+import "./Educators.scss";
 
-const DashboardUser = () => {
+const Educators = () => {
   return (
     <div>
       <div className='dashboardbackground'>
       <div className='dashboardhead'>
-      <DashboardHeader/>
+      <DashboardSideBar csvbtn/>  
       </div>
       </div>
-      <DashboardSideBar/>  
     </div>
   )
 }
 
-export default DashboardUser;
+export default Educators;

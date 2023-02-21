@@ -1,19 +1,19 @@
 import React from 'react'
-import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
 import DashboardSideBar from '../../components/DashboardSideBar/DashboardSideBar';
-import "./DashboardUser.scss";
+import MicroApprovalContent from '../../components/DashboardUserContent/MicroApprovalContent';
+import "./MicroApproval.scss";
 
-const DashboardUser = () => {
+const MicroCourseApproval = () => {
   return (
     <div>
       <div className='dashboardbackground'>
       <div className='dashboardhead'>
-      <DashboardHeader/>
-      </div>
-      </div>
       <DashboardSideBar/>  
+      <MicroApprovalContent/>
+      </div>
+      </div>
     </div>
   )
 }
 
-export default DashboardUser;
+export default MicroCourseApproval;

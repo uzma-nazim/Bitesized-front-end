@@ -2,13 +2,14 @@
     height: 80px;
     padding-top: 25px;
     display: flex;
+    align-items: center;
 }
 
 .dashheadinp{
     background-color: #FFFFFF;
     border-radius: 12px;
-    width: 550px;
-    height: 50px;
+    width: 518px;
+    height: 46px;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -53,4 +54,30 @@
     background-color: #F8C993;
     border-radius: 8px;
     margin-left: 40px;
+}
+
+.slmenu{
+    font-size: 30px;
+    margin-right: 20px;
+    display: none;
+}
+
+// =======================
+
+.CSVbtn{
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    line-height: 15px;
+  font-family: rangeSane;
+  color:#006CFF;
+  width: 146px;
+  height: 46px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
 }
