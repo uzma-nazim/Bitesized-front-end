@@ -17,6 +17,8 @@ import UploadMicroCourse from "./components/UploadMicroCourse/UploadMicroCourse"
 import DashboardUser from "./screens/DashboardUser/DashboardUser";
 import MicroCourseApproval from "./screens/MicroApproval/MicroApproval";
 import Educators from "./screens/Educators/Educators";
+import Learners from "./screens/Learners/Learners";
+import Payments from "./screens/Payments/Payments";
 function App() {
   return (
     <>
@@ -39,6 +41,8 @@ function App() {
           <Route exact path="/dashboard" element={<DashboardUser/>} />
           <Route exact path="/microcourse-approval" element={<MicroCourseApproval/>} />
           <Route exact path="/educators" element={<Educators/>} />
+          <Route exact path="/Learners" element={<Learners/>} />
+          <Route exact path="/payments" element={<Payments/>} />
           
         </Routes>
       </BrowserRouter>

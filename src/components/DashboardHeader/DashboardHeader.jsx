@@ -15,7 +15,7 @@ const DashboardHeader = ({HandleOpen , downloadcsv}) => {
       <input className="searchmicroinput" type="text" placeholder="Search microcourse" />
       </div>
       <div>
-        {downloadcsv ? <button className="CSVbtn">
+        {downloadcsv ? <button className="CSVbtn csvhidden">
           <img src={DownloadCSV} alt="" />
          <p>Download CSV</p>
         </button> : null} 
