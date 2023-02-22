@@ -1,0 +1,49 @@
+
+@media only screen and (max-width: 820px) {
+    .uihutflex{
+        flex-direction: column;
+    }
+    .secondcsv{
+        margin-top: 272px;
+    }
+    .secondclassforscroll{
+        margin-top: 20px;
+    }
+    .uihutdiv{
+        width: 293px;
+        height: 132px;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 664px) {
+  
+    .CSVbtn{
+        width: 120px;
+        height: 40px;
+        font-size: 10px;
+        margin-left: 20px;
+    }
+    .CSVbtn img{
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .uihutcsvbtnflex{
+        flex-wrap: wrap;
+    }
+    .secondcsv{
+        margin-top: 20px;
+    }
+    .CSVbtn{
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 344px) {
+    .uihutdiv{
+        width: 95%;
+    }
+}
