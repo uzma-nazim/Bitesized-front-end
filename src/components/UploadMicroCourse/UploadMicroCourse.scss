@@ -78,7 +78,7 @@
     background: rgba(255, 116, 119, 0.08);
     border-radius: 40px;
     padding: 15px;
-    width: 15%;
+    width: 207px;
     font-size: 15px;
     line-height: 18px;
     color: #0B1F22;
@@ -89,7 +89,7 @@
     background: rgba(255, 116, 119, 0.08);
     border-radius: 40px;
     padding: 15px;
-    width: 15%;
+    width: 207px;
     font-size: 15px;
     line-height: 18px;
     background: #5DA9E9;
@@ -98,15 +98,37 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .exit-button {
 
-        width: 50%;
+.upload-ui-heading {
+
+    margin-top: 15px;
+}
+.micro-course-cards{
+    margin-top: 0px;
+}
+.microcourse-profile{
+
+    margin-top: 38px;
+    gap: 12px;
+    img{
+        width: 70px;
 
     }
-
+}
     .continue-button {
+        width: 130px;
+        font-size: 10px;
+        padding: 9px !important;
+        line-height: 18px;
+        
 
-        width: 50%;
+    }
+    .exit-button {
+        width: 130px;
+        font-size: 10px;
+        padding: 9px !important;
+        line-height: 18px;
+        
 
     }
 
@@ -121,7 +143,7 @@
     }
     .course-name{
         font-size: 12px;
-        line-height: 18px;
+        line-height: 9px;
     }
     .tag-button {
         
@@ -154,12 +176,7 @@
         padding: 5px;
     }
 
-    .continue-button {
 
-        width: 40%;
-        font-size: 12px;
-        line-height: 18px;
-    }
 }
 @media only screen and (max-width: 320px) {
    
