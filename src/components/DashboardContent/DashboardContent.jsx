@@ -5,6 +5,7 @@ import SmallArrow from "../../assets/SmallArrow.svg";
 import SmallRedArrow from "../../assets/SmallRedArrow.svg";
 import RedArrow from "../../assets/RedArrow.svg";
 import DashboardChart from '../DashboardChart/DashboardChart';
+import RadialApexChart from '../CircleChart/CircleChart';
 
 const DashboardContent = () => {
   return (
@@ -146,7 +147,9 @@ const DashboardContent = () => {
 
 
       <div>
+        
         <DashboardChart/>
+
       </div>
     </>
   )
