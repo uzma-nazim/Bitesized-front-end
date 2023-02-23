@@ -17,7 +17,7 @@ import dashboardwhite from "../../assets/dashboardwhite.svg";
 
 const DashboardSideBar = ({csvbtn}) => {
   const {pathname} = useLocation()
-  const [toggle , settoggle] = useState(true)
+  const [toggle , settoggle] = useState(false)
 
   const HandleOpen = () =>{
     settoggle(true)
@@ -33,7 +33,7 @@ const DashboardSideBar = ({csvbtn}) => {
     {csvbtn ? <DashboardHeader HandleOpen = {HandleOpen} downloadcsv/> : <DashboardHeader HandleOpen = {HandleOpen}/>}
 
     <div className="sidebar" 
-    style={{left:toggle ? "0%" : "-100%"}}
+    style={{left:window.innerWidth>1250? "0%" :toggle ? "0%" : "-100%"}}
     >
       <div className="mainrxcross">
       <RxCrossCircled className="rxcross" onClick={HandleClosed}/>

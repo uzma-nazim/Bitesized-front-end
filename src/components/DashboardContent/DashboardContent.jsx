@@ -9,6 +9,7 @@ import ApexChart from '../DashboardChart/DashboardChart';
 import Calendar from '../../assets/Calendar.svg';
 import DatePickerComp from '../DatePicker/DatePicker';
 import { IoIosArrowDown } from "react-icons/io";
+import RadialApexChart from '../CircleChart/CircleChart';
 
 const DashboardContent = () => {
   return (
@@ -148,7 +149,7 @@ const DashboardContent = () => {
 
     </div>
 
-
+<div className='bothchart'> 
       <div className="chartmaindiv">
         <div className='statistics'>
         <h1>Statistics</h1> 
@@ -161,6 +162,11 @@ const DashboardContent = () => {
 
         <ApexChart/>
       
+      </div>
+      <div className='radialchart'>
+
+      <RadialApexChart/>
+      </div>
       </div>
     </>
   )

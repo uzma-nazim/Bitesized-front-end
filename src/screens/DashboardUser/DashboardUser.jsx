@@ -6,7 +6,7 @@ import "./DashboardUser.scss";
 const DashboardUser = () => {
   return (
     <div>
-    <div className='dashboardbackground educatorbackground'>
+    <div className='dashboardbackground'>
     <div className='dashboardhead'>
     <DashboardSideBar/>
      <DashboardContent/>

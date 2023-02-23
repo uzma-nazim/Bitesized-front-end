@@ -161,7 +161,7 @@ class ApexChart extends React.Component {
         legend: {
           position: "top",
           offsetY: 0,
-          show: true
+          show: window.innerWidth > 411 ? true : false,
         },
         fill: {
           opacity: 1,
@@ -178,7 +178,7 @@ class ApexChart extends React.Component {
           series={this.state.series}
           type="bar"
           height={350}
-          width={715}
+          width={"100%"}
         />
       </div>
     );

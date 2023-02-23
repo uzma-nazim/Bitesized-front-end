@@ -43,6 +43,17 @@ ul {
 .light-white{
   background-color: $lighwhite !important;
 }
+.textgray{
+  color: #818386 !important; 
+}
+.bg-blue{
+  background-color: #3A63DE !important;
+  
+}
+.bg-yellow{
+  background-color: #FFCA61 !important;
+  
+}
 .heading1 {
   font-size: 32px;
   color: $textColor;
@@ -86,7 +97,17 @@ line-height: 23px;
   color: #141414;
   font-family: rangeSanebold;
 }
-
+.heading6{
+  font-family: rangeSanebold;
+font-size: 22px;
+line-height: 26px;
+}
+.heading7{
+  font-family: rangeSane;
+  color: #333333;
+  font-size: 30px;
+  line-height: 35px;
+}
 .links {
   font-size: 14px;
   font-family: rangeSane;

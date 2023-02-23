@@ -131,13 +131,17 @@
 
 // ==========================
 
+.radialchart{
+    margin-top: 20px;
+}
+
 .chartmaindiv{
     background-color: white;
     margin-top: 40px;
     padding-top: 45px;
     padding-right: 20px;
     padding-left: 20px;
-    width: 750px;
+    width: 67%;
     position: relative;
 
 }
@@ -202,6 +206,13 @@
 
 }
 
+.bothchart{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    gap: 20px;
+}
+
 // ==========================
 
 @media only screen and (max-width: 1050px) {
@@ -220,11 +231,68 @@
     }
 }
 
+@media only screen and (max-width: 986px) {
+    .radialchart{
+        margin-top: 0px !important;
+    }
+    
+    .chartmaindiv{
+        width: 96%;
+
+    }
+}
+
 @media only screen and (max-width: 830px) {
     .dashboardforflex{
         grid-template-columns: repeat(2 , 1fr);
     
         }
+}
+
+@media only screen and (max-width: 669px) {
+    .calenderflex{
+        gap: 5px;
+        width:165px
+    }
+    .react-datepicker__input-container{
+        width: 100% !important;
+
+    }
+    .react-datepicker__input-container input{
+        font-size: 12px;
+        width: 100% !important;
+
+    }
+    .calendericon{
+        width: 19px;
+        height: 19px;
+    }
+    .react-datepicker-wrapper{
+        width: 58% !important;
+}
+
+}
+
+@media only screen and (max-width: 565px) {
+    .calenderflex{
+        width: 52px;
+    }
+    .calendericon{
+        width: 15px;
+        height: 15px;
+    }
+    .react-datepicker-wrapper{
+        display: none !important;
+}
+    .chartmaindiv{
+        width: 94%;
+}
+    .statistics h1{
+        font-size: 18px;
+}
+.arrowiconcalender{
+    display: none;
+}
 }
 
 @media only screen and (max-width: 615px) {
@@ -252,4 +320,32 @@
     .dashboardforflex{
         grid-template-columns: repeat(1 , 1fr);
         }
+        .heading7{
+            font-size: 20px;
+        }
+}
+
+@media only screen and (max-width: 411px) {
+    .statistics h1{
+        font-size: 14px;
+    }
+    .heading6{
+        font-size: 18px;
+    }
+        .chartmaindiv{
+        width: 94%;
+}
+.calenderflex{
+    width:35px;
+    height:35px;
+}
+.dashboardforflex{
+    margin-right: 20px;
+}
+}
+
+@media only screen and (max-width: 354px) {
+    .circleChartContainer{
+        width: 97%;
+    }
 }

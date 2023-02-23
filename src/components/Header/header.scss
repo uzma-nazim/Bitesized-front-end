@@ -12,7 +12,9 @@ $blue: #5da9e9;
   justify-content: space-between;
   padding: 19px 0px 10px 0px;
   align-items: center;
-
+a{
+  text-decoration: none !important;
+}
   .logo {
     font-size: 24px;
     color: $textColor;
@@ -71,7 +73,9 @@ $blue: #5da9e9;
   .logo {
     font-size: 20px !important;
   }
-
+  .dropdown-adjust2{
+    width: 300px !important;
+  }
   .header-link {
     a {
 

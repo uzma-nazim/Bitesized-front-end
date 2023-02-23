@@ -15,7 +15,9 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
         <>
           <div className="headerContainer container">
             <div>
+            <NavLink to={"/"}>
               <h1 className="logo">Bitesized</h1>
+              </NavLink>
             </div>
             <div className="header-link">
               <ul>
@@ -51,7 +53,9 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
           <div className="headerBoxShadow">
             <div className="headerContainer container ">
               <div>
-                <h1 className="logo">Bitesized</h1>
+                <NavLink to={"/"}>
+                  <h1 className="logo">Bitesized</h1>
+                </NavLink>
               </div>
               <div className="header-link">
                 <ul>
@@ -85,10 +89,12 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
         </>
       ) : educatorProfile ? (
         <>
-          <div className="headerBoxShadow">
+          <div className="">
             <div className="headerContainer container ">
               <div>
+              <NavLink to={"/"}>
                 <h1 className="logo">Bitesized</h1>
+                </NavLink>
               </div>
               <div className="header-link">
                 <ul>
