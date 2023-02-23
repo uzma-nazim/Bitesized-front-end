@@ -3,7 +3,7 @@
     display: block;
     border-radius: 6px;
     padding: 16px;
-    margin-bottom: 7px !important;
+    margin-bottom: 2px !important;
     margin-right: 15px;
     margin-left: 15px;
     text-decoration: none;
@@ -48,6 +48,7 @@
     width: 248px;
     transition: .5s linear;
     background-color: white;
+    z-index: 999;
 }
 
 .bitesizeddashboard{
@@ -60,7 +61,7 @@
 }
 
 .dashboardspan{
-    margin-left: 12px;
+    margin-left: 16px;
     font-size: 14px;
     line-height: 22px;
     font-family: rangeSane;

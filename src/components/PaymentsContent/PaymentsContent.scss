@@ -18,22 +18,27 @@
 .uihutflex{
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     margin-top: 20px;
 }
 
 .uihutdiv{
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
     background-color: #FFFFFF;
     width: 273px;
     height: 132px;
+    position: relative;
 }
 
-.uihutdiv img{
-    width: 62px;
-    height: 62px;
+.greyball{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.circularprogress{
     margin-left: 20px;
 }
 .totalrevenue{
@@ -53,4 +58,24 @@
 
 .secondclassforscroll{
     margin-top: 25px;
+}
+
+// ==================
+
+.circleprogressivebar{
+    height: 65px;
+    width: 65px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleprogressivebarchild{
+    height: 35px;
+    width: 35px;
+    background-color: red;
+    border-radius: 50%;
+
 }

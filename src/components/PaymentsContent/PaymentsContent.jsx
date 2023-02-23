@@ -1,14 +1,18 @@
 import React from 'react'
 import "./PaymentsContent.scss";
 import DownloadCSV from "../../assets/DownloadCSV.svg";
-import UIHUT from "../../assets/UIHUT.svg";
+import greyball from "../../assets/greyball.svg";
+import CircularProgress from '../CircularProgressiveBar/CircularProgressiveBar';
 const PaymentsContent = () => {
   return (
     <>
     <div className="uihutcsvbtnflex">
         <div className='uihutflex'>
         <div className='uihutdiv'>
-            <img src={UIHUT} alt="" />
+                <img className='greyball' src={greyball} alt="" />
+            <div className="circularprogress">
+          <CircularProgress percent={50}/>
+            </div>
             <div>
             <p className='totalrevenue'>Total Revenue</p>
             <p className='uihutdollar'>$3.5k</p>
@@ -16,7 +20,10 @@ const PaymentsContent = () => {
         </div>
 
         <div className='uihutdiv'>
-            <img src={UIHUT} alt="" />
+        <img className='greyball' src={greyball} alt="" />
+        <div className="circularprogress">
+          <CircularProgress percent={50}/>
+            </div>
             <div>
             <p className='totalrevenue'>Total Fee Revenue</p>
             <p className='uihutdollar'>$100</p>
