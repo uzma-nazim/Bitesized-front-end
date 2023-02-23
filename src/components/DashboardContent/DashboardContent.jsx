@@ -5,6 +5,10 @@ import SmallArrow from "../../assets/SmallArrow.svg";
 import SmallRedArrow from "../../assets/SmallRedArrow.svg";
 import RedArrow from "../../assets/RedArrow.svg";
 import DashboardChart from '../DashboardChart/DashboardChart';
+import ApexChart from '../DashboardChart/DashboardChart';
+import Calendar from '../../assets/Calendar.svg';
+import DatePickerComp from '../DatePicker/DatePicker';
+import { IoIosArrowDown } from "react-icons/io";
 
 const DashboardContent = () => {
   return (
@@ -145,8 +149,18 @@ const DashboardContent = () => {
     </div>
 
 
-      <div>
-        <DashboardChart/>
+      <div className="chartmaindiv">
+        <div className='statistics'>
+        <h1>Statistics</h1> 
+        <div className='calenderflex'>
+          <img className="calendericon" src={Calendar} alt="" />
+        <DatePickerComp/>
+        <IoIosArrowDown className="arrowiconcalender"/>
+        </div>
+        </div>
+
+        <ApexChart/>
+      
       </div>
     </>
   )
