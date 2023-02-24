@@ -112,6 +112,7 @@ class ApexChart extends React.Component {
             breakpoint: 480,
             options: {
               legend: {
+                
                 position: "top",
                 offsetX: -10,
                 offsetY: 0,
@@ -127,8 +128,10 @@ class ApexChart extends React.Component {
             columnWidth:"30%",
             horizontal: false,
             borderRadius:2,
+            
             barWidth:10,
             dataLabels: {
+              enabled: false,
               show:true,
               total: {
                 enabled: false,
@@ -142,20 +145,23 @@ class ApexChart extends React.Component {
           },
         },
         colors:["#4D4D4D","#FFCA61"],
+        dataLabels: {
+          enabled: false
+        },
         xaxis: {
-          type: "datetime",
+          type: "month",
           categories: [
-            "01/01/2011 GMT",
-            "01/02/2011 GMT",
-            "01/03/2011 GMT",
-            "01/04/2011 GMT",
-            "01/05/2011 GMT",
-            "01/06/2011 GMT",
-            "01/07/2011 GMT",
-            "01/08/2011 GMT",
-            "01/09/2011 GMT",
-            "01/10/2011 GMT",
-            "01/11/2011 GMT",
+            "jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "jun",
+            "jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Dec",
           ],
         },
         legend: {
