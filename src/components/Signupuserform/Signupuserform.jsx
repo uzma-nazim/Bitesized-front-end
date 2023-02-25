@@ -2,8 +2,10 @@ import React from "react";
 import './Signupuserform.scss'
 import google from '../../assets/google-icon.svg'
 import hide from '../../assets/hide.svg'
+import { useNavigate } from "react-router-dom";
 
 const Signupuserform = (props) => {
+    const navigate = useNavigate()
     return (
         <div className="maincontainer">
 
@@ -23,7 +25,7 @@ const Signupuserform = (props) => {
                         <div className="line2"></div>
                     </div>
                     <div className="form">
-                        <form action="submit">
+                        <form action="/create-profile" onSubmit={()=>navigate("/create-profile")}>
                             <p>Name</p>
                             <div className="inputfield">
 

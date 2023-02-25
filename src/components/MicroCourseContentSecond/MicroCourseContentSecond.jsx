@@ -1,8 +1,11 @@
 import React from 'react'
 import "./MicroCourseContentSecond.scss";
 import uploadthumbnail from "../../assets/upload.svg";
+import { useNavigate } from 'react-router-dom';
 
 const MicroCourseContentSecond = () => {
+  const navigate = useNavigate(   )
+
   return (
     <div className='container'>
        <div className='allcontentpadding'>
@@ -80,7 +83,7 @@ const MicroCourseContentSecond = () => {
             </div>
             <div className='savebtnflex fortopmarginsave'>
                 <button className="saveexit">Save and Exit</button>
-                <button className="savecontinue">Save and Continue</button>
+                <button className="savecontinue"  onClick={()=>navigate("/educator-profile")}>Save and Continue</button>
             </div>
             </div>
 

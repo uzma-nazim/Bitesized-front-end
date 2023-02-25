@@ -14,7 +14,7 @@ import RateCourses from "../RateCourses/RateCourses";
 
 
 const IntroUIDesignStart = () => {
-  const [modalShow, setModalShow] = useState(true);
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <div className="container">
