@@ -1,0 +1,362 @@
+.Signupuserform {
+    background-color: #ffff;
+    // border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 600px;
+    padding:34px 30px 30px 30px;
+    
+}
+
+.main-content {
+    width: 80%;
+    margin: auto
+}
+
+.signupuserheading {
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.signupuserheading3 {
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 10px;
+}
+
+.google {
+    display: flex;
+    // justify-content: flex-start;
+    border: 1px solid #E1E3E6;
+    width: 90%;
+    padding: 14px;
+    margin: 30px 20px 21px 20px;
+
+}
+
+.googletext {
+    margin: auto;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: "Poppins";
+    color: #898989;
+}
+
+.lineheading {
+    width: 100%;
+    // border: 1px solid black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 9px auto;
+}
+
+.line1,
+.line2 {
+    width: 115px;
+    border-top: 1px solid  #E1E3E6;
+    margin: auto 12px;
+}
+
+.linetext {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #818386;
+    opacity: 0.6;
+}
+
+.form {
+    width: 90%;
+    // border: 1px solid #CECECE;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    // justify-content: center;
+    p {
+        text-align: start;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        color: #898989;
+        margin-top:14px;
+
+
+    }
+
+    input {
+        width: 100%;
+        background: #F2F5FA;
+        border: none;
+    }
+
+    span {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #D2D4D9;
+        text-align: start;
+        margin-top: 5px;
+    }
+
+    button {
+        background: #5DA9E9;
+        border-radius: 40px;
+        width: 100%;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: #FFFFFF;
+        padding: 15px;
+        margin-top: 16px;
+        border: none;
+    }
+}
+
+input:focus {
+    outline: none;
+}
+
+.inputfield {
+    margin-top: 4px;
+    width: 100%;
+    background: #F2F5FA;
+    padding: 12px 16px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.checkbox {
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #595F69;
+
+    input {
+        width: 18px;
+    }
+
+    span {
+        font-weight: 400;
+        color: #3A63DE;
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+.login-text {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #818386;
+    margin-top: 30px;
+
+    span {
+        font-weight: 400;
+        color: #3A63DE;
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+.passcheckfield {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+
+}
+
+.filed1 {
+    width: 24%;
+    background: #44CB7F;
+    border-radius: 4px;
+    height: 4px;
+}
+
+@media only screen and (max-width: 425px) {
+    .Signupuserform {
+
+
+        width: 100%;
+
+    }
+
+    .main-content {
+        width: 100%;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+    .Signupuserform {
+
+
+        width: 300px;
+
+    }
+
+    .main-content {
+        width: 100%;
+
+    }
+
+    .signupuserheading {
+        font-size: 20px;
+    }
+
+    .signupuserheading3 {
+        font-size: 15px;
+    }
+
+    .google {
+
+        width: 85%;
+        padding: 8px;
+
+    }
+
+    .googletext {
+        margin: auto;
+        font-size: 12px;
+    }
+
+    .linetext {
+
+        font-size: 10px;
+    }
+
+    .form {
+        width: 100%;
+
+
+    }
+
+    form {
+
+        p {
+
+            font-weight: 500;
+            font-size: 10px;
+
+
+        }
+
+        span {
+
+            font-size: 10px;
+
+        }
+
+
+
+    }
+    .inputfield {
+        
+        padding: 6px 10px;
+    
+    }
+    .checkbox {
+        
+        font-size: 10px;
+    
+        span {
+            
+            font-size: 10px;
+
+        }
+    }
+    .login-text {
+        
+        font-size: 10px;
+        
+    
+        span {
+            
+            font-size: 10px;
+           
+        }
+    }
+
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .signupuserheading {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .signupuserheading3 {
+        font-size: 20px;
+        line-height: 15px;
+        margin-top: 10px;
+    }
+    .linetext
+    {
+        font-size: 11px;
+        line-height: 13px;
+    }
+    .line1{
+        width: 95px;
+    }
+    .line2{
+        width: 95px;
+    }
+    .Signupuserform{
+        padding: 34px 10px 30px 10px;
+
+    }
+    form {
+        p{
+            font-size: 12px;
+        }
+        .inputfield{
+            padding: 10px 16px;
+            
+        }
+        span {
+            font-size: 11px;
+    line-height: 17px;
+        }
+        button{
+            font-size: 12px;
+            padding: 9px;
+            margin-top: 11px;
+        }
+        
+    }
+    ::placeholder{
+        font-size: 13px;
+    }
+    .checkbox{
+        font-size: 12px;
+        span{
+        font-size: 12px;
+
+
+        }
+
+    }
+}

@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import "./Signupuserform.scss";
+import React from "react";
+import "./SignupEducatorform.scss";
 import google from "../../assets/google-icon.svg";
 import hide from "../../assets/hide.svg";
 import { Link } from "react-router-dom";
 
 const Signupuserform = (props) => {
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [number, setnumber] = useState("");
-  const [password, setpassword] = useState("");
-  const [confirmPassowrd, setconfirmPassowrd] = useState("");
+  const [name, setname] = useState();
+  const [email, setemail] = useState();
+  const [number, setnumber] = useState();
+  const [password, setpassword] = useState();
+  const [confirmPassowrd, setconfirmPassowrd] = useState();
   const handleCreateAccount = (e) => {
     e.preventDefault();
-    console.log("runn", name, email);
+    console.log("runn");
   };
   return (
     <div className="maincontainer">
