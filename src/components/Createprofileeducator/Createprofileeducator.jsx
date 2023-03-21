@@ -2,14 +2,16 @@ import React from "react";
 import './Createprofileeducator.scss';
 import camera from '../../assets/camera.svg'
 import exportsvg from '../../assets/export.svg'
+import { useNavigate } from "react-router-dom";
 
 
 const Createprofileeducator = () => {
+    const navigate = useNavigate()
     return (
         <div className="Createprofileeducator-main">
             <h1 className="fontbold educatorprof">Create Educator Profile</h1>
-            <div className="educatorform">
-                <form action="">
+            <div  className="educatorform">
+                <form onSubmit={()=>navigate("/upload-course")} action="/create-profile">
 
                     <label htmlFor="upload-file">
                         <img src={camera} alt="" width="160px" />
@@ -61,7 +63,7 @@ const Createprofileeducator = () => {
                         <input type="file" name="" id="upload-file" hidden />
                     </label>
 
-                    <button className="educator-button fontbold">Submit and Continue</button>
+                    <button className="educator-button fontbold" >Submit and Continue</button>
 
                 </form>
 

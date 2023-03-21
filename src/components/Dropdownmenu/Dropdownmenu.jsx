@@ -5,10 +5,12 @@ import book from '../../assets/Book-1.svg';
 import help from '../../assets/Help-1.svg';
 import logout from '../../assets/Logout-1.svg';
 import setting from '../../assets/Settings-1.svg';
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 
 const Dropdownmenu = () => {
+    const navigate = useNavigate()
     
     return (
         
@@ -31,9 +33,10 @@ const Dropdownmenu = () => {
                 <div><p className="items-2">9</p></div>
             </div>
             <div className="dropdown-2">
-                <div className="dropdown-items">
+                <div onClick={()=>navigate("/educator-profile")} className="dropdown-items">
                     <img src={setting}  alt="" />
-                    <p>Settings</p>
+                    <p >Settings</p>
+                    {/* <NavLink to={"/educator-profile"}>Settings</NavLink> */}
                 </div>
                 <div><p className="items-2">9</p></div>
             </div>

@@ -33,7 +33,7 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
                 </li>
                 <li>
                   <NavLink
-                    to={"/my-courese"}
+                    to={"/my-course"}
                     className={({ isActive }) =>
                       isActive ? "activeLink" : undefined
                     }
@@ -70,10 +70,10 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
                     </NavLink>
                   </li>
                   <li
-                    onClick={() => setopen(!open)}
+                    
                     className="dropdown-adjust"
                   >
-                    <img src={profile} alt="" />
+                    <img onClick={() => setopen(!open)} src={profile} alt="" />
                     <div
                       style={{ display: open ? "block" : "none" }}
                       className="dropdown-adjust2"
@@ -100,7 +100,7 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
                 <ul>
                   <li>
                     <NavLink
-                      to={"/create-profile"}
+                      to={"/my-course"}
                       className={({ isActive }) =>
                         isActive ? "activeLink" : "activeLink"
                       }
@@ -109,10 +109,10 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
                     </NavLink>
                   </li>
                   <li
-                    onClick={() => setopen(!open)}
+                    
                     className="dropdown-adjust"
                   >
-                    <img src={profile} alt="" />
+                    <img onClick={() => setopen(!open)} src={profile} alt="" />
                     <div
                       style={{ display: open ? "block" : "none" }}
                       className="dropdown-adjust2"

@@ -1,8 +1,10 @@
 import React from 'react'
 import "./MicroCourseContent.scss";
 import uploadthumbnail from "../../assets/upload.svg";
+import { useNavigate } from 'react-router-dom';
 
 const MicroCourseContent = () => {
+    const navigate = useNavigate()
   return (
     <div className="container">
         <div className='allcontentpadding'>
@@ -53,7 +55,7 @@ const MicroCourseContent = () => {
             </label>
             <div className='savebtnflex'>
                 <button className="saveexit">Save and Exit</button>
-                <button className="savecontinue">Save and Continue</button>
+                <button onClick={()=>navigate("/upload-video-course")} className="savecontinue">Save and Continue</button>
             </div>
         </div>
     </div>
