@@ -19,34 +19,42 @@ import MicroCourseApproval from "./screens/MicroApproval/MicroApproval";
 import Educators from "./screens/Educators/Educators";
 import Learners from "./screens/Learners/Learners";
 import Payments from "./screens/Payments/Payments";
+import Login from "./screens/Login";
+import GlobalProvider from "./contextapi/GlobalContext";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/sign-up" element={<Signup />} />
-          <Route exact path="/my-course" element={<UserCourses />} />
-          <Route exact path="/choose-course-user" element={<ChooseCourseUser />} />
-          <Route exact path="/user-profile" element={<CourseUser />} />
-          <Route exact path="/course-video" element={<IntroToUIDesign/>} />
-          <Route exact path="/learner-signup" element={<LeanerSignup/>} />
-          <Route exact path="/aducator-signup" element={<EducatorSignup/>} />
-          <Route exact path="/create-profile" element={<CreateEducatorProfile/>} />
-          <Route exact path="/upload-course" element={<UploadMicroCourseEducator/>} />
-          <Route exact path="/upload-video-course" element={<SecondUploadMicroEducator/>} />
-          <Route exact path="/educator-profile" element={<EducatorProfileMicro/>} />
-          <Route exact path="/educator-account" element={<EducatorAccount/>} />
-          <Route exact path="/upload-microcourse" element={<UploadMicroCourse/>} />
-          <Route exact path="/dashboard" element={<DashboardUser/>} />
-          <Route exact path="/microcourse-approval" element={<MicroCourseApproval/>} />
-          <Route exact path="/educators" element={<Educators/>} />
-          <Route exact path="/Learners" element={<Learners/>} />
-          <Route exact path="/payments" element={<Payments/>} />
-          
-        </Routes>
+        <GlobalProvider>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/sign-up" element={<Signup />} />
+            <Route exact path="/sign-in" element={<Login />} />
+            <Route exact path="/my-course" element={<UserCourses />} />
+            <Route exact path="/choose-course-user" element={<ChooseCourseUser />} />
+            <Route exact path="/user-profile" element={<CourseUser />} />
+            <Route exact path="/course-video" element={<IntroToUIDesign />} />
+            <Route exact path="/learner-signup" element={<LeanerSignup />} />
+            <Route exact path="/aducator-signup" element={<EducatorSignup />} />
+            <Route exact path="/create-profile" element={<CreateEducatorProfile />} />
+            <Route exact path="/upload-course" element={<UploadMicroCourseEducator />} />
+            <Route exact path="/upload-video-course" element={<SecondUploadMicroEducator />} />
+            <Route exact path="/educator-profile" element={<EducatorProfileMicro />} />
+            <Route exact path="/educator-account" element={<EducatorAccount />} />
+            <Route exact path="/upload-microcourse" element={<UploadMicroCourse />} />
+            <Route exact path="/dashboard" element={<DashboardUser />} />
+            <Route exact path="/microcourse-approval" element={<MicroCourseApproval />} />
+            <Route exact path="/educators" element={<Educators />} />
+            <Route exact path="/Learners" element={<Learners />} />
+            <Route exact path="/payments" element={<Payments />} />
+          </Routes>
+          <ToastContainer />
+        </GlobalProvider>
+
       </BrowserRouter>
-      
+
     </>
   );
 }

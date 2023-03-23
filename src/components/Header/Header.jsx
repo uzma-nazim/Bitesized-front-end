@@ -7,7 +7,6 @@ import { Dropdown } from "react-bootstrap";
 import Dropdownmenu from "../../components/Dropdownmenu/Dropdownmenu";
 const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
   const [open, setopen] = useState(false);
-
   const navigate = useNavigate();
   return (
     <>
