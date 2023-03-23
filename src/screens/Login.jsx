@@ -25,7 +25,7 @@ const Login = () => {
       signInUser(user);
     };
     return (
-      <div className="maincontainer">
+      <div className="maincontainer" style={{height:"100vh"}}>
         <div className="Signupuserform">
           <div className="main-content">
             <h1 className="fontbold signupuserheading">Bitesized</h1>
