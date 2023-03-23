@@ -47,14 +47,12 @@ const VideoCard = ({ hideprogressbar, lockvideo, cardWidth }) => {
         <div className="card-icon-box">
           <img src={book} alt="" />
           <p className="ssmallText" style={{ color: "#818386" }}>
-            {" "}
             Lesson 01
           </p>
         </div>
         <div className="card-icon-box">
           <img src={clock} alt="" />
           <p className="ssmallText" style={{ color: "#818386" }}>
-            {" "}
             30 Minutes
           </p>
         </div>
