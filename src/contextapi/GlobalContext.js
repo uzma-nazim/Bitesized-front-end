@@ -1,13 +1,13 @@
 
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { baseUrl, userLogin, userRegister } from '../urls';
+import { baseUrl, userLogin, userRegister, userUsers } from '../urls';
 import { toast } from 'react-toastify';
 export const GlobalContext = createContext({})
 
 const GlobalProvider = ({ children }) => {
-
     const [isLoading, setIsLoading] = useState(false)
+    const [users, setUsers] = useState(localStorage.getItem('user') || '')
     const [token, setToken] = useState(localStorage.getItem('token') || '')
     const navigate = useNavigate();
     const createUser = async (user) => {
@@ -23,8 +23,8 @@ const GlobalProvider = ({ children }) => {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                type:'error',
-                });
+                type: 'error',
+            });
             setIsLoading(false)
         } else {
             const res = await (await fetch(`${baseUrl}${userRegister}`,
@@ -37,29 +37,29 @@ const GlobalProvider = ({ children }) => {
                 })).json();
             if (res.success) {
                 toast(res.message, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                type:'success',
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    type: 'success',
                 });
                 setIsLoading(false)
                 navigate('sign-in')
             } else {
                 toast(res.message, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                type:'error',
-                progress: undefined,
-                theme: "light",
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    type: 'error',
+                    progress: undefined,
+                    theme: "light",
                 });
                 setIsLoading(false)
             }
@@ -68,7 +68,7 @@ const GlobalProvider = ({ children }) => {
     }
 
     const signInUser = async (user) => {
-        setIsLoading(true) 
+        setIsLoading(true)
         const res = await (await fetch(`${baseUrl}${userLogin}`,
             {
                 body: JSON.stringify(user),
@@ -78,7 +78,7 @@ const GlobalProvider = ({ children }) => {
                 },
             })).json();
         if (res.success) {
-            localStorage.setItem('token', res.token); 
+            localStorage.setItem('token', res.token);
             toast(res.message, {
                 position: "top-right",
                 autoClose: 5000,
@@ -87,10 +87,11 @@ const GlobalProvider = ({ children }) => {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                type:'success',
+                type: 'success',
                 theme: "light",
-                });
+            });
             setIsLoading(false)
+            setToken(res.token)
             navigate('/')
         } else {
             toast(res.message, {
@@ -102,14 +103,40 @@ const GlobalProvider = ({ children }) => {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                type:'error',
-                });
+                type: 'error',
+            });
             setIsLoading(false)
         }
     }
 
+    const getUser = async () => {
+        const res = await (await fetch(`${baseUrl}${userUsers}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'user_access_token': localStorage.getItem('token')
+            },
+            method: "GET",
+        })).json();
+        if (res.success) {
+            setUsers(res.users);
+            localStorage.setItem('users', JSON.stringify(res.users));
+        }
+    }
+
+    useEffect(() => {
+        getUser();
+    }, [])
+
+    const logout = async () => {
+        localStorage.removeItem('users');
+        localStorage.removeItem('token');
+        setUsers('')
+        setToken('')
+    }
+
+
     return (
-        <GlobalContext.Provider value={{ createUser, isLoading, signInUser, token }}>
+        <GlobalContext.Provider value={{ createUser, isLoading, signInUser, token, users, logout }}>
             {children}
         </GlobalContext.Provider>
     )

@@ -4,8 +4,10 @@ import google from "../../assets/google-icon.svg";
 import hide from "../../assets/hide.svg";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../contextapi/GlobalContext";
-import { ColorRing } from  'react-loader-spinner'
+import { ColorRing } from 'react-loader-spinner'
+import { GoogleLogin } from 'react-google-login';
 
+const clientId = "905812548501-re7cubnpr3tpfiv0qkcno8u2i7s8okgc.apps.googleusercontent.com"
 
 const Signupuserform = ({ leaner_name }) => {
 
@@ -29,6 +31,29 @@ const Signupuserform = ({ leaner_name }) => {
     e.preventDefault();
     createUser(user);
   };
+
+  const onSuccess = (res) => {
+    console.log(res)
+    // const profile = googleUser.getBasicProfile();
+    // const accessToken = googleUser.getAuthResponse().access_token;
+    // console.log(profile)
+    // Do something with the profile and access token
+  };
+
+  const onFailure = (res) => {
+    console.log(res);
+  };
+
+  // const loginWithGoogle = async () => {  
+  //   <GoogleLogin
+  //     clientId={clientId}
+  //     onSuccess={onSuccess}
+  //     onFailure={onFailure}
+  //     cookiePolicy={'single_host_origin'}
+  //     buttonText="Login with Google"
+  //     isSignedIn={true}
+  //   />
+  // }
   return (
     <div className="maincontainer">
       <div className="Signupuserform">
@@ -37,10 +62,18 @@ const Signupuserform = ({ leaner_name }) => {
           <h3 className="fontmed signupuserheading3">
             Create Account as a {leaner_name}
           </h3>
-          <div className="google">
+          <GoogleLogin
+      clientId={clientId}
+      onSuccess={onSuccess}
+      onFailure={onFailure}
+      cookiePolicy={'single_host_origin'}
+      buttonText="Login with Google"
+      isSignedIn={true}
+    />
+          {/* <div className="google" onClick={loginWithGoogle}>
             <img src={google} alt="" />
             <p className="googletext">Login with Google</p>
-          </div>
+          </div> */}
           <div className="lineheading">
             <div className="line1"></div>
             <div className="linetext">Or Sign Up with email</div>
@@ -112,7 +145,7 @@ const Signupuserform = ({ leaner_name }) => {
               </div>
 
               <p className="checkbox">
-                
+
                 <input type="checkbox" /> I accept
                 <span>Terms and Conditions</span>
               </p>
@@ -133,7 +166,7 @@ const Signupuserform = ({ leaner_name }) => {
               <p className="login-text" style={{ marginTop: "60px" }}>
                 Already have an account?
                 <span>
-                  
+
                   <Link to={"/sign-in"}> Login</Link>
                 </span>
               </p>

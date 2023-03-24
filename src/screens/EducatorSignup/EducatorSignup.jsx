@@ -3,7 +3,7 @@ import Signupuserform from '../../components/Signupuserform/Signupuserform'
 
 const EducatorSignup = () => {
   return (
-    <Signupuserform name={"Educator"}/>
+    <Signupuserform leaner_name={"Educator"}/>
 
   )
 }

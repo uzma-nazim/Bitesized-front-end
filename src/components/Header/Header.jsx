@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../../style/globalStyle.scss";
 import "./header.scss";
 import profile from "../../assets/profile.png";
 import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import Dropdownmenu from "../../components/Dropdownmenu/Dropdownmenu";
-const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
+import { GlobalContext } from "../../contextapi/GlobalContext";
+const Header = () => {
   const [open, setopen] = useState(false);
+  const { users,logout } = useContext(GlobalContext);
   const navigate = useNavigate();
   return (
     <>
-      {userLogin ? (
+      {users.role == 'Learner'  ? (
         <>
           <div className="headerContainer container">
             <div>
@@ -47,7 +49,7 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
             </div>
           </div>
         </>
-      ) : educatorLogin ? (
+      ) :  users.role == 'Educator' ? (
         <>
           <div className="headerBoxShadow">
             <div className="headerContainer container ">
@@ -86,7 +88,7 @@ const Header = ({ userLogin, educatorLogin, educatorProfile }) => {
             </div>
           </div>
         </>
-      ) : educatorProfile ? (
+      ) :  users.role == 'Educator' ? (
         <>
           <div className="">
             <div className="headerContainer container ">
