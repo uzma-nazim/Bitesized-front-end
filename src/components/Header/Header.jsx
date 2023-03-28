@@ -9,6 +9,7 @@ import { GlobalContext } from "../../contextapi/GlobalContext";
 const Header = () => {
   const [open, setopen] = useState(false);
   const { users,token } = useContext(GlobalContext);
+  
   const navigate = useNavigate();
   
   return (
