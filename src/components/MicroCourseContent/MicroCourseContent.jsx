@@ -42,8 +42,6 @@ const MicroCourseContent = () => {
 
   const handleSubmit=async(e)=>{
     e.preventDefault();
-    console.log(supply_list);
-
     const formdata=new FormData();
     formdata.append('micro_course',course.micro_course)
     formdata.append('theme',course.theme)
@@ -56,7 +54,7 @@ const MicroCourseContent = () => {
         }
     }
     const res=await axios.post(`${baseUrl}${addCourse}`,formdata,config);
-    console.log(res)
+    navigate('/upload-video-course/'+res.data.id)
   }
   return (
     <div className="container">

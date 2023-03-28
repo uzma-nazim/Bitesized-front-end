@@ -49,15 +49,15 @@ function App() {
                 <Route exact path="/course-video" element={<IntroToUIDesign />} />
                 <Route exact path="/create-profile" element={<CreateEducatorProfile />} />
                 <Route exact path="/upload-course" element={<UploadMicroCourseEducator />} />
-                <Route exact path="/upload-video-course" element={<SecondUploadMicroEducator />} />
-                <Route exact path="/educator-profile" element={<EducatorProfileMicro />} />
-                <Route exact path="/educator-account" element={<EducatorAccount />} />
-                <Route exact path="/upload-microcourse" element={<UploadMicroCourse />} />
-                <Route exact path="/dashboard" element={<DashboardUser />} />
-                <Route exact path="/microcourse-approval" element={<MicroCourseApproval />} />
-                <Route exact path="/educators" element={<Educators />} />
-                <Route exact path="/Learners" element={<Learners />} />
-                <Route exact path="/payments" element={<Payments />} />
+                <Route  path="/upload-video-course/:id" element={<SecondUploadMicroEducator />} />
+                <Route  path="/educator-profile" element={<EducatorProfileMicro />} />
+                <Route  path="/educator-account" element={<EducatorAccount />} />
+                <Route  path="/upload-microcourse" element={<UploadMicroCourse />} />
+                <Route  path="/dashboard" element={<DashboardUser />} />
+                <Route  path="/microcourse-approval" element={<MicroCourseApproval />} />
+                <Route  path="/educators" element={<Educators />} />
+                <Route  path="/Learners" element={<Learners />} />
+                <Route  path="/payments" element={<Payments />} />
               </>}
             <Route path="*" element={<Navigate to={localStorage.getItem('token') ? '/' : '/sign-up'} />} />
           </Routes>

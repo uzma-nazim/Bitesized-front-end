@@ -4,3 +4,4 @@ export const userLogin="/user/login";
 export const userUsers="/user/users";
 export const educatorProfile="/educator/profile";
 export const addCourse="/educator/course";
+export const addCourse2="/educator/course";

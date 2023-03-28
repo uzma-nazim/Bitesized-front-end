@@ -1,14 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./MicroCourseContentSecond.scss";
 import uploadthumbnail from "../../assets/upload.svg";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { addCourse2, baseUrl } from '../../urls';
+import axios from 'axios';
 
 const MicroCourseContentSecond = () => {
-  const navigate = useNavigate(   )
+  const navigate = useNavigate()
+  const {id}=useParams();
+  const [course, setCourse] = useState({
+    micro_course1: "",
+  });
+ 
+    const [supply_list1,setSupply_list1]=useState([])
+    const hanldeMultInput=(e)=>{
+        const data=[...supply_list1,[]]
+        setSupply_list1(data);
+    }
 
+    const hanldeOnChangeMultInput=(e,i)=>{
+        const data=[...supply_list1]
+        data[i]=e.target.value;
+        setSupply_list1(data);        
+    }
+  const [thumbnail, setThumbnail] = useState(null);
+  const [video, setVideo] = useState(null);
+
+  const handleInputChange = async (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setCourse({ ...course, [name]: value });
+  };
+
+  const uploadThumbnail = (e) => {
+    const thumbnail = e.target.files[0];
+    setThumbnail(thumbnail); 
+  };
+
+  const uploadVideo = (e) => {
+    const video = e.target.files[0];
+    setVideo(video); 
+  };
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    const formdata=new FormData();
+    formdata.append('micro_course1',course.micro_course1)
+    formdata.append('supply_list1',supply_list1)
+    formdata.append('micro_thumbnail',thumbnail)
+    formdata.append('micro_video',video && "null")
+    const config={
+        headers:{
+            'user_access_token':localStorage.getItem('token')
+        }
+    }
+    const res=await axios.post(`${baseUrl}${addCourse2}/${id}`,formdata,config);
+    console.log(res);
+    // navigate('/educator-profile')
+  }
   return (
     <div className='container'>
-       <div className='allcontentpadding'>
+      <form onSubmit={handleSubmit} action="">
+      <div className='allcontentpadding'>
          <div>
             <h1 className='stepbystepprocess thinkpad'>Thinks to know</h1>
             <ol className='stepforlowpad'>
@@ -33,9 +86,9 @@ const MicroCourseContentSecond = () => {
               <h1 className='microlesson'>Micro Lesson 1</h1>
             <div className='flexforvideomicrocourse'>
               <label htmlFor="uploadvideos">
-                <input type="file" hidden id='uploadvideos' />
+                <input type="file" hidden onChange={uploadThumbnail} id='uploadvideos' />
               <div className='uploadvideosecond'>
-                <img src={uploadthumbnail} alt="" />
+                <img src={uploadthumbnail}  alt="" />
                 <p>Upload Video</p>
               </div>
               </label>
@@ -43,16 +96,23 @@ const MicroCourseContentSecond = () => {
               <div className='microsupply'>
               <p className='microheading microheadingpad'>Name of your micro-course</p>
               <p className="microcourseparas">Each micro-course 1 project</p>
-              <input className='createaddtags placeholderformicro' type="text" placeholder='You can name this lesson that is descriptive of the project you’ll be teaching.' />
+              <input className='createaddtags placeholderformicro' name='micro_course1' value={course.micro_course1} onChange={handleInputChange} type="text" placeholder='You can name this lesson that is descriptive of the project you’ll be teaching.' />
 
               <p className='microheading addsupply'>Add Supply list for this lesson</p>
               <p className="microcourseparas">Paper, pencil, etc (if any supplies are needed)</p>
               <div className='inputbtn'>
+              {
+                supply_list1 && supply_list1.map((val,i)=>{
+                    return(
+          <div>
+                        <input className="pencilinp" onChange={(e)=>hanldeOnChangeMultInput(e,i)} type="text" placeholder="" />
+          </div>
+
+                    )  
+                })
+            }
                 <div>
-                <input className="pencilinp" type="text" placeholder='Pencil' />
-                </div>
-                <div>
-                <button className='plusadd plusaddmore'>+ Add More</button>
+                <button type='button' onClick={hanldeMultInput} className='plusadd plusaddmore'>+ Add More</button>
                 </div>
             </div>
               </div>
@@ -61,7 +121,7 @@ const MicroCourseContentSecond = () => {
             <div className='flexforuploadsave'>
               <div>
             <label htmlFor="uploadvideo">
-                <input type="file" hidden id="uploadvideo" />
+                <input type="file" hidden onChange={uploadVideo} id="uploadvideo" />
             <div className='uploaddiv uploaddivcolor'>
                 <img src={uploadthumbnail} alt="" />
                 <p className='uploadheading'>Upload Thumbnail</p>
@@ -82,13 +142,15 @@ const MicroCourseContentSecond = () => {
 
             </div>
             <div className='savebtnflex fortopmarginsave'>
-                <button className="saveexit">Save and Exit</button>
-                <button className="savecontinue"  onClick={()=>navigate("/educator-profile")}>Save and Continue</button>
+                <button className="saveexit" type='submit'>Save and Exit</button>
+                <button className="savecontinue" type='submit'>Save and Continue</button>
             </div>
             </div>
 
             
         </div>
+      </form>
+       
     </div>
   )
 }
