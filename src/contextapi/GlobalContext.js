@@ -36,6 +36,8 @@ const GlobalProvider = ({ children }) => {
                     },
                 })).json();
             if (res.success) {
+                setToken(res.token)
+                localStorage.setItem('token', res.token);
                 toast(res.message, {
                     position: "top-right",
                     autoClose: 5000,
@@ -48,7 +50,7 @@ const GlobalProvider = ({ children }) => {
                     type: 'success',
                 });
                 setIsLoading(false)
-                navigate('sign-in')
+                navigate('/')
             } else {
                 toast(res.message, {
                     position: "top-right",
@@ -78,6 +80,7 @@ const GlobalProvider = ({ children }) => {
                 },
             })).json();
         if (res.success) {
+            setToken(res.token)
             localStorage.setItem('token', res.token);
             toast(res.message, {
                 position: "top-right",
@@ -91,7 +94,6 @@ const GlobalProvider = ({ children }) => {
                 theme: "light",
             });
             setIsLoading(false)
-            setToken(res.token)
             navigate('/')
         } else {
             toast(res.message, {
@@ -119,7 +121,7 @@ const GlobalProvider = ({ children }) => {
         })).json();
         if (res.success) {
             setUsers(res.users);
-            localStorage.setItem('users', JSON.stringify(res.users));
+            localStorage.setItem('user', JSON.stringify(res.users));
         }
     }
 
@@ -128,7 +130,7 @@ const GlobalProvider = ({ children }) => {
     }, [])
 
     const logout = async () => {
-        localStorage.removeItem('users');
+        localStorage.removeItem('user');
         localStorage.removeItem('token');
         setUsers('')
         setToken('')
@@ -136,7 +138,7 @@ const GlobalProvider = ({ children }) => {
 
 
     return (
-        <GlobalContext.Provider value={{ createUser, isLoading, signInUser, token, users, logout }}>
+        <GlobalContext.Provider value={{ createUser, isLoading, signInUser, token, users, logout ,setToken}}>
             {children}
         </GlobalContext.Provider>
     )

@@ -26,8 +26,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from "react";
 function App() {
 
-  const { token } = useContext(GlobalContext)
-  console.log(localStorage.getItem('token'))
+  const { token ,getUser} = useContext(GlobalContext) 
+
   return (
     <>
       <BrowserRouter>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Signupuserform.scss";
 import google from "../../assets/google-icon.svg";
 import hide from "../../assets/hide.svg";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { GlobalContext } from "../../contextapi/GlobalContext";
 import { ColorRing } from 'react-loader-spinner'
 import { GoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script'
 
 const clientId = "905812548501-re7cubnpr3tpfiv0qkcno8u2i7s8okgc.apps.googleusercontent.com"
 
@@ -20,6 +21,7 @@ const Signupuserform = ({ leaner_name }) => {
     confirm_password: '',
     role: leaner_name,
     phone_number: '',
+    is_social: false,
   });
 
   const handleInputChange = (e) => {
@@ -33,7 +35,14 @@ const Signupuserform = ({ leaner_name }) => {
   };
 
   const onSuccess = (res) => {
-    console.log(res)
+    console.log(res.profileObj)
+    const users = {
+      name: res.profileObj.name,
+      email: res.profileObj.email,
+      role: leaner_name,
+      is_social: true,
+    }
+    createUser(users);
     // const profile = googleUser.getBasicProfile();
     // const accessToken = googleUser.getAuthResponse().access_token;
     // console.log(profile)
@@ -54,6 +63,18 @@ const Signupuserform = ({ leaner_name }) => {
   //     isSignedIn={true}
   //   />
   // }
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: ""
+      });
+    };
+
+    gapi.load('client:auth2', start);
+  })
+
   return (
     <div className="maincontainer">
       <div className="Signupuserform">
@@ -63,13 +84,13 @@ const Signupuserform = ({ leaner_name }) => {
             Create Account as a {leaner_name}
           </h3>
           <GoogleLogin
-      clientId={clientId}
-      onSuccess={onSuccess}
-      onFailure={onFailure}
-      cookiePolicy={'single_host_origin'}
-      buttonText="Login with Google"
-      isSignedIn={true}
-    />
+            clientId={clientId}
+            onSuccess={onSuccess}
+            onFailure={onFailure}
+            cookiePolicy={'single_host_origin'}
+            buttonText="Login with Google"
+            isSignedIn={true}
+          />
           {/* <div className="google" onClick={loginWithGoogle}>
             <img src={google} alt="" />
             <p className="googletext">Login with Google</p>

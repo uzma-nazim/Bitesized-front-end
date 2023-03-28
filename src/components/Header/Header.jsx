@@ -8,16 +8,17 @@ import Dropdownmenu from "../../components/Dropdownmenu/Dropdownmenu";
 import { GlobalContext } from "../../contextapi/GlobalContext";
 const Header = () => {
   const [open, setopen] = useState(false);
-  const { users,logout } = useContext(GlobalContext);
+  const { users,token } = useContext(GlobalContext);
   const navigate = useNavigate();
+  
   return (
     <>
-      {users.role == 'Learner'  ? (
+      {token && users.role == 'Learner' ? (
         <>
           <div className="headerContainer container">
             <div>
-            <NavLink to={"/"}>
-              <h1 className="logo">Bitesized</h1>
+              <NavLink to={"/"}>
+                <h1 className="logo">Bitesized</h1>
               </NavLink>
             </div>
             <div className="header-link">
@@ -42,14 +43,23 @@ const Header = () => {
                     My Courses
                   </NavLink>
                 </li>
-                <li>
-                  <img src={profile} alt="" />
+                <li
+
+                  className="dropdown-adjust"
+                >
+                  <img onClick={() => setopen(!open)} src={profile} alt="" />
+                  <div
+                    style={{ display: open ? "block" : "none" }}
+                    className="dropdown-adjust2"
+                  >
+                    <Dropdownmenu />
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
         </>
-      ) :  users.role == 'Educator' ? (
+      ) : token && users.role == 'Educator' ? (
         <>
           <div className="headerBoxShadow">
             <div className="headerContainer container ">
@@ -71,7 +81,7 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li
-                    
+
                     className="dropdown-adjust"
                   >
                     <img onClick={() => setopen(!open)} src={profile} alt="" />
@@ -88,46 +98,7 @@ const Header = () => {
             </div>
           </div>
         </>
-      ) :  users.role == 'Educator' ? (
-        <>
-          <div className="">
-            <div className="headerContainer container ">
-              <div>
-              <NavLink to={"/"}>
-                <h1 className="logo">Bitesized</h1>
-                </NavLink>
-              </div>
-              <div className="header-link">
-                <ul>
-                  <li>
-                    <NavLink
-                      to={"/my-course"}
-                      className={({ isActive }) =>
-                        isActive ? "activeLink" : "activeLink"
-                      }
-                    >
-                      My Course
-                    </NavLink>
-                  </li>
-                  <li
-                    
-                    className="dropdown-adjust"
-                  >
-                    <img onClick={() => setopen(!open)} src={profile} alt="" />
-                    <div
-                      style={{ display: open ? "block" : "none" }}
-                      className="dropdown-adjust2"
-                    >
-                      <Dropdownmenu />
-                    </div>
-                  </li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
+      ) :(
         <>
           <div className="container headerContainer">
             <div>
