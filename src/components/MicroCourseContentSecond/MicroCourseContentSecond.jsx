@@ -56,7 +56,7 @@ const MicroCourseContentSecond = () => {
     }
     const res=await axios.post(`${baseUrl}${addCourse2}/${id}`,formdata,config);
     console.log(res);
-    // navigate('/educator-profile')
+    navigate('/educator-profile')
   }
   return (
     <div className='container'>
