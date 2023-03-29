@@ -11,6 +11,7 @@ const GlobalProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token') || '')
     const navigate = useNavigate();
     const createUser = async (user) => {
+        console.log(user)
         setIsLoading(true)
         const { name, email, password, confirm_password, role, phone_number } = user;
         if (password != confirm_password) {
