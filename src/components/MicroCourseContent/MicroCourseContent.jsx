@@ -5,15 +5,22 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { addCourse, baseUrl } from "../../urls";
+import { useRef } from 'react';
+import { toast } from "react-toastify";
 
 const MicroCourseContent = () => {
   const navigate = useNavigate();
+  const pRef = useRef(null);
   const [course, setCourse] = useState({
-    micro_course: "",
-    age_group: "3",
+    micro_course: "", 
     theme:"my theme",
   });
  
+  const [age_group, setAge_group] = useState('');
+
+  const handleSelect = (value) => {
+    setAge_group(value);
+  };
     const [supply_list,setSupply_list]=useState([])
     const hanldeMultInput=(e)=>{
         const data=[...supply_list,[]]
@@ -45,7 +52,7 @@ const MicroCourseContent = () => {
     const formdata=new FormData();
     formdata.append('micro_course',course.micro_course)
     formdata.append('theme',course.theme)
-    formdata.append('age_group',course.age_group)
+    formdata.append('age_group',age_group)
     formdata.append('supply_list',supply_list)
     formdata.append('thumbnail',thumbnail)
     const config={
@@ -54,11 +61,14 @@ const MicroCourseContent = () => {
         }
     }
     const res=await axios.post(`${baseUrl}${addCourse}`,formdata,config);
-    navigate('/upload-video-course/'+res.data.id)
+    if(res.data.success){
+      toast.success(res.data.message)
+      navigate('/upload-video-course/'+res.data.id)
+    }
   }
   return (
     <div className="container">
-     <form onSubmit={handleSubmit}>
+     <form onSubmit={handleSubmit} >
      <div className="allcontentpadding">
         <div>
           <h1 className="stepbystepprocess">Here's a step by step process.</h1>
@@ -95,14 +105,14 @@ const MicroCourseContent = () => {
           Choose the age groups this course is made for
         </p>
         <div className="numsflex">
-          <p>6</p>
-          <p>7</p>
-          <p>8</p>
-          <p>9</p>
-          <p>10</p>
-          <p>11</p>
-          <p>12</p>
-          <p>13</p>
+          <p onClick={()=>handleSelect(6)} className={age_group ==6 ? "hover_active" :'' }>6</p>
+          <p onClick={()=>handleSelect(7)} className={age_group ==7 ? "hover_active" :'' }>7</p>
+          <p onClick={()=>handleSelect(8)} className={age_group ==8 ? "hover_active" :'' }>8</p>
+          <p onClick={()=>handleSelect(9)} className={age_group ==9 ? "hover_active" :'' }>9</p>
+          <p onClick={()=>handleSelect(10)} className={age_group ==10 ? "hover_active" :'' }>10</p>
+          <p onClick={()=>handleSelect(11)} className={age_group ==11 ? "hover_active" :'' }>11</p>
+          <p onClick={()=>handleSelect(12)} className={age_group ==12 ? "hover_active" :'' }>12</p>
+          <p onClick={()=>handleSelect(13)} className={age_group ==13? "hover_active" :'' }>13</p>
         </div>
         <p className="microheading">Choose a Theme</p>
         <select className="createaddtags selecttheme">

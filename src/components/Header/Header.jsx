@@ -99,7 +99,30 @@ const Header = () => {
             </div>
           </div>
         </>
-      ) :(
+      ) :
+      token && users.role == 'admin'
+      ?(<>
+        <div className="container headerContainer">
+          <div>
+            <h1 className="logo">Bitesized</h1>
+          </div>
+          <div className="header-link">
+            <ul>
+              <li>
+                <NavLink
+                  to={"/dashboard"}
+                  className={({ isActive }) =>
+                    isActive ? "activeLink" : undefined
+                  }
+                >
+                  Admin
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </>)
+      :(
         <>
           <div className="container headerContainer">
             <div>

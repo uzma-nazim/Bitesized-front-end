@@ -49,16 +49,19 @@
 .option1 {
   padding: 20px;
   border-radius: 12px;
-  border: 2px solid #0b1f22;
   margin-top: 10px;
   margin-right: 10px;
+  border: 2px solid #d0d0dd;
+}
+
+.change_border{
+  border: 2px solid #0b1f22;
 }
 
 .option2 {
   margin-top: 10px;
   padding: 20px;
   border-radius: 12px;
-  border: 2px solid #d0d0dd;
 }
 
 .option1 h3,

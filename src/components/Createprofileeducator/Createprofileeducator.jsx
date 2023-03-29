@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Createprofileeducator.scss";
 import camera from "../../assets/camera.svg";
 import exportsvg from "../../assets/export.svg";
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../contextapi/GlobalContext";
 import { useState } from "react";
-import axios from 'axios'
-import { baseUrl, educatorProfile } from "../../urls";
-import EducatorProfilePic from "../EducatorProfilePic";
+import axios from "axios";
+import { baseUrl, educatorProfile, getProfileEducator } from "../../urls";
+import { ProgressBar } from "react-bootstrap";
 
 const Createprofileeducator = () => {
   const navigate = useNavigate();
@@ -21,73 +21,190 @@ const Createprofileeducator = () => {
     learn_as_a_kid: "",
   });
 
+
+  const [uploadProgress, setUploadProgress] = useState(0);
+
   const [showImage, setShowImage] = useState(null);
-  const [profilePic, setProfilePic] = useState(null);
-  const [video, setVideo] = useState(null);
+  const [showVideo, setShowVideo] = useState(null);
+  const [profilePic, setProfilePic] = useState({
+    image: null,
+    video: null,
+  });
+  // const [video, setVideo] = useState(null);
 
   const handleProfileChange = (e) => {
     e.preventDefault();
     const selectedFile = e.target.files[0];
-    setShowImage(URL.createObjectURL(e.target.files[0])) 
-    setProfilePic(selectedFile)
+    const isImage = selectedFile.type.startsWith("image/");
+    const isVideo = selectedFile.type.startsWith("video/");
+    if (isImage) {
+      setProfilePic((previous) => {
+        return {
+          ...previous,
+          image: selectedFile,
+        };
+      });
+      setShowImage(URL.createObjectURL(e.target.files[0]));
+    } else {
+      setProfilePic((previous) => {
+        return {
+          ...previous,
+          video: selectedFile,
+        };
+      });
+      setShowVideo(URL.createObjectURL(e.target.files[0]));
+    }
   };
 
   const handleVideo = (e) => {
     e.preventDefault();
     const selectedFile = e.target.files[0];
-    setVideo(selectedFile)
+    setProfilePic((previous) => {
+      return {
+        ...previous,
+        video: selectedFile,
+      };
+    }); 
+    setShowVideo(URL.createObjectURL(e.target.files[0]));
   };
 
-  const inputHandle=(e)=>{
-    const name=e.target.name;
-    const value=e.target.value;
+  const inputHandle = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-    setProfile({...profile,[name]:value});
-  }
+    setProfile({ ...profile, [name]: value });
+  };
 
-  const handleSubmit=async(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const formdata=new FormData();
-    formdata.append('first_name',profile.first_name);
-    formdata.append('last_name',profile.last_name);
-    formdata.append('profile',profilePic);
-    formdata.append('video',video);
-    formdata.append('education_background',profile.education_background);
-    formdata.append('experience',profile.experience);
-    formdata.append('about',profile.about);
-    formdata.append('fun_fact_about',profile.fun_fact_about);
-    formdata.append('learn_as_a_kid',profile.learn_as_a_kid);
-    console.log(profilePic)
-    console.log(video)
+    const formdata = new FormData();
+    formdata.append("first_name", profile.first_name);
+    formdata.append("last_name", profile.last_name);
+    formdata.append("profile", profilePic.image);
+    formdata.append("video", profilePic.video);
+    formdata.append("education_background", profile.education_background);
+    formdata.append("experience", profile.experience);
+    formdata.append("about", profile.about);
+    formdata.append("fun_fact_about", profile.fun_fact_about);
+    formdata.append("learn_as_a_kid", profile.learn_as_a_kid);
 
-    const config={
-        headers:{
-            'user_access_token':localStorage.getItem('token'),
-        }
+    const config = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        user_access_token: localStorage.getItem("token"),
+      },
+      onUploadProgress: progressEvent => {
+        const percentCompleted = Math.round(
+          (progressEvent.loaded * 100) / progressEvent.total
+        );
+        setUploadProgress(percentCompleted);
+      }
+    };
+
+    const res = await axios.post(
+      `${baseUrl}${educatorProfile}`,
+      formdata,
+      config
+    ); 
+    
+    if(res.data.success){
+      navigate('/upload-course');
     }
+  };
 
-    const res=await axios.post(`${baseUrl}${educatorProfile}`,formdata,config);
-    console.log(res)
+  const getEducatorProfile = async () => {
+    const res = await (
+      await fetch(`${baseUrl}${getProfileEducator}`, {
+        method: "GET",
+        headers: {
+          user_access_token: localStorage.getItem("token"),
+        },
+      })
+    ).json();
+    if (res.success == true && res.educator_profile != null) {
+      setProfile({
+        first_name: res.educator_profile.first_name,
+        last_name: res.educator_profile.last_name,
+        education_background: res.educator_profile.education_background,
+        experience: res.educator_profile.experience,
+        about: res.educator_profile.about,
+        fun_fact_about: res.educator_profile.fun_fact_about,
+        learn_as_a_kid: res.educator_profile.learn_as_a_kid,
+      });
 
-  }
+      setProfilePic({
+        image: res.educator_profile.profile,
+        video: res.educator_profile.video,
+      });
+    }
+  };
+
+  useEffect(() => {
+    getEducatorProfile();
+  }, []);
 
   return (
     <div className="Createprofileeducator-main">
       <h1 className="fontbold educatorprof">Create Educator Profile</h1>
       <div className="educatorform">
-        <form
-          onSubmit={handleSubmit}
-          method="post"
-        >
-          <EducatorProfilePic showImage={showImage} camera={camera} handleProfileChange={handleProfileChange} />
+        <form onSubmit={handleSubmit} method="post">
+          <label htmlFor="upload-file">
+            {showImage ? (
+              <img
+                src={showImage}
+                alt=""
+                width="160px"
+                style={{
+                  borderRadius: "93px",
+                  height: "158px",
+                  objectFit: "cover",
+                }}
+              />
+            ) : profilePic.image ? (
+              <img
+                src={`${baseUrl}/uploads/${profilePic.image}`}
+                style={{
+                  borderRadius: "93px",
+                  height: "158px",
+                  objectFit: "cover",
+                }}
+                alt=""
+                width="160px"
+              />
+            ) : (
+              <img src={camera} alt="" width="160px" />
+            )}
+            <h3 className="image-heading fontbold">Upload your picture</h3>
+            <input
+              type="file"
+              name="profilepic"
+              onChange={handleProfileChange}
+              id="upload-file"
+              hidden
+            />
+          </label>
           <div className="namesection">
             <div className="input-sec">
               <p className="name-tag fontmed">First Name</p>
-              <input className="name-input" value={profile.first_name} name="first_name" onChange={inputHandle} placeholder="Istiaq" type="text" />
+              <input
+                className="name-input"
+                value={profile.first_name}
+                name="first_name"
+                onChange={inputHandle}
+                placeholder="Istiaq"
+                type="text"
+              />
             </div>
             <div className="input-sec">
               <p className="name-tag fontmed">Last Name</p>
-              <input  onChange={inputHandle} value={profile.last_name} name="last_name" className="name-input" placeholder="Ahmed" type="text" />
+              <input
+                onChange={inputHandle}
+                value={profile.last_name}
+                name="last_name"
+                className="name-input"
+                placeholder="Ahmed"
+                type="text"
+              />
             </div>
           </div>
           <div className="input-sec">
@@ -125,7 +242,6 @@ const Createprofileeducator = () => {
               id=""
               value={profile.about}
             ></textarea>
-
           </div>
           <div className="input-sec">
             <p className="name-tag fontmed">What is the fun fact about you?</p>
@@ -161,9 +277,29 @@ const Createprofileeducator = () => {
               your course.
             </p>
           </div>
+          {/* <ProgressBar now={uploadProgress} label={`${uploadProgress}%`} /> */}
+          {showVideo != null ? (
+             <video
+             controls
+             src={`${showVideo}`} 
+             style={{ width: "50%" }} 
+           ></video>
+          ) : (
+            <video
+              controls
+              src={`${baseUrl}/uploads/${profilePic.video}`}
+              style={{ width: "50%" }}
+            ></video>
+          )}
           <label htmlFor="upload-file" className="video-tag">
             <img src={exportsvg} alt="" />
-            <input type="file" name="video" onChange={handleVideo} id="upload-file" hidden />
+            <input
+              type="file"
+              name="video"
+              onChange={handleVideo}
+              id="upload-file"
+              hidden
+            />
           </label>
 
           <button type="submit" className="educator-button fontbold">
