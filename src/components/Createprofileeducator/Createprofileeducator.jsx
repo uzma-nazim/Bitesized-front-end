@@ -8,6 +8,7 @@ import { useState } from "react";
 import axios from "axios";
 import { baseUrl, educatorProfile, getProfileEducator } from "../../urls";
 import { ProgressBar } from "react-bootstrap";
+import { RxCrossCircled } from "react-icons/rx";
 
 const Createprofileeducator = () => {
   const navigate = useNavigate();
@@ -20,7 +21,6 @@ const Createprofileeducator = () => {
     fun_fact_about: "",
     learn_as_a_kid: "",
   });
-
 
   const [uploadProgress, setUploadProgress] = useState(0);
 
@@ -64,7 +64,7 @@ const Createprofileeducator = () => {
         ...previous,
         video: selectedFile,
       };
-    }); 
+    });
     setShowVideo(URL.createObjectURL(e.target.files[0]));
   };
 
@@ -90,25 +90,25 @@ const Createprofileeducator = () => {
 
     const config = {
       headers: {
-        'Content-Type': 'multipart/form-data',
+        "Content-Type": "multipart/form-data",
         user_access_token: localStorage.getItem("token"),
       },
-      onUploadProgress: progressEvent => {
+      onUploadProgress: (progressEvent) => {
         const percentCompleted = Math.round(
           (progressEvent.loaded * 100) / progressEvent.total
         );
         setUploadProgress(percentCompleted);
-      }
+      },
     };
 
     const res = await axios.post(
       `${baseUrl}${educatorProfile}`,
       formdata,
       config
-    ); 
-    
-    if(res.data.success){
-      navigate('/upload-course');
+    );
+
+    if (res.data.success) {
+      navigate("/upload-course");
     }
   };
 
@@ -269,38 +269,55 @@ const Createprofileeducator = () => {
               id=""
             ></textarea>
           </div>
-          <div className="namesection">
-            <p className="name-tag fontmed">
-              Upload a short video about yourself answering the following
-              questions: Your name, where you go/went to school, what you are
-              excited to teach, describe a fun project the kids will be doing in
-              your course.
-            </p>
-          </div>
+
+          {profilePic.video ? (
+            <div style={{position:"relative", marginTop:"20px"}}>
+              <RxCrossCircled style={{fontSize:"30px",top:"0px", position:"absolute", right:"0px", zIndex:999, color:"#fff" }}/>
+              <video
+                controls
+                // src={`${baseUrl}/uploads/${profilePic.video}`}
+                src={showVideo}
+                style={{ width: " 100%", height: "200px" }}
+              ></video>
+            </div>
+          ) : (
+            <>
+              <div className="namesection">
+                <p className="name-tag fontmed">
+                  Upload a short video about yourself answering the following
+                  questions: Your name, where you go/went to school, what you
+                  are excited to teach, describe a fun project the kids will be
+                  doing in your course.
+                </p>
+              </div>
+              <label htmlFor="upload-file" className="video-tag">
+                <img src={exportsvg} alt="" />
+                <input
+                  type="file"
+                  name="video"
+                  onChange={handleVideo}
+                  id="upload-file"
+                  hidden
+                />
+              </label>
+            </>
+          )}
+
           {/* <ProgressBar now={uploadProgress} label={`${uploadProgress}%`} /> */}
-          {showVideo != null ? (
+          {/* {showVideo != null ? (
              <video
              controls
              src={`${showVideo}`} 
-             style={{ width: "50%" }} 
+             style={{ width:" 100%", height:"200px" }}
+
            ></video>
           ) : (
             <video
               controls
               src={`${baseUrl}/uploads/${profilePic.video}`}
-              style={{ width: "50%" }}
+              style={{ width:" 100%", height:"200px" }}
             ></video>
-          )}
-          <label htmlFor="upload-file" className="video-tag">
-            <img src={exportsvg} alt="" />
-            <input
-              type="file"
-              name="video"
-              onChange={handleVideo}
-              id="upload-file"
-              hidden
-            />
-          </label>
+          )} */}
 
           <button type="submit" className="educator-button fontbold">
             Submit and Continue

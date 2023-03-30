@@ -3,13 +3,13 @@ import "./Dropdownmenu.scss";
 import profileimage from "../../assets/avatar.svg";
 import book from "../../assets/Book-1.svg";
 import help from "../../assets/Help-1.svg";
-import logout from "../../assets/Logout-1.svg";
+import logoutIcon from "../../assets/Logout-1.svg";
 import setting from "../../assets/Settings-1.svg";
 import { NavLink, useNavigate } from "react-router-dom";
 import { GoogleLogout } from "react-google-login";
 import { gapi } from "gapi-script";
 import { GlobalContext } from "../../contextapi/GlobalContext";
-
+import { BiLogOut } from "react-icons/bi";
 const clientId =
   "905812548501-re7cubnpr3tpfiv0qkcno8u2i7s8okgc.apps.googleusercontent.com";
 
@@ -87,14 +87,20 @@ const Dropdownmenu = () => {
       </div>
       <div className="dropdown-2 dropdown-3">
         {users.is_social == 1 ? (
+          <div  style={{display:"flex" , gap:"14px", alignItems:"center"}}>
+            <img src={logoutIcon} style={{width:'20px'}} alt="" />
+
           <GoogleLogout
             clientId={clientId}
+            className="googlebtn"
+            
             buttonText="Logout"
             onLogoutSuccess={onLogoutSuccess}
           />
+          </div>
         ) : (
           <div className="dropdown-items" onClick={logout}>
-            <img src={logout} alt="" />
+            <img src={logoutIcon} alt="" />
             <p>Logout</p>
           </div>
         )}

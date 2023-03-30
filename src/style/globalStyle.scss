@@ -404,3 +404,30 @@ line-height: 19px;
   display: block;
   padding: 2px;
 }
+.googlebtn{
+  box-shadow: none !important;
+  width: 200px !important;
+  // border: 1px solid red !important;
+  div{
+    padding: 0px !important;
+  margin-right: 0px !important;
+
+}
+  span{
+    padding: 0px !important;
+    width: max-content !important;
+
+  }
+  svg{
+    display: none !important;
+
+  }
+}
+
+.dropdown-2:hover{
+  cursor: pointer;
+  background-color:#dcdcdc ;
+  .googlebtn{
+    background-color: #dcdcdc  !important;
+  }
+}

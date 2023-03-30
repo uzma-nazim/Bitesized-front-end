@@ -1,4 +1,4 @@
-export const baseUrl="http://localhost:5000";
+export const baseUrl="https://bitisized-server-production-06c0.up.railway.app";
 export const userRegister="/user/register";
 export const userLogin="/user/login";
 export const userUsers="/user/users";
