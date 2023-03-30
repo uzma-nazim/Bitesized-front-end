@@ -99,8 +99,15 @@
 .numsflex p:hover{
     background-color: #FF7477;
     color: white;
-
+    cursor: pointer !important;
 }
+
+
+.hover_active{
+    background-color: #FF7477;
+    color: white !important;
+}
+
 
 .pencilinp{
     width: 100%;

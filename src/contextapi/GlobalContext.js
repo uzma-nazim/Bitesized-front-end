@@ -1,6 +1,6 @@
 
 import { createContext, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { redirect, useNavigate } from 'react-router-dom';
 import { baseUrl, userLogin, userRegister, userUsers } from '../urls';
 import { toast } from 'react-toastify';
 export const GlobalContext = createContext({})
@@ -11,6 +11,7 @@ const GlobalProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token') || '')
     const navigate = useNavigate();
     const createUser = async (user) => {
+        console.log(user)
         setIsLoading(true)
         const { name, email, password, confirm_password, role, phone_number } = user;
         if (password != confirm_password) {
@@ -38,6 +39,7 @@ const GlobalProvider = ({ children }) => {
             if (res.success) {
                 setToken(res.token)
                 localStorage.setItem('token', res.token);
+                getUser();
                 toast(res.message, {
                     position: "top-right",
                     autoClose: 5000,
@@ -82,6 +84,7 @@ const GlobalProvider = ({ children }) => {
         if (res.success) {
             setToken(res.token)
             localStorage.setItem('token', res.token);
+            getUser();
             toast(res.message, {
                 position: "top-right",
                 autoClose: 5000,
@@ -129,16 +132,20 @@ const GlobalProvider = ({ children }) => {
         getUser();
     }, [])
 
-    const logout = async () => {
+
+    const logout=async()=>{
+        console.log("logut successfully")
+        setToken('');
+        setUsers('');
         localStorage.removeItem('user');
         localStorage.removeItem('token');
-        setUsers('')
-        setToken('')
+        getUser();
+        navigate('/')
     }
 
 
     return (
-        <GlobalContext.Provider value={{ createUser, isLoading, signInUser, token, users, logout ,setToken}}>
+        <GlobalContext.Provider value={{ createUser, isLoading, signInUser, token, users, logout ,setToken,getUser}}>
             {children}
         </GlobalContext.Provider>
     )

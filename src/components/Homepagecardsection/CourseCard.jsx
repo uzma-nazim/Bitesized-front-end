@@ -10,14 +10,21 @@ import profile from '../../assets/profile2.png'
 import dot from '../../assets/Ellipse 388.svg'
 import rating from '../../assets/Ratings.svg'
 import { useNavigate } from 'react-router-dom';
+import { baseUrl } from '../../urls';
 
 
-const CourseCard = () => {
+const CourseCard = ({val}) => {
     const navigate = useNavigate()
+    const createdAt = new Date(val.created_at);
+    const formattedDate = createdAt.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+      year: 'numeric'
+    });
     return (
         <div onClick={()=>navigate("/choose-course-user")} className="videoCard">
             <div className="video-Box">
-                <video  poster={thumbnail} width="100%" height="208">
+                <video  poster={`${baseUrl}/uploads/${val.thumbnail}`} width="100%" height="208">
                     <source type="video/mp4" src={""} />
                 </video>
                 <div className="playbtnwrapper" >
@@ -35,8 +42,7 @@ const CourseCard = () => {
             <div className="iconContainer">
                 <div className="card-icon-box">
                     <img src={user} alt="" />
-                    <p className="ssmallText" style={{ color: "#818386" }}>
-                        {" "}
+                    <p className="ssmallText" style={{ color: "#818386" }}> 
                         23455 Students
                     </p>
                 </div>
@@ -44,19 +50,19 @@ const CourseCard = () => {
                     <img src={clock} alt="" />
                     <p className="ssmallText" style={{ color: "#818386" }}>
                         {" "}
-                        12 July 2023
+                        {formattedDate}
                     </p>
                 </div>
             </div>
 
-            <h2 className="heading2">Introduction to User Interface Design</h2>
+            <h2 className="heading2">{val.micro_course}</h2>
             <div className="cardprofile">
                 <img src={profile} alt="" />
-                <span className="name">Ester Howard  </span>
+                <span className="name">{val.educator.name}  </span>
                 <img src={dot} alt="" />
                 <span className="designation"> Design </span>
                 <img src={dot} alt="" />
-                <span className="age"> Ages: 8-10</span>
+                <span className="age"> Ages: {val.age_group}</span>
             </div>
             <div className="rating">
                 <img src={rating} alt="" />

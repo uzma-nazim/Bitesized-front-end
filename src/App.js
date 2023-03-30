@@ -23,10 +23,14 @@ import Login from "./screens/Login";
 import GlobalProvider, { GlobalContext } from "./contextapi/GlobalContext";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 function App() {
 
-  const { token ,getUser} = useContext(GlobalContext) 
+  const { token ,users,getUser} = useContext(GlobalContext) 
+console.log(users)
+useEffect(() => {
+  // getUser()
+}, [])
 
   return (
     <>
