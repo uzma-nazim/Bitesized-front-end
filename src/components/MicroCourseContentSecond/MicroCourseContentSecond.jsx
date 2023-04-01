@@ -5,10 +5,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { addCourse2, baseUrl } from "../../urls";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Spinner } from "react-bootstrap";
 
 const MicroCourseContentSecond = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const [loading, setloading] = useState(false);
   const [course, setCourse] = useState({
     micro_course1: "",
   });
@@ -64,16 +66,17 @@ const MicroCourseContentSecond = () => {
         ...previous,
         video: selectedFile,
       };
-    }); 
+    });
     setShowVideo(URL.createObjectURL(e.target.files[0]));
   };
-  
+
   const handleInputChange = async (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setCourse({ ...course, [name]: value });
   };
   const handleSubmit = async (e) => {
+    setloading(true);
     e.preventDefault();
     const formdata = new FormData();
     formdata.append("micro_course", course.micro_course1);
@@ -90,12 +93,14 @@ const MicroCourseContentSecond = () => {
       formdata,
       config
     );
-    console.log(res)
-    if(res.data.success){
-      toast.success(res.data.message)
+    console.log(res);
+    if (res.data.success) {
+      setloading(false);
+
+      toast.success(res.data.message);
       navigate("/educator-profile");
-    }else{
-      toast.error(res.data.message)
+    } else {
+      toast.error(res.data.message);
     }
   };
   return (
@@ -151,18 +156,18 @@ const MicroCourseContentSecond = () => {
                 onChange={handleVideo}
                 id="uploadvideos"
               />
-              {
-                showVideo
-                ?<video
-                controls
-                src={`${showVideo}`} 
-                style={{ width: "50%" }} 
-              ></video>
-                :<div className="uploadvideosecond">
-                <img src={uploadthumbnail} alt="" />
-                <p>Upload Video</p>
-              </div>
-              } 
+              {showVideo ? (
+                <video
+                  controls
+                  src={`${showVideo}`}
+                  style={{ width: "200px", height: "210px", marginTop: "30px" }}
+                ></video>
+              ) : (
+                <div className="uploadvideosecond">
+                  <img src={uploadthumbnail} alt="" />
+                  <p>Upload Video</p>
+                </div>
+              )}
             </label>
 
             <div className="microsupply">
@@ -214,25 +219,33 @@ const MicroCourseContentSecond = () => {
 
           <div className="flexforuploadsave">
             <div>
-              <label htmlFor="uploadvideo">
-                <input
-                  type="file"
-                  hidden
-                  onChange={handleProfileChange}
-                  id="uploadvideo"
+              {showImage ? (
+                <img
+                  src={showImage}
+                  width={"200px"}
+                  height={"200px"}
+                  style={{ borderRadius: "10px" }}
+                  alt=""
                 />
-                <div className="uploaddiv uploaddivcolor">
-                  {
-                    showImage 
-                    ?<img src={showImage}  alt="" />
-                    :<img src={uploadthumbnail} alt="" />
-                  }
-                  
-                  <p className="uploadheading">Upload Thumbnail</p>
-                  <p className="fileallowed">JPEG,JPG,PNG file are allowed.</p>
-                  <p className="fileallowed">H 277px, W 208px Recommended</p>
-                </div>
-              </label>
+              ) : (
+                <label htmlFor="uploadvideo">
+                  <input
+                    type="file"
+                    hidden
+                    onChange={handleProfileChange}
+                    id="uploadvideo"
+                  />
+                  <div className="uploaddiv uploaddivcolor">
+                    <img src={uploadthumbnail} alt="" />
+
+                    <p className="uploadheading">Upload Thumbnail</p>
+                    <p className="fileallowed">
+                      JPEG,JPG,PNG file are allowed.
+                    </p>
+                    <p className="fileallowed">H 277px, W 208px Recommended</p>
+                  </div>
+                </label>
+              )}
 
               <div className="lessonformatmain">
                 <h1>Lesson Format</h1>
@@ -261,7 +274,7 @@ const MicroCourseContentSecond = () => {
                 Save and Exit
               </button>
               <button className="savecontinue" type="submit">
-                Save and Continue
+                {loading ? <Spinner animation="border" /> : "Save and Continue"}
               </button>
             </div>
           </div>

@@ -7,11 +7,12 @@ import { GlobalContext } from "../../contextapi/GlobalContext";
 import { useState } from "react";
 import axios from "axios";
 import { baseUrl, educatorProfile, getProfileEducator } from "../../urls";
-import { ProgressBar } from "react-bootstrap";
+import { ProgressBar, Spinner } from "react-bootstrap";
 import { RxCrossCircled } from "react-icons/rx";
 
 const Createprofileeducator = () => {
   const navigate = useNavigate();
+  const [loading, setloading] = useState(false)
   const [profile, setProfile] = useState({
     first_name: "",
     last_name: "",
@@ -76,6 +77,7 @@ const Createprofileeducator = () => {
   };
 
   const handleSubmit = async (e) => {
+    setloading(true)
     e.preventDefault();
     const formdata = new FormData();
     formdata.append("first_name", profile.first_name);
@@ -109,6 +111,8 @@ const Createprofileeducator = () => {
 
     if (res.data.success) {
       navigate("/upload-course");
+    setloading(false)
+
     }
   };
 
@@ -320,7 +324,14 @@ const Createprofileeducator = () => {
           )} */}
 
           <button type="submit" className="educator-button fontbold">
-            Submit and Continue
+            {loading?
+          <>
+          <Spinner animation="border" />
+          </>  
+          :" Submit and Continue"
+          }
+           
+
           </button>
         </form>
       </div>
