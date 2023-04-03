@@ -3,19 +3,20 @@ import PurchasingCard from '../PurchasingCard/PurchasingCard';
 import VideoCard from '../VideoCard/VideoCard'
 import "./IntroductionCard.scss";
 
-const IntroductionCard = () => {
+const IntroductionCard = ({courses}) => {
   return (
     <div className='container'>
       <div className='purchasebeforeintro'>
       <PurchasingCard/>
       </div>
     <div className='introductionvideocard'>
-        <VideoCard hideprogressbar cardWidth="cardWidth" />
-        <VideoCard hideprogressbar lockvideo cardWidth="cardWidth"/>
-        <VideoCard hideprogressbar lockvideo cardWidth="cardWidth"/>
-        <VideoCard hideprogressbar lockvideo cardWidth="cardWidth"/>
-        <VideoCard hideprogressbar lockvideo cardWidth="cardWidth"/>
-        <VideoCard hideprogressbar lockvideo cardWidth="cardWidth"/>
+    {
+      courses && courses.map((val)=>{
+        return (
+          <VideoCard hideprogressbar cardWidth="cardWidth" />
+          )
+      })
+    }
     </div>
     </div>
   )

@@ -13,3 +13,4 @@ export const is_followed="/is/followed/";
 export const total_follower="/educator/total/follower/";
 export const educator_playlist="/educator/playlist";
 export const all_educator="/all/educator";
+export const get_course_by_id="/all/course";

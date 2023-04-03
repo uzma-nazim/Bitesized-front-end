@@ -73,8 +73,7 @@ const Signupuserform = ({ leaner_name }) => {
     createUser(my_user);
   };
 
-  const onSuccess = (res) => {
-    console.log(res.profileObj);
+  const onSuccess = (res) => { 
     const users = {
       name: res.profileObj.name,
       email: res.profileObj.email,
@@ -82,10 +81,7 @@ const Signupuserform = ({ leaner_name }) => {
       is_social: true,
     };
     createUser(users);
-    // const profile = googleUser.getBasicProfile();
-    // const accessToken = googleUser.getAuthResponse().access_token;
-    // console.log(profile)
-    // Do something with the profile and access token
+  
   };
 
   const onFailure = (res) => {

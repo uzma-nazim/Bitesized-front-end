@@ -21,55 +21,84 @@ import Learners from "./screens/Learners/Learners";
 import Payments from "./screens/Payments/Payments";
 import Login from "./screens/Login";
 import GlobalProvider, { GlobalContext } from "./contextapi/GlobalContext";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useContext, useEffect } from "react";
 function App() {
-
-  const { token ,users,getUser} = useContext(GlobalContext) 
-console.log(users)
-useEffect(() => {
-  // getUser()
-}, [])
+  const { token, users, getUser } = useContext(GlobalContext);
+  console.log(token);
+  useEffect(() => {
+    // getUser()
+  }, []);
 
   return (
     <>
-      <BrowserRouter>
-        <GlobalProvider>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
+        <BrowserRouter>
+      <GlobalProvider>
 
-            {!localStorage.getItem('token')
-              ? <>
-                <Route exact path="/sign-up" element={<Signup />} />
-                <Route exact path="/sign-in" element={<Login />} />
-                <Route exact path="/learner-signup" element={<LeanerSignup />} />
-                <Route exact path="/aducator-signup" element={<EducatorSignup />} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+            {!localStorage.getItem("token") ? (
+              <>
+                <Route path="/sign-up" element={<Signup />} />
+                <Route path="/sign-in" element={<Login />} />
+                <Route path="/learner-signup" element={<LeanerSignup />} />
+                <Route path="/aducator-signup" element={<EducatorSignup />} />
               </>
-              : <>
-                <Route exact path="/my-course" element={<UserCourses />} />
-                <Route exact path="/choose-course-user" element={<ChooseCourseUser />} />
-                <Route exact path="/user-profile" element={<CourseUser />} />
-                <Route exact path="/course-video" element={<IntroToUIDesign />} />
-                <Route exact path="/create-profile" element={<CreateEducatorProfile />} />
-                <Route exact path="/upload-course" element={<UploadMicroCourseEducator />} />
-                <Route  path="/upload-video-course/:id" element={<SecondUploadMicroEducator />} />
-                <Route  path="/educator-profile" element={<EducatorProfileMicro />} />
-                <Route  path="/educator-account" element={<EducatorAccount />} />
-                <Route  path="/upload-microcourse" element={<UploadMicroCourse />} />
-                <Route  path="/dashboard" element={<DashboardUser />} />
-                <Route  path="/microcourse-approval" element={<MicroCourseApproval />} />
-                <Route  path="/educators" element={<Educators />} />
-                <Route  path="/Learners" element={<Learners />} />
-                <Route  path="/payments" element={<Payments />} />
-              </>}
-            <Route path="*" element={<Navigate to={localStorage.getItem('token') ? '/' : '/sign-up'} />} />
+            ) : (
+              <>
+                <Route path="/my-course" element={<UserCourses />} />
+                <Route
+                  path="/choose-course-user/:id"
+                  element={<ChooseCourseUser />}
+                />
+                <Route path="/user-profile" element={<CourseUser />} />
+                <Route path="/course-video" element={<IntroToUIDesign />} />
+                <Route
+                  path="/create-profile"
+                  element={<CreateEducatorProfile />}
+                />
+                <Route
+                  path="/upload-course"
+                  element={<UploadMicroCourseEducator />}
+                />
+                <Route
+                  path="/upload-video-course/:id"
+                  element={<SecondUploadMicroEducator />}
+                />
+                <Route
+                  path="/educator-profile"
+                  element={<EducatorProfileMicro />}
+                />
+                <Route path="/educator-account" element={<EducatorAccount />} />
+                <Route
+                  path="/upload-microcourse"
+                  element={<UploadMicroCourse />}
+                />
+                <Route path="/dashboard" element={<DashboardUser />} />
+                <Route
+                  path="/microcourse-approval"
+                  element={<MicroCourseApproval />}
+                />
+                <Route path="/educators" element={<Educators />} />
+                <Route path="/Learners" element={<Learners />} />
+                <Route path="/payments" element={<Payments />} />
+              </>
+            )}
+            {/*<Route
+              path="*"
+              element={
+                <Navigate
+                  to={localStorage.getItem("token") ? "/" : "/sign-in"}
+                />
+              }
+            />*/}
           </Routes>
           <ToastContainer />
-        </GlobalProvider>
+      </GlobalProvider>
 
-      </BrowserRouter>
-
+        </BrowserRouter>
     </>
   );
 }
