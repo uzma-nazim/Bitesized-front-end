@@ -21,8 +21,9 @@ const CourseCard = ({val}) => {
         day: 'numeric',
       year: 'numeric'
     });
+    const myArray = val.supply_list.split(",");
     return (
-        <div onClick={()=>navigate("/choose-course-user")} className="videoCard">
+        <div onClick={()=>navigate(`/choose-course-user/${val._id}`)} className="videoCard">
             <div className="video-Box">
                 <video  poster={`${baseUrl}/uploads/${val.thumbnail}`} width="100%" height="208">
                     <source type="video/mp4" src={""} />
@@ -68,10 +69,16 @@ const CourseCard = ({val}) => {
                 <img src={rating} alt="" />
             </div>
             <div className="profiletag">
-                <button className="tags">#tag1</button>
-                <button className="tags">#tag2</button>
-                <button className="tags">#tag3</button>
-                <button className="tags">#tagzaff4</button>
+            {
+                myArray && myArray.length != 0 && myArray.map((val1,i)=>{
+                    return (
+                        <div key={i}>
+                        <button className="tags">{val1}</button>
+                        </div>
+                    )
+                })  
+            }
+                
             </div>
 
         </div>

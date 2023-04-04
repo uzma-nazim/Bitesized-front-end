@@ -10,6 +10,21 @@ const GlobalProvider = ({ children }) => {
     const [users, setUsers] = useState(localStorage.getItem('user') || '')
     const [token, setToken] = useState(localStorage.getItem('token') || '')
     const navigate = useNavigate();
+
+    const getUser = async () => {
+        const res = await (await fetch(`${baseUrl}${userUsers}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'user_access_token': localStorage.getItem('token')
+            },
+            method: "GET",
+        })).json();
+        if (res.success) {
+            setUsers(res.users);
+            localStorage.setItem('user', JSON.stringify(res.users));
+        }
+    }
+
     const createUser = async (user) => {
         console.log(user)
         setIsLoading(true)
@@ -114,22 +129,12 @@ const GlobalProvider = ({ children }) => {
         }
     }
 
-    const getUser = async () => {
-        const res = await (await fetch(`${baseUrl}${userUsers}`, {
-            headers: {
-                'Content-Type': 'application/json',
-                'user_access_token': localStorage.getItem('token')
-            },
-            method: "GET",
-        })).json();
-        if (res.success) {
-            setUsers(res.users);
-            localStorage.setItem('user', JSON.stringify(res.users));
-        }
-    }
+   
 
     useEffect(() => {
-        getUser();
+        // getUser();
+        setToken(localStorage.getItem('token'));
+        setUsers(localStorage.getItem('user'))
     }, [])
 
 

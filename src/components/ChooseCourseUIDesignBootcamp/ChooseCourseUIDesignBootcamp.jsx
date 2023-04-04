@@ -10,8 +10,11 @@ import playicon from "../../assets/playicon.svg";
 import PurchasingCard from "../PurchasingCard/PurchasingCard";
 import { useNavigate } from "react-router-dom";
 
-const ChooseCourseUIDesignBootcamp = () => {
+const ChooseCourseUIDesignBootcamp = ({playlist}) => {
   const navigate = useNavigate()
+  console.log(playlist.supply_list)
+  console.log(playlist);
+  const myArray=playlist.supply_list.split(",");
   return (
     <>
       <div className="maindiv">
@@ -35,13 +38,13 @@ const ChooseCourseUIDesignBootcamp = () => {
               </div>
 
               <h1 className="headingDesignBootcamp">
-                UI Design Bootcamp. Master Typography, Color & Grids
+                {playlist.micro_course}
               </h1>
               <p className="paraLevelup">
                 Level up your design eye and improve your intuition to craft
                 aesthetically satisfying UI Designs
               </p>
-              <p className="ages">Ages: 8-10</p>
+              <p className="ages">Ages: {playlist.age_group}</p>
 
               <div className="forflexstarsandrating">
                 <div className="sta">
@@ -62,10 +65,17 @@ const ChooseCourseUIDesignBootcamp = () => {
                 <span className="viewInstructor">View Instructor Profile</span>
               </p>
               <div className="tagsmain">
-                <button>#tag1</button>
-                <button>#tag2</button>
-                <button>#tag3</button>
-                <button>#tagzsff4</button>
+              {
+                myArray && myArray.length != 0 && myArray.map((val,i)=>{
+                  return(
+                    <div key={i}> 
+                          <button>{val}</button>
+                    </div>
+                    
+
+                    )
+                })
+              }
               </div>
             </div>
             <div className="purchasecardnone">
