@@ -38,10 +38,10 @@ const ChooseCourseUser = () =>{
             ?<h1>Loading....</h1>
             :(
             <>
-            {playlist}
-                <ChooseCourseUIDesignBootcamp playlist={playlist}/>
+            {/* {playlist} */}
+                {/* <ChooseCourseUIDesignBootcamp playlist={playlist}/>
                 <IntroductionCard courses={courses}/>
-                <CustomerReviews/>
+                <CustomerReviews/> */}
             </>)
             }
             

@@ -9,12 +9,14 @@ import { GlobalContext } from "../../contextapi/GlobalContext";
 const Header = () => {
   const [open, setopen] = useState(false);
   const { users,token } = useContext(GlobalContext);
+  const parseUser = JSON.parse(users)
+  console.log("users", token)
   
   const navigate = useNavigate();
   
   return (
     <>
-      {token && users.role == 'Learner' ? (
+      {token && parseUser.role == 'Learner' ? (
         <>
           <div className="headerContainer container">
             <div>
@@ -60,7 +62,7 @@ const Header = () => {
             </div>
           </div>
         </>
-      ) : token && users.role == 'Educator' ? (
+      ) : token && parseUser.role == 'Educator' ? (
         <>
           <div className="headerBoxShadow">
             <div className="headerContainer container ">
@@ -100,7 +102,7 @@ const Header = () => {
           </div>
         </>
       ) :
-      token && users.role == 'admin'
+      token && parseUser.role == 'admin'
       ?(<>
         <div className="container headerContainer">
           <div>
